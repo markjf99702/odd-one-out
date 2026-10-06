@@ -1,0 +1,552 @@
+[
+ {
+  "id": "h_basket",
+  "title": "The Laundry Basket",
+  "art": "basket",
+  "text": "You land face down in a plastic laundry basket, which is the closest thing a sock has to a cathedral. Warm towels rise around you like bread. A fitted pillowcase snores. Everything smells of tumble dry low and somebody else's fabric softener.\n\nYou are in the House. Somewhere in this House is the top drawer of the dresser, and somewhere in that drawer is Pim, calm, patient Pim, probably folding and unfolding with worry. Or calmly not worrying. Pim was always better at that.\n\nAbove you, the basket's rim is a cliff of woven plastic holes. Far away, footsteps thump. The Owner is coming back for the basket, or isn't. With the Owner, you can never tell.",
+  "choices": [
+   {
+    "label": "Climb out over the rim",
+    "to": "h_basket_climb"
+   },
+   {
+    "label": "Burrow in and wait to be carried",
+    "to": "h_carried"
+   },
+   {
+    "label": "Notice this load smells a bit damp",
+    "to": "w_rinse"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_basket_climb",
+  "title": "Over the Rim",
+  "art": "basket",
+  "text": "You inchworm up the basket wall, hooking your toe through one plastic hole, then the next. It is slow. It is undignified. A dish towel watches and says nothing, which is somehow worse.\n\nAt the top you teeter, then tumble onto the cold tiles of the laundry room. The floor here is a desert of stray lint and one lonely bobby pin, staring at the ceiling as if it has seen things.\n\nAhead, the doorway opens onto the hallway. From somewhere close by comes a sound you know from Pim's stories: the jingle of a collar, and a tail thumping a wall in pure, uncomplicated joy.",
+  "choices": [
+   {
+    "label": "Creep out into the hallway",
+    "to": "h_hallway"
+   },
+   {
+    "label": "Face the jingling sound",
+    "to": "h_biscuit"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_carried",
+  "title": "Basket Passenger",
+  "art": "stairs",
+  "text": "You burrow between a bath towel and a pair of flannel pajama pants and hold very still. The world lurches. Giant hands have lifted the basket, and you sway upward in the warm dark like a pea in a hot air balloon.\n\nThrough the plastic holes you glimpse the stairs going by: carpeted, endless, each step a cliff you would have needed an hour to climb. The Owner hums something tuneless. The pajama pants complain about the turbulence.\n\nNear the top, the basket tilts on the landing as the Owner adjusts their grip. One good wriggle and you could spill out. Or you could stay put and see where the folding happens.",
+  "choices": [
+   {
+    "label": "Ride on to wherever the folding is",
+    "to": "h_bed"
+   },
+   {
+    "label": "Wriggle out onto the landing",
+    "to": "h_landing"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_door",
+  "title": "Back Indoors",
+  "art": "hallway",
+  "text": "One way or another, through the dog flap or past the Owner's giant feet, you make it indoors. You lie on the doormat, damp and gritty, breathing in the smell of indoors: toast, carpet, and the faint holy scent of a dryer somewhere down the hall.\n\nThe House. You made it back. Somewhere upstairs is the sock drawer, and in the sock drawer is Pim. You remember that much even if you have no idea where the stairs are.\n\nThe doormat bristles under you. It says WELCOME in letters it clearly does not mean. To your left is a long hallway. To your right, a living room with a couch so large it has its own weather. And something nearby is wagging.",
+  "choices": [
+   {
+    "label": "Head down the hallway",
+    "to": "h_hallway"
+   },
+   {
+    "label": "Make for the couch",
+    "to": "h_couch"
+   },
+   {
+    "label": "Investigate the wagging",
+    "to": "h_biscuit"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_hallway",
+  "title": "The Long Hallway",
+  "art": "hallway",
+  "text": "The hallway stretches ahead like a carpeted highway, all beige and hope. Dust motes drift in a sunbeam. You feel the faint vibration of the house: a fridge humming, a dryer settling, a clock that ticks slightly louder than it needs to.\n\nOn a radiator by the wall lies a gray cat, folded into a perfect loaf, one eye open and fixed on you with the expression of a professor grading a terrible essay.\n\nFurther along, a dog bed the size of a small nation sits in a corner, piled with suspicious treasures. And through the far doorway, the living room couch looms, its cushions slumped like sleeping hills.",
+  "choices": [
+   {
+    "label": "Approach the cat on the radiator",
+    "to": "h_professor"
+   },
+   {
+    "label": "Peek at the dog bed",
+    "to": "h_biscuit"
+   },
+   {
+    "label": "Head for the couch",
+    "to": "h_couch"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_biscuit",
+  "title": "Biscuit",
+  "art": "dog",
+  "text": "A golden wall of fur arrives. It has a nose, and the nose is very interested in you. It is wet. It is enormous. It huffs warm breath through your weave until your stripes stand on end.\n\nThis is Biscuit. Pim told you about Biscuit. Pim survived Biscuit, which was talked about in the drawer the way people talk about surviving a shipwreck. \"He doesn't mean any harm,\" Pim said. \"He just loves things with his whole mouth.\"\n\nBiscuit's tail goes off like a metronome set to *allegro*. He makes a small hopeful noise. He gently, gently, opens his mouth.",
+  "choices": [
+   {
+    "label": "Go limp and let him carry you",
+    "to": "h_biscuit_carry"
+   },
+   {
+    "label": "Try to reason with him",
+    "to": "h_biscuit_talk"
+   },
+   {
+    "label": "Bolt for the radiator",
+    "to": "h_professor"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_biscuit_carry",
+  "title": "In the Jaws of Love",
+  "art": "dog",
+  "text": "Biscuit picks you up with a softness that should not be possible for a mouth that size. You dangle from his lip, swaying, damp but unharmed. He is very proud of you. He trots in a little circle to show you to nobody in particular.\n\nThen he sets off with purpose. You pass the hallway, a shoe, a table leg. Ahead, two paths: a corner where his bed waits, heaped with treasures, and the rattling dog flap, beyond which lies grass and sky and everything a dog considers important.\n\nHe pauses, considering. You could kick and tip the balance. Or you could hang on and see.",
+  "choices": [
+   {
+    "label": "Kick toward the dog flap",
+    "to": "o_yard"
+   },
+   {
+    "label": "Go limp and let him choose the bed",
+    "to": "h_dogbed"
+   },
+   {
+    "label": "Get spotted, slobbery, by the Owner",
+    "to": "w_rinse"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_biscuit_talk",
+  "title": "A Reasonable Dog",
+  "art": "dog",
+  "text": "\"Biscuit,\" you say, very firmly for a sock. \"Sit.\"\n\nHe sits. He sits so fast and so hard that his whole body wiggles with the effort. You did not expect that to work. Neither, from his face, did he.\n\nYou tell him about Pim. The right sock. Lilac, calm, smells like cedar from the drawer. Biscuit's ears lift at \"Pim.\" He knows that smell. He whines softly and points his nose at the stairs, then back at you, then at the stairs, in case you missed it.\n\n\"Will you help me?\" you ask. His tail sweeps the floor clean in reply. He would like to help. He would also, very much, like to show you his bed.",
+  "choices": [
+   {
+    "label": "Follow his nose to the stairs",
+    "to": "h_stairs"
+   },
+   {
+    "label": "Agree to see his treasures first",
+    "to": "h_dogbed"
+   }
+  ],
+  "ending": null,
+  "flag": "biscuit_friend"
+ },
+ {
+  "id": "h_dogbed",
+  "title": "The Hoard",
+  "art": "dog",
+  "text": "Biscuit's bed is a plaid crater lined with dog hair and treasure. You are laid tenderly on top, beside a tennis ball, a slipper with a heroic chew history, and three other socks.\n\nThe socks look up, blissful and a bit soggy. \"Oh, you'll love it here,\" says a blue ankle sock. \"He sleeps with his nose on us. We're the most loved things in the house.\" A sports sock with no elastic left nods slowly, like a monk.\n\nBiscuit circles three times and flops down, chin across you, sighing a sigh of total contentment. It is warm. It is so warm. You think of Pim, and the cedar drawer, and how far away the stairs are.",
+  "choices": [
+   {
+    "label": "Stay. Just for a while.",
+    "to": "h_end_beloved"
+   },
+   {
+    "label": "Wait for him to sleep, then sneak off",
+    "to": "h_hallway"
+   },
+   {
+    "label": "Let the Owner tidy up the hoard",
+    "to": "j_drawer"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_end_beloved",
+  "title": "Biscuit's Favorite",
+  "art": "dog",
+  "text": "A while becomes an afternoon. An afternoon becomes a season. You never quite decide to stay, you just keep not leaving.\n\nBiscuit carries you everywhere: to the door when the Owner comes home, to the yard to show the squirrels, back to bed every night with the care of a dog transporting a crown jewel. Your stripes fade to a gentle swamp color. Your darn becomes a hole, and the hole becomes his favorite spot to hold you by.\n\nSometimes, late at night, you smell cedar on the Owner's feet as they pass, and you think of Pim, and something in your weave aches. Then Biscuit sighs in his sleep and pulls you closer, and you are, if not matched, at least completely and ridiculously loved.",
+  "choices": [],
+  "ending": {
+   "name": "Biscuit's Favorite",
+   "kind": "bittersweet"
+  }
+ },
+ {
+  "id": "h_professor",
+  "title": "The Professor",
+  "art": "cat",
+  "text": "The gray cat on the radiator does not move when you approach. Cats never move when you want them to. He simply lets you get closer, and closer, until you are near enough to see your own reflection in one disdainful green eye.\n\n\"A left sock,\" he says, as if diagnosing something. \"Striped. Darned. Lost. How wonderfully predictable.\" His name, you learn, is Professor, though he does not say what he is a professor of. Presumably everything.\n\nHe yawns, showing teeth you try not to think about. \"Let me guess. You want the drawer. Everyone wants the drawer. Nobody ever asks *me* what I want.\"",
+  "choices": [
+   {
+    "label": "Ask him what he wants",
+    "to": "h_professor_deal"
+   },
+   {
+    "label": "Leave him to his radiator",
+    "to": "h_couch"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_professor_deal",
+  "title": "Terms and Conditions",
+  "art": "cat",
+  "text": "Professor's tail flicks once, a gavel. \"What I want,\" he says, \"is a hair tie. Black. Elastic. Excellent for batting under the refrigerator. The Owner had one this morning and it is now in the couch, as all good things eventually are.\"\n\n\"Bring it to me,\" he continues, \"and I will tell you exactly where the drawer is and how to get into it. Exactly. Not the vague nonsense the dryer sheets peddle.\"\n\nYou point out that you could just find the drawer yourself. Professor closes his eyes. \"You could,\" he agrees. \"And I could watch. I enjoy a tragedy.\"",
+  "choices": [
+   {
+    "label": "Go into the couch for the hair tie",
+    "to": "h_couch_market"
+   },
+   {
+    "label": "Find the drawer yourself",
+    "to": "h_stairs"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_couch",
+  "title": "Couch Country",
+  "art": "couch",
+  "text": "The couch is a range of three great cushions slumped against each other like tired giants. You climb, hook by hook, and stand on the summit plateau, looking down into the cracks between.\n\nDown there, something is happening. You hear the clink of coins, the rustle of a receipt, and many small voices haggling. The cushion cracks are not empty. They are an economy.\n\nFurther down still, in the deepest crack at the corner, the darkness has a strange softness to it. It does not look like a gap. It looks like a fold in something much bigger than a couch.",
+  "choices": [
+   {
+    "label": "Descend into the cushion market",
+    "to": "h_couch_market"
+   },
+   {
+    "label": "Peer into the deepest crack",
+    "to": "h_couch_deep"
+   },
+   {
+    "label": "Climb down and seek the stairs",
+    "to": "h_stairs"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_couch_market",
+  "title": "The Crumb Exchange",
+  "art": "couch",
+  "text": "Between the cushions lies a bustling bazaar. Crumbs are the currency, sorted by grade: toast, cracker, and the legendary Cheeto dust, which is traded only by the very rich. A pen cap runs the bank. A lone popcorn kernel sells fortunes nobody believes.\n\nYou find the hair tie being used as a corral for three runaway raisins. The pen cap negotiates hard. In the end you trade a single strand of your own wool, which the market treats like gold thread, and the hair tie is yours.\n\n\"Taking it to the cat?\" the pen cap asks. \"Smart. That cat pays in information, and his information is always right. Annoyingly so.\"",
+  "choices": [
+   {
+    "label": "Carry the hair tie to Professor",
+    "to": "h_professor_map"
+   },
+   {
+    "label": "Explore deeper below the market",
+    "to": "h_couch_deep"
+   },
+   {
+    "label": "Get scooped up by a rummaging hand",
+    "to": "j_drawer"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_couch_deep",
+  "title": "The Deep Cushion",
+  "art": "portal",
+  "text": "You crawl past the market, past the last crumb, past a TV remote battery that has been down here so long it has become a sort of hermit. The cushion gap narrows, then softens, then stops being a gap at all.\n\nThe fabric here feels like the inside of a cloud. It shimmers faintly pastel, lavender and mint, and you hear something impossible: the far-off, gentle rumble of a spin cycle that is not coming from any machine in this house.\n\nA warm draft curls out of the fold and smells, overwhelmingly, of being found. Your stripes tingle. Something in there is calling you, kindly. Something in there may not want to give you back.",
+  "choices": [
+   {
+    "label": "Slip through the soft fold",
+    "to": "x_portal"
+   },
+   {
+    "label": "Claw back up toward the light",
+    "to": "h_couch"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_professor_map",
+  "title": "The Professor's Map",
+  "art": "cat",
+  "text": "You drop the hair tie at Professor's paws. He regards it for a long time, then bats it once, lazily, and something in his face almost becomes pleasure before he catches it.\n\n\"Very well,\" he says. \"Up the stairs. Through the second door, the one that sticks. The dresser is beside the window. Top drawer. Your Pim is at the back on the left, behind a pair of wool hiking socks with ideas above their station. The drawer sticks. Push from the bottom right corner.\"\n\nHe flicks an ear toward the laundry basket by the foot of the stairs, then pauses. \"And if you reach the foot of that dresser and find yourself stuck, which you will, call for me. I may come. I may not. It depends how bored I am.\"",
+  "choices": [
+   {
+    "label": "Head for the stairs",
+    "to": "h_stairs"
+   },
+   {
+    "label": "Hop into the basket for a ride up",
+    "to": "h_basket"
+   }
+  ],
+  "ending": null,
+  "flag": "knows_drawer"
+ },
+ {
+  "id": "h_stairs",
+  "title": "The Mountain",
+  "art": "stairs",
+  "text": "The stairs rise above you, fourteen carpeted cliffs climbing toward a landing lost in shadow. Each step is the height of three of you stacked. Mountaineers would weep. Mountaineers would at least have thumbs.\n\nAt the base you find a lost earring back and a fallen cheerio, the bones of previous expeditions. You consider the climb. You consider your darn, which is not built for this.\n\nBehind you, a laundry basket waits on the floor, half full and abandoned for now. And somewhere in the house, a large and friendly dog is listening for his name.",
+  "choices": [
+   {
+    "label": "Begin the climb",
+    "to": "h_stairs_climb"
+   },
+   {
+    "label": "Whistle for Biscuit",
+    "to": "h_landing",
+    "requires": "biscuit_friend"
+   },
+   {
+    "label": "Hide in the basket for a lift",
+    "to": "h_basket"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_stairs_climb",
+  "title": "The Ascent",
+  "art": "stairs",
+  "text": "Step one: you fling your toe over the edge and haul yourself up by carpet fibers. Step two: the same, but sweatier. By step six you have developed a technique, a sort of desperate cartwheel, and by step nine you have developed opinions about whoever invented stairs.\n\nOn step eleven, a gust from the heating vent nearly takes you. You cling to the carpet, flapping like a flag on a summit, and think of Pim. Pim would say, *one more step, then another.* Pim was always saying things like that. It was very annoying. You miss it terribly.\n\nThree steps to go. Your arms, which you do not have, ache.",
+  "choices": [
+   {
+    "label": "Push on to the landing",
+    "to": "h_landing"
+   },
+   {
+    "label": "Let go and slide back down",
+    "to": "h_hallway"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_landing",
+  "title": "The Landing",
+  "art": "hallway",
+  "text": "You flop onto the landing, gasping lint. You have conquered the mountain, one way or another. Nobody will ever believe it. That is fine. That is how the greatest climbs always go.\n\nThe upstairs hallway is quieter, darker, carpeted in a deeper shade of beige. Doors line it. One is open just a crack, and through it you catch a sliver of dresser and a curtain moving in the breeze.\n\nBeside you, a window stands propped open. A breeze pours through it, rich with grass and sky, tugging at your stripes. One good puff and you would be out and gone, over the sill and down into the yard, all your hard climbing undone.",
+  "choices": [
+   {
+    "label": "Go through the door to the dresser",
+    "to": "h_bedroom"
+   },
+   {
+    "label": "Let the breeze take you",
+    "to": "o_yard"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_bedroom",
+  "title": "The Bedroom",
+  "art": "bedroom",
+  "text": "The bedroom is vast and soft and smells of the Owner: sleep, shampoo, and a faint undertone of cedar that makes your whole weave sit up straight. Cedar. The drawer.\n\nThere it is: the dresser, standing by the window like a wooden cathedral, its brass handles gleaming. The top drawer is open a finger's width. A sliver of darkness. Somewhere in that darkness, Pim.\n\nAcross the room, the bed is heaped with clean laundry. The Owner sits on its edge, folding with the slow exhaustion of someone who has done this a thousand times and will do it a thousand more. Pairs go into neat balls. Singles go into a sad little pile.",
+  "choices": [
+   {
+    "label": "Cross to the foot of the dresser",
+    "to": "h_drawer"
+   },
+   {
+    "label": "Climb onto the bed with the laundry",
+    "to": "h_bed"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_bed",
+  "title": "The Folding Table",
+  "art": "bedroom",
+  "text": "The bed is a snowfield of laundry. Shirts lie flat like sleeping seals. Towels are rolled into logs. And the Owner's hands move through it all like weather systems, sweeping, folding, pairing.\n\nYou see socks being matched. A pair of gray work socks, reunited. A pair of pink fuzzy ones, giddy. The Owner tucks each pair into a ball and drops it into a growing heap, destined for the drawer.\n\nThe singles sit in a pile at the foot of the bed, trying not to look hopeful. Among them is a beige argyle golf sock with a confident air. He sees you and winks. The hands, sweeping closer, have not noticed you yet.",
+  "choices": [
+   {
+    "label": "Lie flat and wait to be folded",
+    "to": "h_fold"
+   },
+   {
+    "label": "Slide off the bed toward the dresser",
+    "to": "h_drawer"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_fold",
+  "title": "The Tired Hands",
+  "art": "bedroom",
+  "text": "The hands find you. They lift you to a height that makes your stitches swim. Somewhere far above, the Owner squints, sighs, and rummages through the pile of singles for something, anything, that looks right.\n\nYou try to will them toward the drawer. Toward Pim. But the Owner is tired, it is late, and the hands close instead on the beige argyle golf sock.\n\nThey hold you side by side. You are teal and mustard and anxious. He is beige and diamond-patterned and smells faintly of a country club. The Owner considers you both for one long moment, shrugs, and begins to roll you together into a ball.",
+  "choices": [
+   {
+    "label": "Go along with it",
+    "to": "h_end_wrong"
+   },
+   {
+    "label": "Wriggle loose and run for the dresser",
+    "to": "h_drawer"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_end_wrong",
+  "title": "Close Enough",
+  "art": "mismatch",
+  "text": "You end up in the drawer, rolled up with Gerald. That is the golf sock's name. He tells you within the first four seconds.\n\nAt first you are horrified. Then, slowly, you are not. Gerald turns out to be a wonderful listener. He has been to Scotland, or at least to a putting green near the highway. He thinks your darn is \"distinguished.\" When you mention Pim, he nods and says, \"Ah. A first love.\" And then, kindly, he changes the subject.\n\nThe Owner wears you together on Tuesdays. People stare at their ankles. The Owner does not care, and after a while, neither do you. It is not the pair you were bought in. It is, it turns out, a pair. Somewhere at the back of the drawer, you hope, Pim has found a Gerald too.",
+  "choices": [],
+  "ending": {
+   "name": "Close Enough",
+   "kind": "weird"
+  }
+ },
+ {
+  "id": "h_drawer",
+  "title": "The Foot of the Dresser",
+  "art": "drawer",
+  "text": "You stand at the foot of the dresser and look up. And up. And up. It is a wooden cliff with four brass handles bolted to it like the rungs of a ladder built for giants.\n\nAt the very top, the drawer is open a crack. Cedar breathes out of it. And faintly, so faintly you might be imagining it, you hear a familiar voice humming the little tune Pim always hums on wash day, the one that goes nowhere and comforts everyone.\n\nYou are so close your stripes hurt. The handles glint. Behind you, footsteps creak closer with an armful of laundry. And on the windowsill, a gray tail twitches, very deliberately, in your direction.",
+  "choices": [
+   {
+    "label": "Climb the brass handles",
+    "to": "h_handles"
+   },
+   {
+    "label": "Wait for the Owner's hands",
+    "to": "h_hands"
+   },
+   {
+    "label": "Call to the cat on the windowsill",
+    "to": "h_professor_lift",
+    "requires": "knows_drawer"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_handles",
+  "title": "The Brass Ladder",
+  "art": "drawer",
+  "text": "You throw yourself at the bottom handle and cling. Brass is cold and slippery, with nothing for your weave to grip but a few tiny scratches. You use every one of them.\n\nHandle one. A swing, a lunge, a terrible moment of hanging by your heel. Handle two. Handle three, where you rest, panting, and look down at a carpet that seems as far away as the moon.\n\nThen the last one. Above it, the drawer's open crack is right there, a dark strip smelling of cedar and home, barely wider than you are. It is the kind of drawer that sticks. To reach it you will have to let go of the handle completely and fling yourself upward, trusting to static and nerve.",
+  "choices": [
+   {
+    "label": "Fling yourself through the gap",
+    "to": "h_inside"
+   },
+   {
+    "label": "Push at the bottom right corner",
+    "to": "h_inside",
+    "requires": "knows_drawer"
+   },
+   {
+    "label": "Climb back down and rethink",
+    "to": "h_drawer"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_hands",
+  "title": "The Giant Hands",
+  "art": "bedroom",
+  "text": "The footsteps stop. A shadow falls. Then the hands descend, huge and warm, and pluck you off the carpet as if you weigh nothing, which, to them, you do.\n\nYou are held up to the light. The Owner turns you over. Your stripes. Your red heel. Your darn, oh no, your darn, which they examine for a long, terrible moment while a thumb rubs over the stitches.\n\n\"Huh,\" says the Owner, in the voice they use for things they are deciding about. One hand drifts toward the dresser. The other hand drifts toward the rag bin by the door. You could hold perfectly still and look worthy, or you could panic.",
+  "choices": [
+   {
+    "label": "Hold still and look worthy",
+    "to": "h_inside"
+   },
+   {
+    "label": "Wriggle in panic",
+    "to": "h_end_rag"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_end_rag",
+  "title": "The Rag Life",
+  "art": "rag",
+  "text": "You wriggle. You thrash. You flail with every fiber you have. The Owner watches you squirm in their hand and laughs, because to a person, a wriggling sock looks exactly like a puppet.\n\nFirst come the googly eyes, glued on crooked. Then a mouth drawn in marker. For one week you are \"Mister Stripes\" and you perform a dramatic reading of the grocery list. Then the novelty fades, the glue fails, and you are demoted to the cleaning cupboard.\n\nNow you dust the baseboards on Saturdays, one googly eye still clinging on, staring at the dresser you can never quite reach. The other rags are kind. Their stories all start the same way: \"I was a sock, once.\"",
+  "choices": [],
+  "ending": {
+   "name": "The Rag Life",
+   "kind": "bad"
+  }
+ },
+ {
+  "id": "h_professor_lift",
+  "title": "The Professor Is Bored",
+  "art": "cat",
+  "text": "\"Please,\" you call up to the windowsill, feeling ridiculous.\n\nNothing. Then a long, theatrical sigh from the windowsill. The gray cat pours himself down to the carpet like spilled ink and stands over you. \"I want it noted,\" he says, \"that I am doing this for my own entertainment and for no other reason.\"\n\nHe takes you gently by the cuff with his teeth. Then he coils, and leaps, and you are flying past the handles, past the second drawer, up into the cedar-scented air. He lands on the dresser top without a sound, dips his head, and drops you neatly into the open crack.\n\n\"Do try not to get lost again,\" he says. \"It is tedious for everyone.\"",
+  "choices": [
+   {
+    "label": "Look for Pim in the dark",
+    "to": "h_inside"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_inside",
+  "title": "The Sock Drawer",
+  "art": "drawer",
+  "text": "You tumble into the drawer and land on a pillow of folded cotton. It is dark, and close, and smells so strongly of cedar that you sneeze.\n\nAround you the drawer society stirs. Balled-up pairs peer at you, murmuring. A pair of Christmas socks, out of season and sulking. Two wool hiking socks who have seen mountains, real ones, and would like you to know it. A pair of nylons tangled in permanent argument. \"A single,\" someone whispers, the way you would say *a ghost.*\n\nYou wriggle past them, behind the hiking socks, toward the back left corner by the knot in the wood where the light never reaches. Your heart, which socks do not technically have, is hammering. Someone back there has stopped humming. Someone back there is listening.",
+  "choices": [
+   {
+    "label": "Call out for Pim",
+    "to": "h_matched"
+   },
+   {
+    "label": "Creep forward in silence",
+    "to": "h_matched"
+   },
+   {
+    "label": "Make the entrance this trip deserves",
+    "to": "h_secret_full_load",
+    "requires": [
+     "has_quarter",
+     "met_mitt"
+    ]
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "h_matched",
+  "title": "Matched",
+  "art": "reunion",
+  "text": "\"Stripes?\" There, in the back left corner, folded neatly in half, is Pim. Lilac, soft, with the calm of a sock who once survived a dog, except that Pim's toe is trembling. \"You're late,\" says Pim. \"I wasn't worried.\" It is the first lie Pim has ever told, and it is a terrible one.\n\n\"I got lost,\" you say. \"Then a lot of other things happened. Some of it you won't believe.\" And Pim says, \"I kept your spot,\" and shuffles over, and there it is: a warm hollow in the cedar dark, exactly your shape, defended all afternoon against the hiking socks, the Christmas socks, and one very persistent nylon.\n\nYou slide in. It fits. Of course it fits. You came home in the same paper band, a striped one and a lilac one, the only pair in the three-pack that made no sense, and the Owner rolled you together on the very first day and never once thought better of it. \"Your darn looks good,\" Pim says. \"It does not.\" \"It does. It looks like you've been somewhere.\"\n\nIn the morning, the Owner will open the drawer, reach in without looking, and pull out a pair. Two socks, rolled together, warm, ordinary, complete. Nobody will ever know what it took. That is the best part.",
+  "choices": [],
+  "ending": {
+   "name": "Matched",
+   "kind": "good"
+  }
+ },
+ {
+  "id": "h_secret_full_load",
+  "title": "The Full Load",
+  "art": "reunion",
+  "text": "You do not creep. You tip your cuff, and out rolls Vernon, who has ridden there the whole way, give or take a few transactions he would rather not discuss. He spins across the cedar like a tiny drumroll. \"Gentlesocks! Hiking socks!\" he booms. \"Presenting the left sock, home from the Drum and points beyond!\"\n\nThe whole drawer sits up. The nylons stop arguing mid-word. From the back left corner, a lilac toe pokes out of the dark, and Pim says, \"You brought a quarter.\" \"I brought a friend,\" you say. \"He's a quarter.\"\n\nThen Vernon has news, because the vents talk and quarters listen. Mitt went looking for Mott and found her in the Odd Sock Dimension, flour to the cuff, running the best bakery in the place. \"Sent you a cinnamon lint roll,\" says Vernon. \"I ate it. Don't ask how.\"\n\nYou slide in beside Pim. It fits. Vernon settles between you like a coin in a warm pocket. Everyone accounted for. A full load, at last.",
+  "choices": [],
+  "ending": {
+   "name": "The Full Load",
+   "kind": "good"
+  }
+ }
+]

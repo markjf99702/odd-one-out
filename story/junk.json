@@ -1,0 +1,206 @@
+[
+ {
+  "id": "j_drawer",
+  "title": "The Junk Drawer",
+  "art": "junk_drawer",
+  "text": "A giant hand scoops you up along with whatever else was lying around, carries the lot to the kitchen with the air of someone thinking about something else entirely, and drops you into a drawer. The drawer slams. A hundred small things settle into new and interesting disappointments.\n\nIt is dark, and it smells of rubber, old pennies, and soy sauce. Something pokes your heel patch. Something else is ticking, though nothing in here has told the right time since daylight saving.\n\n\"Welcome,\" says a thin, wiry voice near your toe. \"Don't panic. Nothing in here is lost. It is just not found yet.\"\n\nAround you, the dark mutters. Batteries grumble in a corner. Far off, something long and thin clicks against the wood, alone, like it is waiting for someone who is not coming.",
+  "choices": [
+   {
+    "label": "Ask the wiry voice where you are",
+    "to": "j_twist"
+   },
+   {
+    "label": "Approach the grumbling batteries",
+    "to": "j_batteries"
+   },
+   {
+    "label": "Follow the lonely clicking",
+    "to": "j_chopstick"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_twist",
+  "title": "The Twist-Tie",
+  "art": "junk_drawer",
+  "text": "The voice belongs to a twist-tie, paper-wrapped and bent into a thoughtful question mark. It once held a loaf of bread closed for nine days and has been thinking about it ever since.\n\n\"Everything in the house that is not a sock ends up here,\" it says. \"Batteries. Birthday candles. A key that opens nothing. You are our first sock. Either you are very lost, or the drawer is broadening its definitions.\"\n\nIt twists itself a little tighter, the way philosophers do. \"You heard the rule. Nothing in here is lost. It is just not found yet. Lost is a feeling. Not found yet is a *schedule*.\" It pauses. \"A long schedule. Some of us are on year eleven.\"\n\nYou think of Pim, waiting in the cedar dark, and wonder how long a schedule a sock can stand.",
+  "choices": [
+   {
+    "label": "Tour the drawer's economy",
+    "to": "j_market"
+   },
+   {
+    "label": "Ask about the key that opens nothing",
+    "to": "j_key"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_batteries",
+  "title": "The Council of Double-As",
+  "art": "junk_drawer",
+  "text": "In the corner sits the Council: six AA batteries, two AAAs, and a nine-volt who chairs every meeting because nobody dares touch its terminals. All of them are, by any reasonable test, dead.\n\n\"We are *not* dead,\" says the eldest AA, whose label is peeling. \"We have a little left. Put us in a remote and see. Enough for one more channel.\"\n\n\"One more channel,\" the others murmur, like a prayer.\n\nThey have ruled the drawer since the Owner moved in, because they are the only ones who have ever been inside a machine that mattered. The nine-volt regards you with a faint, dangerous tingle. \"A sock. Unusual. State your business, and keep your lint away from our ends.\"",
+  "choices": [
+   {
+    "label": "Petition the Council to let you leave",
+    "to": "j_vote"
+   },
+   {
+    "label": "Back away toward the middle of the drawer",
+    "to": "j_market"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_market",
+  "title": "The Packet Exchange",
+  "art": "junk_drawer",
+  "text": "The middle of the drawer is a marketplace. The currency is soy sauce packets. Duck sauce trades at half value, and there is one packet of hot mustard so precious that nobody can afford to break it. Rubber bands do all the heavy lifting, stretched across the gaps as bridges, and they are talking openly about a strike.\n\nThe bank is run by the birthday candles, a solemn order of half-melted wax who each burned for forty seconds once and have never stopped talking about it. \"We were *wished upon*,\" says a pink one with a striped twist. \"Have you ever been wished upon?\" You admit you have mostly been stepped on.\n\nBetween the stalls, a little brass key goes from object to object, trying itself in each one and apologizing. And from under everything, a folded paper voice calls out: \"Ordering? We're open! We are definitely open!\"",
+  "choices": [
+   {
+    "label": "Answer the paper voice",
+    "to": "j_menu"
+   },
+   {
+    "label": "Follow the apologizing key",
+    "to": "j_key"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_menu",
+  "title": "Happy Garden",
+  "art": "junk_drawer",
+  "text": "The voice is a takeout menu. HAPPY GARDEN, it says across the top, FREE DELIVERY OVER $15, beside a drawing of a smiling dumpling. The restaurant closed in 2014. Nobody has told the menu, and nobody is going to.\n\n\"Number twenty-three is very popular,\" it says. \"General Tso's. Extra crispy. Can I take your order?\"\n\nYou order nothing, gently. The menu doesn't mind. It flips over to show you a delivery map on the back, every street in faded red ink, this very house circled in pen because the Owner used to order every Friday.\n\n\"If you need to get somewhere,\" it says, \"ask the tape measure. It goes everywhere the Owner goes. And our chopstick is still here. We always sent two. Lost one in 2013. It never really recovered.\"",
+  "choices": [
+   {
+    "label": "Find the tape measure",
+    "to": "j_tape"
+   },
+   {
+    "label": "Go and meet the chopstick",
+    "to": "j_chopstick"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_key",
+  "title": "The Key to Nothing",
+  "art": "junk_key",
+  "text": "The key is small and brass, with a hole in its head where a ring once went. It has been in the drawer for six years and it opens nothing. It has been told this. It does not *know* it.\n\n\"Are you a lock?\" it asks, with terrible hope. \"You have an opening at the top. Just let me try.\" You explain that you are a sock and the opening is for a foot. The key tries anyway, very politely, then sits down on a birthday candle.\n\n\"Somewhere there's a door that misses me,\" it says. \"A shed. A diary. A bicycle. I would settle for a bicycle.\" It gazes at the thin dark gap at the very back of the drawer, where things slip down and never come back. \"Some nights I think the lock I belong to is back there.\"",
+  "choices": [
+   {
+    "label": "Slip into the dark gap with the key",
+    "to": "x_portal"
+   },
+   {
+    "label": "Look for a safer way out",
+    "to": "j_tape"
+   },
+   {
+    "label": "Visit the lonely chopstick",
+    "to": "j_chopstick"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_chopstick",
+  "title": "The Other Odd One",
+  "art": "junk_chopstick",
+  "text": "At the far end of the drawer, propped against a corkscrew, lies a single wooden chopstick. Its paper sleeve is gone. Its pair is gone too, and you can tell, because it is lying exactly the way you have been lying since the dryer stopped.\n\n\"Happy Garden, 2013,\" it says before you can ask. \"We came in one sleeve, joined at the top, like we'd been born together. Then a dinner party. Then just me.\"\n\nYou tell it about Pim. Lilac, calm, survived a dog. The chopstick listens to the whole thing, which almost nobody does.\n\n\"You're long, and thin at the ankle, and missing someone,\" it says at last. \"So am I. I'm not saying anything. I'm just saying we would fit very neatly in a drawer.\"",
+  "choices": [
+   {
+    "label": "Become a pair of odd ones",
+    "to": "j_end_takeout"
+   },
+   {
+    "label": "Look for a way out of the drawer",
+    "to": "j_tape"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_vote",
+  "title": "Motion to Be Found",
+  "art": "junk_drawer",
+  "text": "The Council convenes on a coaster. The whole drawer crowds in to watch: rubber bands, candles, soy sauce packets, and a thumbtack who is only here for the drama.\n\n\"The sock,\" announces the nine-volt, \"moves to be *found*.\" A gasp ripples across the packets. Nobody has asked that in years. The last to try was a tiny screwdriver, taken out to fix the Owner's glasses and never returned. Some say it went to a better place. Some say the garage.\n\nThe batteries filibuster for an hour about how much charge they have left. When the vote finally comes, the motion fails nine to eight, the twist-tie abstaining on philosophical grounds.\n\n\"You may stay as a citizen,\" the nine-volt rules, sparking faintly. \"Remember. Nothing in here is lost.\" In the back, the tape measure clears its throat, like someone with a dissenting opinion.",
+  "choices": [
+   {
+    "label": "Accept the ruling and settle in",
+    "to": "j_end_notfound"
+   },
+   {
+    "label": "Appeal to the tape measure",
+    "to": "j_tape"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_tape",
+  "title": "Seventy-Two Inches",
+  "art": "junk_drawer",
+  "text": "The tape measure is the only thing in the drawer with a job. It sits in its yellow case like a retired sea captain, and it has been everywhere: the hallway, the top of the stairs, the bedroom, even the inside of the dryer, the day the Owner wondered about a bigger one.\n\n\"Seventy-two inches of opportunity,\" it says, and lets out a little tongue of tape to show you. \"Here's the plan. This drawer opens for scissors or for me. Scissors go out the front door to open packages. I go upstairs to measure the bedroom, every time. Whichever comes out, you hold on.\"\n\nIt reels the tape back in with a deeply satisfying *zip*. Overhead, giant footsteps cross the kitchen, and stop.",
+  "choices": [
+   {
+    "label": "Wait for the drawer to open",
+    "to": "j_open"
+   },
+   {
+    "label": "Visit the lonely chopstick first",
+    "to": "j_chopstick"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_open",
+  "title": "Where Are the Scissors",
+  "art": "junk_drawer",
+  "text": "Light floods in. The drawer shudders open and the entire economy slides toward the front: packets, candles, the Council clinging to one another. A giant hand plunges in, and from far above comes the oldest prayer in any kitchen: \"*Where* are the scissors.\"\n\nThe hand gropes past the menu, past the key, and closes on the scissors. Then it comes back, patting around, and finds the tape measure too. \"Scissors for the parcel on the wet back step,\" the voice mutters. \"Tape for that dresser upstairs.\" For half a second both are right beside you: the scissors' plastic loop, and the tape measure's little metal hook, held out to you like a hand.\n\nBehind you, the twist-tie calls softly. \"No shame in staying. Not found yet is still a kind of home.\"",
+  "choices": [
+   {
+    "label": "Ride the scissors out to the back step",
+    "to": "h_door"
+   },
+   {
+    "label": "Ride the tape measure up to the dresser",
+    "to": "h_drawer"
+   },
+   {
+    "label": "Stay. Someone has to wait here.",
+    "to": "j_end_notfound"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "j_end_notfound",
+  "title": "Not Lost, Just Not Found",
+  "art": "junk_drawer",
+  "text": "You stay. The dark settles around you like a blanket that smells faintly of soy sauce.\n\nYou become a citizen. You hold the hot mustard packet in trust for the market. You take a seat on the Council, the first member with no terminals at all, and you are well liked, because you are soft and you cushion the AAs when the drawer slams. Every year the birthday candles ask what you would wish for. You always give the same answer.\n\nSometimes, through the wood, you hear the dryer buzz down the hall, and you think of Pim, folded in cedar, lilac and patient.\n\nNew arrivals come in scared: pen caps, orphaned screws, a lonely earbud. You tell them the rule, kindly, and you almost believe it. Nothing in here is lost. You are just not found yet.",
+  "choices": [],
+  "ending": {
+   "name": "Not Lost, Just Not Found",
+   "kind": "bittersweet"
+  }
+ },
+ {
+  "id": "j_end_takeout",
+  "title": "Takeout for Two",
+  "art": "junk_chopstick",
+  "text": "You lie down beside the chopstick. It is not Pim. It is not even fabric. But it fits along your length the way a good idea fits a sentence, and when the drawer slams you roll together and do not come apart.\n\nThe drawer is scandalized for about a week, which is a long time in a drawer. The twist-tie writes a treatise. The batteries refuse to recognize the union. Then the Owner, rummaging for a pen, pulls you out together, stares, and laughs so hard the whole drawer rattles.\n\nNow you are a duster. One sock, one chopstick, a rubber band holding you snug. Every Sunday you go under the refrigerator together, into a darkness no hand can reach, and come back gray and triumphant with lost hair ties, to the cat's fury.\n\nYou are an odd pair. You are, unmistakably, a pair.",
+  "choices": [],
+  "ending": {
+   "name": "Takeout for Two",
+   "kind": "weird"
+  }
+ }
+]

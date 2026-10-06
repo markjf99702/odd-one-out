@@ -1,0 +1,10 @@
+{
+  "name": "odd-one-out",
+  "private": true,
+  "type": "module",
+  "description": "You are a sock lost in the dryer. Find your way back to your pair.",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node tools/build.mjs && node test/e2e.mjs"
+  }
+}

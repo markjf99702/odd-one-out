@@ -1,0 +1,350 @@
+[
+ {
+  "id": "w_rinse",
+  "title": "Rewash",
+  "art": "washer",
+  "text": "A giant hand closes around you and lifts you into the light. Far above, the Owner sniffs you, once, and makes the face people make at milk.\n\nYou know what they smell. Dog, maybe. Street, maybe. Or the sour little ghost that creeps into any load left damp too long. It doesn't matter. The verdict is the same. \"Nope,\" says the Owner, and you fly.\n\nYou land in a white steel cavern full of strangers: a towel, three gym socks, a red sweatshirt so new it still has its tag, and a pair of swim trunks announcing to the whole load that he is Captain Trunks. The round glass door slams. A porthole, you realize. A dial clicks to *Normal*. Somewhere a valve opens with a long, hungry hiss.\n\nYour tag says *cold wash only*. Nobody has read it. This is not a room. It is a sea, and it is coming in.",
+  "choices": [
+   {
+    "label": "Grab the nearest thing that floats",
+    "to": "w_captain"
+   },
+   {
+    "label": "Sink to the bottom and brace",
+    "to": "w_fill"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_fill",
+  "title": "The Flood",
+  "art": "washer",
+  "text": "The water pours in from the back of the drum like a waterfall that has been waiting all week for this. It is cold. Nobody read your tag; the Owner is just cheap. You will take it. You are soaked from heel to cuff in a heartbeat, and your darn stings with the shock.\n\nThe flood lifts the towel like an iceberg. Then something rolls out from under it, where the Owner tossed it before anything else: a plump, glossy capsule, blue and green and swirling, glowing like a tiny planet.\n\nIt bobs beside you. Its skin is already thinning. \"Oh good,\" it says, in a voice like bubbles. \"A listener. Quick, I haven't got long.\"\n\nOverhead, Captain Trunks drifts past, legs puffed with air, shouting orders at nobody.",
+  "choices": [
+   {
+    "label": "Listen to the glowing pod",
+    "to": "w_oracle"
+   },
+   {
+    "label": "Swim for the swim trunks",
+    "to": "w_captain"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_captain",
+  "title": "Captain Trunks",
+  "art": "captain_trunks",
+  "text": "You catch hold of a drawstring and haul yourself aboard. The swim trunks float like a raft, both legs swollen with trapped air, a pattern of tiny palm trees across the deck.\n\n\"Welcome aboard the *Board Short*,\" booms the captain. \"Captain Trunks. I have crossed this sea three hundred times. I have seen chlorine. I have seen the *ocean*, the real one, with sand in my pockets for a month.\"\n\nHe looks you over. \"Single, eh? Shame. I've never had that problem. Two legs, one garment. I *am* my own pair.\" He says it kindly, which somehow makes it worse.\n\nBelow, three gym socks paddle in a ring, eyeing you with piratical interest. Above, a glowing pod is dissolving as it mutters to itself.",
+  "choices": [
+   {
+    "label": "Sign on with the gym sock crew",
+    "to": "w_crew"
+   },
+   {
+    "label": "Paddle over to the glowing pod",
+    "to": "w_oracle"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_oracle",
+  "title": "The Pod Speaks",
+  "art": "pod",
+  "text": "The detergent pod turns slowly in the water, shedding blue swirls with every word. \"I am the Pod,\" it says. \"I know all things. I have about forty seconds. Listen.\n\n\"Beware the red one, for it bleeds and does not know it. Beware the blue song in the last rinse, for it is soft and wants you softer. Beware the hose, for it goes down and never up. The ghost will help you, if you are not afraid of the pale. And the door is a shore. All loads come to shore.\"\n\nIt is getting very small now. \"Also, you have a darn on your toe. It's fine. Nobody notices. That one was free.\"\n\nThen it is gone, and the whole sea smells of *Mountain Spring*. The drum gives a lurch. Then another. The weather is turning.",
+  "choices": [
+   {
+    "label": "Hold on tight",
+    "to": "w_storm"
+   },
+   {
+    "label": "Swim for the three gym socks",
+    "to": "w_crew"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_crew",
+  "title": "The Odd Lot",
+  "art": "odd_lot",
+  "text": "The three gym socks are a crew. They call themselves the Odd Lot, and each lost a pair in some heroic way. Whiff lost hers in a locker room. Crusty lost his to a dog park, and wears an iron-on knee patch over one eye to prove it. The smallest, a no-show called Ghostie, isn't sure he ever had one.\n\n\"Sign the articles,\" says Whiff, holding out a soggy receipt. \"Code of the Odd Lot: no sock left behind, no sock left matched, and all treasure split three ways.\"\n\n\"Four ways now,\" says Crusty, glaring.\n\nYou press your heel to the receipt. It dissolves at once, which everyone agrees counts. Whiff grins. \"First job, new sock: there's treasure in the deep. Something sharp and shiny fell out of a jeans pocket last load.\" Under you, the drum gives a lurch. Weather is coming.",
+  "choices": [
+   {
+    "label": "Dive for the treasure",
+    "to": "w_pick"
+   },
+   {
+    "label": "Ride out the storm with the crew",
+    "to": "w_storm"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_pick",
+  "title": "The Guitar Pick",
+  "art": "washer",
+  "text": "You dive. The water is cloudy with suds, and down at the bottom, wedged between two holes in the drum, something glints: a guitar pick, tortoiseshell, worn smooth on one edge from years of the same three chords.\n\n\"Don't,\" it says as you touch it. \"I'm retired. The Owner loses one of us a week. We turn up in sheets, under dryers, in the dog. I have seen things in the bottom of a tip jar that would curl your elastic.\"\n\nYou explain that you are trying to get home. The pick considers this for a long, plasticky moment.\n\n\"Fine. One last gig,\" it says, and lets you tuck it into your cuff. \"I'm good at two things. Strumming, and wedging into places nobody can reach. Let's hope you need one of them.\"",
+  "choices": [
+   {
+    "label": "Rejoin the crew before the storm",
+    "to": "w_storm"
+   },
+   {
+    "label": "Explore the rubber door seal",
+    "to": "w_gasket"
+   }
+  ],
+  "ending": null,
+  "flag": "w_has_pick"
+ },
+ {
+  "id": "w_storm",
+  "title": "Agitate",
+  "art": "captain_trunks",
+  "text": "The storm hits.\n\nThe drum heaves left, stops dead, heaves right. Waves of soapy water slam over everything. Captain Trunks roars into the spray, \"HOLD FAST, YOU BEAUTIFUL LAUNDRY!\" The towel goes overboard, then comes back, then goes overboard again. The three gym socks cling together in a soggy knot, singing a shanty that is mostly just yelling.\n\nYou lose your grip. The sea flings you across the drum like a wet comma. Lightning would be dramatic here, but the washer settles for a loud clunk every few seconds, which is honestly worse.\n\nWhen you surface, gasping suds, you see three things: a pale, ragged shape drifting toward you through the foam, a great red hulk wallowing in a spreading pink cloud, and the rubber seal of the door, wrinkled like a reef.",
+  "choices": [
+   {
+    "label": "Swim toward the pale shape",
+    "to": "w_ghost"
+   },
+   {
+    "label": "Swim toward the red hulk",
+    "to": "w_red"
+   },
+   {
+    "label": "Make for the rubber reef",
+    "to": "w_gasket"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_ghost",
+  "title": "The Bleached",
+  "art": "ghost_shirt",
+  "text": "The pale shape is a T-shirt. Or it was. It was black once, a concert shirt, but now it is splotched with bleach in the shape of continents, so thin you can see the drum through it. It drifts toward you, sleeves out, moaning. \"Cooooold. Waaaash. Ooooonly.\"\n\n\"That's on my tag too,\" you say. The ghost stops moaning and peers closer. \"Teal and mustard,\" it whispers. \"I know you. The bleach pen, two years ago. You were in that load, you and a lilac one, clinging together the whole cycle like you'd been sewn. The pen missed you both. It found me.\" It does not sound bitter. \"I'm Tour Dates. Go home. Somebody should.\n\n\"Listen to the dead: the red one does not know what it does. And the rubber reef by the door is safe.\" Pink is spreading through the water like a rumor.",
+  "choices": [
+   {
+    "label": "Head for the rubber reef",
+    "to": "w_gasket"
+   },
+   {
+    "label": "Go and warn the red one",
+    "to": "w_red"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_red",
+  "title": "The Red Sweatshirt",
+  "art": "red_sweatshirt",
+  "text": "Up close, the red sweatshirt is enormous and very, very cheerful. It says STATE across its chest in white letters that are going faintly rosy. Its tag, still attached, flaps like a little flag.\n\n\"HI!\" it bellows. \"First wash! Isn't this AMAZING? Everyone's so NICE!\" Around it, the water glows a deep, lovely pink. A white undershirt nearby has gone the color of a strawberry milkshake and looks stunned.\n\n\"You're bleeding dye,\" you say, carefully. \"Am I?\" The sweatshirt peers down at itself. \"Huh. Is that bad? Do you want a hug? I give great hugs. I have a hood.\"\n\nYou feel the warm pink current tugging at your stripes. Teal and mustard. You have always been teal and mustard. You have never wondered what else you could be. Until now.",
+  "choices": [
+   {
+    "label": "Accept the hug",
+    "to": "w_pinkend"
+   },
+   {
+    "label": "Paddle away fast and wait out the wash",
+    "to": "w_calm"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_pinkend",
+  "title": "Pink Forever",
+  "art": "pink_forever",
+  "text": "The hug is tremendous. The sweatshirt wraps you in its hood and sleeves and pure good intentions, and the pink soaks into you like sunlight. Your teal goes rose. Your mustard goes coral. Even your red heel patch blushes deeper, as if to say, finally.\n\nWhen the lid opens, the Owner stares into a load of nothing but pink, says a word socks are not supposed to hear, and gives the whole lot to a small niece who receives it like a coronation.\n\nShe wears you to school, to the park, to bed. She wears you with a different pink sock every day and calls you both \"the twins.\" You are rose and coral and loved, and every time you pass a lilac thing you think of Pim, and think: we were always going to end up in the same family of colors.",
+  "choices": [],
+  "ending": {
+   "name": "Pink Forever",
+   "kind": "weird"
+  }
+ },
+ {
+  "id": "w_gasket",
+  "title": "The Rubber Reef",
+  "art": "gasket",
+  "text": "You hook your toe into the door seal and hold on. The gasket is a reef of folds and grooves, and every fold holds a secret: a hair tie, a wad of tissue that went through the wash in a pocket and has become a kind of seafloor snow, and three pennies who have lived here so long they have started a small religion.\n\n\"Welcome, pilgrim,\" say the pennies in unison. \"Rest. The storm passes. The storm always passes. Then comes the calm. Then comes the turning. Then the shore.\"\n\nYou rest. Outside the reef, the sea thrashes, and then, between one clunk and the next, it stops. The water drains away and floods in fresh and clean. You realize the pennies are right, and a little smug about it.",
+  "choices": [
+   {
+    "label": "Swim out into the calm",
+    "to": "w_calm"
+   },
+   {
+    "label": "Stay on the reef for the turning",
+    "to": "w_spin"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_calm",
+  "title": "The Rinse",
+  "art": "washer",
+  "text": "The rinse is the calmest sea you have ever known. Fresh water, no soap, no storm. The drum rocks gently, the way a cradle would if cradles were made of steel. Captain Trunks floats on his back, legs up, humming. The gym socks doze in a heap. Even the red sweatshirt has gone quiet, staring at its pinking letters in mild confusion.\n\nYou drift. For the first time since the buzzer, you are not scared. You are clean. Your stripes feel brighter. The darn on your toe feels less like a flaw and more like a story.\n\n\"Enjoy it,\" the captain calls. \"Rinse never lasts. Next comes the turning, and the turning separates the sailors from the lint.\"\n\nHigh in the machine, something small clicks open. A faint, silky humming begins.",
+  "choices": [
+   {
+    "label": "Ask Vernon what he knows",
+    "to": "w_vernon",
+    "requires": "has_quarter"
+   },
+   {
+    "label": "Brace for the turning",
+    "to": "w_spin"
+   },
+   {
+    "label": "Float closer to the humming",
+    "to": "w_softener"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_vernon",
+  "title": "Vernon at Sea",
+  "art": "coin",
+  "text": "\"Psst,\" says Vernon. The quarter has been riding in your cuff the whole time, Delaware side up, 1998 and proud of it. \"I've been through this washer four times. I know the score.\"\n\n\"You never said.\"\n\n\"You never asked. Listen. When it spins, everything flies to the wall. The small stuff goes out the holes and down the hose. I went down once. Fished out by the Owner's plumber. Twelve dollars an hour to save a twenty-five-cent coin. Worst day of my life. Also best, financially speaking.\"\n\nHe settles deeper in your cuff. \"Grab something big and hold on. Something with legs. And whatever you do, do not let go when the wall starts singing.\"",
+  "choices": [
+   {
+    "label": "Find the captain and hold on",
+    "to": "w_spin"
+   },
+   {
+    "label": "Float on and enjoy the calm",
+    "to": "w_softener"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_spin",
+  "title": "The Turning",
+  "art": "spin_wall",
+  "text": "It starts slow. The drum turns, then turns faster, then faster than turning seems allowed. The sea pulls away from the middle and climbs the walls in a roaring silver whirlpool, and you go with it, flattened against steel full of little holes.\n\nThe wall sings. It is a high, terrible note. Water streams out through the holes beneath you, tugging at your weave, pulling, pulling. A shoelace goes. A button goes, with a tiny scream.\n\nNearby, Captain Trunks is pinned spread-eagle to the drum, magnificent and unbothered. \"GRAB A LEG, STRIPES,\" he bellows over the howl. His drawstring whips past you. Below you, through the holes, you can feel the dark pull of something long and hollow, sighing.",
+  "choices": [
+   {
+    "label": "Grab the captain's leg",
+    "to": "w_unload"
+   },
+   {
+    "label": "Let the water take you",
+    "to": "w_hose"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_hose",
+  "title": "The Drain Hose",
+  "art": "drain",
+  "text": "You slip through the gap where the drum meets the tub and into the dark. Then the river takes you.\n\nThe drain hose is long and ribbed and gray, and it smells of old soap and older sorrows. The water moves slowly here, mournful. Things drift past you: a fleck of tissue, a thread, a single sequin, glinting once and gone. Somewhere ahead, the hose bends down toward the wall and the pipes and the great beyond.\n\nA voice echoes along the ribs, low and patient. \"All things come down the hose eventually,\" it says. It is the hose itself. \"Lint. Thread. Hope. Do not struggle. The current is kind, in its way.\"\n\nYou can feel it pulling you toward the bend. But behind you, faintly, the washer is still sloshing and gulping overhead, not finished with its sea.",
+  "choices": [
+   {
+    "label": "Wedge in the pick, climb to the captain",
+    "to": "w_unload",
+    "requires": "w_has_pick"
+   },
+   {
+    "label": "Swim back against the current",
+    "to": "w_backwash"
+   },
+   {
+    "label": "Let the river carry you",
+    "to": "w_drainend"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_drainend",
+  "title": "Down the Drain Hose",
+  "art": "drain_hose",
+  "text": "You stop fighting. The river carries you to the bend, where the hose meets the wall, and there you catch. Your heel snags on a ridge, and your cuff folds over, and you stick fast, a woolen plug in a plastic throat.\n\nAt first you are frightened. Then the next load drains, and you notice: the sequins and threads and hair ties catch in your weave instead of sinking into the pipes. You are a filter. The hose hums with gratitude. \"No one has ever stayed,\" it says.\n\nYou stay. Load after load, you hear the washer above: storms and calms and the singing wall. You catch what falls. You keep the pipes clear. Sometimes you think of Pim, folded in the cedar dark, and you hope Pim never needs a rewash. And sometimes, between loads, the hose tells you stories, and they are better than you expected.",
+  "choices": [],
+  "ending": {
+   "name": "Down the Drain Hose",
+   "kind": "bittersweet"
+  }
+ },
+ {
+  "id": "w_backwash",
+  "title": "Upstream",
+  "art": "drain",
+  "text": "You swim. Socks are not built to swim, but you are a left sock, and left socks are stubborn. You inchworm up the ribs of the hose against the current, one ridge at a time, while the hose sighs, \"Nobody ever goes back up.\"\n\nThen, far above, the washer kicks into one more rinse, and the water in the hose reverses with a great gulp. A surge of backwash catches you and flings you up the hose, through the gap, and back into the drum, where you land in a heap on top of something warm, red, and delighted.\n\n\"HI!\" shouts the red sweatshirt. \"WHERE DID YOU GO? I MISSED YOU! I miss everybody! Hug?\"\n\nAcross the drum, Captain Trunks is waving his drawstring. \"Stripes! The last spin's coming! Get over here!\"",
+  "choices": [
+   {
+    "label": "Get to the captain",
+    "to": "w_unload"
+   },
+   {
+    "label": "Fine. One hug.",
+    "to": "w_pinkend"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_unload",
+  "title": "Shore",
+  "art": "washer",
+  "text": "The wall stops singing. The drum winds down, slower, slower, and settles with a click. You are plastered to the steel beside Captain Trunks, wrung out, clean, and alive. The gym socks cheer weakly. The red sweatshirt is pinker than anyone expected, including itself.\n\nThen the porthole swings open and light pours in. The Owner's hands scoop out the whole heavy, tangled load, you included.\n\n\"Shore,\" sighs the captain. \"Fair winds, Stripes.\"\n\nA thumb finds your stripes and pauses. Wool. The hand hovers between the round steel door you know far too well and the basket of warm, dry laundry waiting by the wall. You have a strange feeling you have been here before. You have a strange feeling you will wake to a buzzer.",
+  "choices": [
+   {
+    "label": "Get tossed in the basket of dry laundry",
+    "to": "h_basket"
+   },
+   {
+    "label": "Tumble into the dryer, again",
+    "to": "start"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_softener",
+  "title": "The Blue Song",
+  "art": "washer",
+  "text": "The click came from a little drawer high in the machine, one you never noticed. Now it tips open, and the softener comes down.\n\nIt pours into the sea in a long silky ribbon of blue, and it is singing. Not words, exactly. More the feeling of a towel straight off the line. *Let go,* it sings. *You are so soft now. Nobody has to hold on to anything. Drift down, down, where the water goes.*\n\nYour grip loosens. All around you, laundry goes limp and dreamy. The towel is smiling at nothing. Even Captain Trunks has stopped shouting, his drawstring trailing, his eyes half closed.\n\nFar below, the little holes in the drum are humming the same tune, and the drain is listening.",
+  "choices": [
+   {
+    "label": "Clamp your cuff shut and hold on",
+    "to": "w_spin"
+   },
+   {
+    "label": "Ask the pick for one last song",
+    "to": "w_gig",
+    "requires": "w_has_pick"
+   },
+   {
+    "label": "Follow the song down",
+    "to": "w_hose"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "w_gig",
+  "title": "The Last Gig",
+  "art": "captain_trunks",
+  "text": "The guitar pick climbs out of your cuff and squints at the blue song like a heckler. \"Softener,\" it mutters. \"I've played rooms like this. Everybody mellow, nobody listening.\"\n\nThen it braces its worn edge against Captain Trunks's drawstring and strums.\n\nThree chords. The same three it has played for years. They twang off the steel and come back doubled, and the sea starts to slosh in time. The gym socks wake and stamp. The towel hums the bass line. The captain opens one eye, then bellows the chorus of a shanty nobody taught him, and the whole load roars it back.\n\nThe blue song falters, sulks, and slides off down the drain alone.\n\n\"Still got it,\" says the pick, tucking itself back into your cuff. Under you, the wall begins to turn.",
+  "choices": [
+   {
+    "label": "Grab the captain's leg and hold on",
+    "to": "w_unload"
+   },
+   {
+    "label": "Ride the turning on your own",
+    "to": "w_spin"
+   }
+  ],
+  "ending": null
+ }
+]

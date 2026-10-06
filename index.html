@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Odd One Out</title>
+  <meta name="description" content="A choose-your-own-adventure where you are a striped left sock lost in the dryer, trying to get back to your pair. 170 pages, 23 endings, seven places to get lost in.">
+  <meta property="og:title" content="Odd One Out">
+  <meta property="og:description" content="You are a sock lost in the dryer. Find your way back to your pair.">
+  <meta property="og:image" content="https://odd-one-out.junkdrawer.works/og.png">
+  <meta property="og:url" content="https://odd-one-out.junkdrawer.works/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#E9EEF1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161925" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="preload" href="fonts/grandstander.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/literata.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="bar">
+      <div class="brand"><span class="stripes" aria-hidden="true"></span>Odd One Out</div>
+      <button class="tbtn" id="backBtn" type="button" title="Go back one choice">Back</button>
+      <button class="tbtn" id="lfBtn" type="button" title="Endings you have found">Found</button>
+    </header>
+    <main id="page" class="wrap" aria-live="polite"></main>
+    <p class="foot" id="foot"></p>
+  </div>
+
+  <div class="lf" id="lf" hidden role="dialog" aria-modal="true" aria-labelledby="lfTitle">
+    <div class="inner">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <h2 id="lfTitle">Lost &amp; Found</h2>
+        <button class="tbtn" id="lfClose" type="button">Close</button>
+      </div>
+      <p class="sub" id="lfSub"></p>
+      <div class="meter" aria-hidden="true"><i id="lfMeter"></i></div>
+      <ul class="tags" id="lfTags"></ul>
+      <h3 class="maph">Places you have been</h3>
+      <div class="map" id="lfMap"></div>
+      <div class="row">
+        <button class="tbtn" id="restartBtn" type="button">Start a new tumble</button>
+        <button class="tbtn" id="wipeBtn" type="button">Forget my endings</button>
+      </div>
+      <footer class="jd-foot">
+        <a href="https://junkdrawer.works/">Part of junkdrawer.works</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://junkdrawer.works/privacy.html">Privacy</a>
+      </footer>
+    </div>
+  </div>
+
+  <noscript><p class="noscript">Odd One Out needs JavaScript to turn the pages.</p></noscript>
+  <script src="js/sound.js" defer></script>
+  <script src="js/art.js" defer></script>
+  <script src="js/story.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

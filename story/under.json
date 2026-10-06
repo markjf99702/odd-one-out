@@ -1,0 +1,503 @@
+[
+ {
+  "id": "u_gate",
+  "title": "Under the Dryer",
+  "art": "behind",
+  "text": "Whether you dropped through the gap at the back of the drum or squirmed back down the long foil throat of the vent, you end up in the same place: the dark beneath the dryer. It closes over you like a lid. It smells of warm metal and forgotten Tuesdays. The floor is soft. Too soft. You are standing on a carpet of lint so deep it has weather.\n\nSomewhere far off, something sighs: not one voice, but thousands, a slow tide of disappointment. Closer, tiny tracks lead away through the fluff, round and bouncy, as if made by something that rolls on purpose.\n\nAnd to your left, low to the ground, a single red glimmer pulses. Patient. Like it has been expecting a sock exactly like you.\n\nYour toe darn itches. It always itches when you are nervous.",
+  "choices": [
+   {
+    "label": "Follow the bouncy tracks",
+    "to": "u_patrol"
+   },
+   {
+    "label": "Walk toward the sighing",
+    "to": "u_hall"
+   },
+   {
+    "label": "Approach the red glimmer",
+    "to": "u_garnet"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_patrol",
+  "title": "The Fluff Patrol",
+  "art": "dust_bunny",
+  "text": "Three dust bunnies roll out of the gloom and stop in a wobbly line. Each is the size of a grape and carries a toothpick like a pike.\n\n\"Halt, textile!\" squeaks the biggest. \"You stand within the borders of the Lint Kingdom, realm of His Fuzziness, King Fluffington the Ninth. State your business or be *tumbled*.\"\n\nYou do not know what being tumbled means down here, but you have been tumbled for forty minutes on medium heat and did not enjoy it.\n\nBehind the guards, a narrow tunnel burrows into the lint. Above them, a hairpin leans against a bottle cap, picking her teeth with her own tip and watching you with professional interest.",
+  "choices": [
+   {
+    "label": "Demand to see the King",
+    "to": "u_court"
+   },
+   {
+    "label": "Bluff past them into the tunnel",
+    "to": "u_tunnels"
+   },
+   {
+    "label": "Wave to the hairpin",
+    "to": "u_hairpin"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_tunnels",
+  "title": "The Crumb Tunnels",
+  "art": "behind",
+  "text": "The tunnels were dug by generations of dust bunnies who never agreed on a plan. They loop, fork, double back, and occasionally contain a raisin of terrifying age.\n\nYou inch along by feel. Lint vibrations tell you things: here a draft from the cold side, smelling of rain and the outside world. There a warm updraft, rising toward the dryer's belly and the faint clatter of the house beyond. And from deeper in, a low hum, like a choir of socks who have forgotten the words.\n\nThree directions. Your heel patch prickles with indecision. Pim would just pick one and stroll. You admire that and also find it deeply annoying.",
+  "choices": [
+   {
+    "label": "Follow the cold draft",
+    "to": "u_vent_duct"
+   },
+   {
+    "label": "Follow the warm draft upward",
+    "to": "u_climb"
+   },
+   {
+    "label": "Follow the humming",
+    "to": "u_hall"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_court",
+  "title": "The Court of Lint",
+  "art": "throne",
+  "text": "The throne room is a cathedral of fluff. Pillars of compressed lint rise to the dryer's underside, decorated with bottle caps, a staple, and one gleaming paperclip held up as a sacred relic.\n\nCourtiers bob everywhere: dust bunnies in every shade of grey, plus a lady's hair tie acting as chancellor and a crumpled receipt who reads out royal decrees. Everyone is whispering. You catch the words *annual cleaning* and *this very day* and *the Long Hose*.\n\nOn the throne sits a dust bunny the size of a cabbage, crowned with a bent ring-pull. He is snoring. Behind the throne, half hidden, is a small locked door made of felted lint.",
+  "choices": [
+   {
+    "label": "Kneel and request an audience",
+    "to": "u_king"
+   },
+   {
+    "label": "Slip behind the throne to the door",
+    "to": "u_vault"
+   },
+   {
+    "label": "Ask about the annual cleaning",
+    "to": "u_cleaning"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_king",
+  "title": "King Fluffington the Ninth",
+  "art": "dust_bunny",
+  "text": "The chancellor coughs. The King wakes with a great snort that sends three courtiers rolling.\n\n\"A SOCK,\" booms King Fluffington the Ninth, which is impressive for something with no visible mouth. \"We have not had a sock at court since the Great Spin of last spring. What does it want? Speak, striped one.\"\n\nYou explain about Pim, and the drawer, and the darn on your toe, which you did not mean to mention but nerves are nerves.\n\nThe King considers. \"Home, is it? Many come seeking home. Few deserve it. The Lint Kingdom grants passage only to those who prove their *cling*.\" He leans forward, shedding slightly. \"Or to those who bring tribute.\"",
+  "choices": [
+   {
+    "label": "Prove your cling",
+    "to": "u_joust"
+   },
+   {
+    "label": "Let Vernon jingle the tribute",
+    "to": "u_bribe",
+    "requires": "has_quarter"
+   },
+   {
+    "label": "Bow out and follow the sighing",
+    "to": "u_hall"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_bribe",
+  "title": "Royal Tribute",
+  "art": "coin",
+  "text": "Vernon tumbles out of your cuff the instant you loosen it and rolls to the foot of the throne, gleaming like a full moon in a thunderstorm.\n\n\"Your Majesty,\" he says. \"Vernon. Twenty-five cents, Delaware, 1998, a very good year. I have seen the inside of a vending machine, a fountain, and a senator's pocket.\" The court gasps. Nobody down here has ever seen that much money in one piece.\n\nThe King's fluff stands on end with greed. \"We shall keep it!\"\n\n\"You shall *rub* it,\" says Vernon. \"Once. For luck. I'm on loan to the sock.\" The King rubs, and sighs like a kettle. \"Chancellor! Prepare the Royal Lift! Or the Royal Escort to the Vent, if the sock prefers fresh air. We are generous. We are *lucky*.\" Two courtiers wheel in the Royal Lift: a bent teaspoon, aimed up past the dryer at the laundry basket.\n\nVernon rolls back into your cuff, flips to his horseback side, and winks. \"Told you I was worth bringing.\"",
+  "choices": [
+   {
+    "label": "Ride the Royal Lift upward",
+    "to": "h_basket"
+   },
+   {
+    "label": "Take the escort to the Vent",
+    "to": "u_vent_duct"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_joust",
+  "title": "The Static Joust",
+  "art": "dust_bunny",
+  "text": "The court clears a ring. Your opponent is Sir Clump, the King's champion, a dust bunny so dense he has his own gravity.\n\nThe rules are simple: whoever clings to the other longest wins. Sir Clump rolls at you. You do what every sock is born knowing. You rub yourself briskly against the lint floor, build up a terrific charge, and crackle.\n\nSir Clump hits you and sticks. You stick back. Hair-thin sparks dance across your stripes. The court goes silent. Five seconds. Ten. Sir Clump's fluff begins to lift away in tufts. At twenty seconds he drops off you with a small, dignified *pff*.\n\nThe King rises. \"Such cling! Such charge! Never have We seen the like!\"",
+  "choices": [
+   {
+    "label": "Bow and accept the King's praise",
+    "to": "u_heir"
+   },
+   {
+    "label": "Demand your prize: a way home",
+    "to": "u_climb"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_heir",
+  "title": "An Unexpected Offer",
+  "art": "throne",
+  "text": "King Fluffington beckons you close. Up close he smells of old toast and dryer sheets.\n\n\"We are the Ninth,\" he murmurs. \"There will be no Tenth. Our children all went out with the Owner's broom. We need an heir with cling, and wool, and that lovely stubborn striping.\" He lifts the ring-pull crown from his head and holds it toward you. \"Rule the Lint Kingdom. Never be folded, never be sorted, never be judged for a darn.\"\n\nEvery courtier still in earshot holds its breath. Somewhere above, a whole house goes on without you. Somewhere above, Pim is waiting in a drawer, or maybe not waiting anymore.\n\nThe crown is very shiny.",
+  "choices": [
+   {
+    "label": "Accept the crown",
+    "to": "u_crown"
+   },
+   {
+    "label": "Refuse, and ask for the way out",
+    "to": "u_vent_duct"
+   },
+   {
+    "label": "Seek a seer's advice first",
+    "to": "u_garnet"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_crown",
+  "title": "Long Live the Lint",
+  "art": "crowned",
+  "text": "The ring-pull settles over your cuff. It is slightly too big and it is perfect.\n\nYour reign is long and soft. You abolish the tumbling. You turn the Hall of the Unpaired into a social club with board games made from bottle caps. You knight the hairpin. Every spring, when the Owner's broom comes, you lead your people in an orderly evacuation drill, and you lose nobody.\n\nSometimes, late at night, you hear the dresser drawer slide shut far above, and you think of Pim. You hope Pim found a good partner. A dish towel, maybe. Someone calm.\n\nThen a courtier rolls up with a petition about raisin rights, and you straighten your crown, and you get back to work. Stripes the First, Sovereign of Lint. It has a ring to it.",
+  "choices": [],
+  "ending": {
+   "name": "Long Live the Lint",
+   "kind": "good"
+  }
+ },
+ {
+  "id": "u_hall",
+  "title": "The Hall of the Unpaired",
+  "art": "sock_crowd",
+  "text": "The sighing comes from here, so many sighs at once that up close they blur into a hum. The Hall of the Unpaired stretches into the dark further than lint vibrations can reach: rows upon rows of single socks, draped over bottle caps and pencil stubs like tired laundry on a line.\n\nAnkle socks. Knee socks. A lone ski sock still damp with some ancient snow. A baby bootie the size of a thimble, asleep. Nobody is looking for anything. Nobody is going anywhere.\n\nAt the entrance stands a cheerful argyle sock with a clipboard, beaming at you. Beside the door, a huge book bound in a pot holder lies open: the *Registry of the Lost*. And a gap in the back wall lets in a draft.",
+  "choices": [
+   {
+    "label": "Talk to the argyle sock",
+    "to": "u_recruiter"
+   },
+   {
+    "label": "Read the Registry of the Lost",
+    "to": "u_registry"
+   },
+   {
+    "label": "Sneak out the gap in the back",
+    "to": "u_tunnels"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_registry",
+  "title": "The Registry of the Lost",
+  "art": "recruiter",
+  "text": "The Registry is written in the careful thread-stitch of the Unpaired. Every single thing that has fallen behind the dryer has a line.\n\n*One sock, white, sporty, gave up after three days.* *One sock, purple, Christmas pattern, still hopeful (see note).* The note says only: *no longer hopeful.*\n\nFurther down, three entries stand out. *One earring, garnet, arrived with a scream, now gives readings, tips appreciated.* *One letter, red yarn on a gum wrapper, blew in through the vent last winter. Addressed to: MITT. Unclaimed.* And, underlined twice: *Two socks, teal and mustard stripes, red heels. Arrived as a PAIR (unheard of). Did not stay. Went through a soft fold, holding toes.*\n\nYour stitches go hot, then cold. The third pair. The ones nobody talks about. At your elbow, the argyle sock hovers with his clipboard, humming hopefully.",
+  "choices": [
+   {
+    "label": "Ask for Mitt's letter",
+    "to": "u_mitten_twin",
+    "requires": "met_mitt"
+   },
+   {
+    "label": "Go find the garnet earring",
+    "to": "u_garnet"
+   },
+   {
+    "label": "Take the argyle sock's tour",
+    "to": "u_orientation"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_mitten_twin",
+  "title": "The Unclaimed Letter",
+  "art": "mitten",
+  "text": "The argyle sock fetches it from a pigeonhole made of a matchbox: a gum wrapper, folded small and stitched shut with red yarn. *MITT* is spelled out on the front in wobbly lint. \"Nobody claims anything down here,\" he says. \"It's sort of the main activity.\"\n\nYou tell him you know Mitt. He hands it over like a holy relic.\n\nInside, in a child-sized scrawl: *Dear Mitt. It's Mott. I'm in the pastel place, past the soft folds, and I'm safe. I bake now. Come through when you're brave. I'm sorry about the snowball. Love, your Right.*\n\nOn the back, someone has drawn a lint map of the underside of the dryer. One line is marked *warm way up, comes out by the basket*. Another just says *vent*. You tuck the letter into your cuff for safekeeping.",
+  "choices": [
+   {
+    "label": "Take the warm way up",
+    "to": "u_climb"
+   },
+   {
+    "label": "Head for the vent instead",
+    "to": "u_vent_duct"
+   },
+   {
+    "label": "Ask the earring about the pastel place",
+    "to": "u_garnet"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_recruiter",
+  "title": "Argyle Makes an Offer",
+  "art": "recruiter",
+  "text": "\"Welcome, welcome!\" The argyle sock bounces on his heel. \"I'm Argyle. Head of Recruitment, Hall of the Unpaired. Lost your pair? Of course you have, look at you, one sock, very sad, very relatable.\"\n\nHe flips through his clipboard. \"Here's the thing, Stripes. Up there, it's all *pressure*. Find your match, fold nicely, don't get a hole. Down here? No sorting. No drawer. No dread of the Rag. Just rest, forever, in the warm.\"\n\nHe lowers his voice. \"Most socks who go looking end up in the Dog's bed or the bin. You know the statistics. I'm not saying stay. I'm saying take the tour.\"",
+  "choices": [
+   {
+    "label": "Take the tour",
+    "to": "u_orientation"
+   },
+   {
+    "label": "Ask who keeps the Registry",
+    "to": "u_registry"
+   },
+   {
+    "label": "Refuse and slip away",
+    "to": "u_tunnels"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_orientation",
+  "title": "The Tour",
+  "art": "hammock",
+  "text": "Argyle (all argyles are called Argyle; it saves time) shows you the hammocks, strung from hair ties between bottle caps, each with a single sock gently swinging. He shows you the Story Circle, where the Unpaired retell the same three laundry tales very slowly. He shows you the Warm Spot, directly under the dryer's heater, where it is always tumble dry low and nobody is ever asked to do anything.\n\nIt is so warm. Your darn stops itching for the first time in your life.\n\nArgyle holds out his clipboard and a pen nib. \"Just sign at the toe,\" he says kindly. \"You never have to be odd again. Here, everyone is.\"\n\nIn your mind, faintly, you can see Pim, waiting.",
+  "choices": [
+   {
+    "label": "Sign at the toe",
+    "to": "u_unpaired"
+   },
+   {
+    "label": "Think of Pim and run",
+    "to": "u_vent_duct"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_unpaired",
+  "title": "The Comfortable Hall",
+  "art": "hammock",
+  "text": "You sign. Argyle files the page with a satisfied little sniff, and someone helps you into a hammock.\n\nThe days go soft. There are no days, really, only the hum of the dryer above and the occasional thump of a new arrival, who you greet with the same gentle words you were greeted with. You become good at the Story Circle. You tell the tale of a sock with teal and mustard stripes who almost went looking for their pair, and everyone nods, because they all almost did too.\n\nSometimes, very faintly, you hear a drawer open and close far away. It is a nice sound. It used to mean something. You cannot quite remember what.",
+  "choices": [],
+  "ending": {
+   "name": "The Comfortable Hall",
+   "kind": "bittersweet"
+  }
+ },
+ {
+  "id": "u_garnet",
+  "title": "Lady Garnet",
+  "art": "earring",
+  "text": "Low by the wall, a red glimmer pulses. Up close, it is an earring: a garnet in a tarnished silver claw, hanging from a bent nail like a lantern. Around her, someone has arranged a tent of an old silk scarf and three birthday candles that have never been lit.\n\n\"Lady Garnet,\" she says, swinging slightly. \"Seer, sage, and formerly the left ear of a very important wedding guest. Sit, sock. I have seen you coming since the rinse cycle.\"\n\nHer voice is all glitter and gravel. Behind her, propped against the wall, is a compact mirror, open, its glass rippling in a way glass should not. \"A reading costs nothing,\" she says. \"The mirror costs everything. Choose.\"",
+  "choices": [
+   {
+    "label": "Ask for a reading",
+    "to": "u_reading"
+   },
+   {
+    "label": "Look into the mirror",
+    "to": "u_mirror"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_reading",
+  "title": "The Reading",
+  "art": "earring",
+  "text": "Lady Garnet spins on her nail until she is a blur of red. Her voice drops an octave.\n\n\"I see a black bird who wants you for a pillow. Say no to the bird, unless you like heights. I see a golden beast with a wet nose who will love you far too much. I see a cat who pretends not to care, and cares. I see a crown made from a ring-pull that fits better than it should. I see a drawer, a dark wooden mouth, and someone inside it who has not stopped counting the days.\"\n\nShe stops spinning, dizzy. \"Also, a hairpin will offer you a deal. Take it. She is the only honest thief under this dryer. And the cold draft leads outside, if outside is what you want.\"",
+  "choices": [
+   {
+    "label": "Find the hairpin",
+    "to": "u_hairpin"
+   },
+   {
+    "label": "Follow the cold draft outside",
+    "to": "u_vent_duct"
+   },
+   {
+    "label": "Look into the mirror after all",
+    "to": "u_mirror"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_mirror",
+  "title": "The Rippling Mirror",
+  "art": "portal",
+  "text": "You lean over the compact mirror. Your own face does not look back, since socks do not really have faces. Instead you see a place: pastel, soft-edged, full of socks walking arm in arm with oven mitts, tea cozies, and one very happy pot holder.\n\nThe glass bends toward you like warm fabric, then softens into a fold. It smells of lavender and something you cannot name, something like the first wash of your life.\n\n\"They are happy there,\" Lady Garnet says quietly. \"Truly. But time works differently, and memory is a loose thread. Pull it and it unravels.\" She does not tell you not to go. She just watches you, glinting.",
+  "choices": [
+   {
+    "label": "Step through the soft fold",
+    "to": "x_portal"
+   },
+   {
+    "label": "Back away and find the Lint King",
+    "to": "u_court"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_hairpin",
+  "title": "Pinsworth the Hairpin",
+  "art": "vault",
+  "text": "You find the hairpin lounging against a bottle cap, exactly where a hairpin would lounge if she wanted the right sort of client to find her. Up close she is all elbows. One end is bent from years of work and the other has lost its plastic tip, which she says she misses \"like a tooth.\"\n\n\"Pinsworth. Lockpick, locksmith, lock-whisperer. Formerly in the employ of a lady who lost me in a laundry pocket.\" She taps a bottle cap with her tip. *Click.* \"There's not a lock under this dryer I can't open. The King's vault, the vent grate, the secret hatch to the Owner's world. Name it.\"\n\nShe pauses. \"I work for gossip. Tell me one good secret and I'm yours for the afternoon.\" You tell her about the third pair from your three-pack. She goes very quiet, then nods with respect.",
+  "choices": [
+   {
+    "label": "Let her crack the King's vault",
+    "to": "u_treasury"
+   },
+   {
+    "label": "Have her lead you to the Vent Duct",
+    "to": "u_vent_duct"
+   }
+  ],
+  "ending": null,
+  "flag": "has_hairpin"
+ },
+ {
+  "id": "u_vault",
+  "title": "The Felted Door",
+  "art": "vault",
+  "text": "Behind the throne is a little door of felted lint, studded with thumbtacks and locked with a padlock from a child's diary. Painted on it, in what might be ketchup: *ROYAL TREASURY. KEEP OUT. THIS MEANS SOCKS.*\n\nYou press your ear to it. Inside, something chimes softly, the sound of many small precious things settling.\n\nThen the floor shudders. Far above, a door opens, and footsteps the size of continents cross the laundry room. A cupboard clanks. Something long and plastic is dragged out of it, bumping along the floor. All over the court, dust bunnies go pale, which is hard for something already grey. \"The Long Hose,\" somebody whimpers. \"It's *today*.\"\n\nThat lock had better open fast.",
+  "choices": [
+   {
+    "label": "Have Pinsworth pick the lock",
+    "to": "u_treasury",
+    "requires": "has_hairpin"
+   },
+   {
+    "label": "Go find a lockpick",
+    "to": "u_hairpin"
+   },
+   {
+    "label": "Go see what's coming",
+    "to": "u_cleaning"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_treasury",
+  "title": "The Royal Treasury",
+  "art": "vault",
+  "text": "Pinsworth squares up to the felted door behind the throne, where the King snores on, oblivious. She bends over the little diary padlock and listens to it like a doctor. *Click.* She bows. The door swings open.\n\nInside is every lost thing the Lint Kingdom ever saved: buttons, a guitar pick, a single contact lens in a bottle cap like a holy pool, the cap of a pen, and a whole drift of glittering sequins. Hung on the wall is the King's greatest secret: a map, scratched into a cracked bathroom tile, showing a hidden shaft that rises straight from the treasury up behind the dryer.\n\nAnd at the very back, where the wall should be, the air is folded like a pillowcase. Pastel light leaks through. It smells of lavender.\n\nOut in the court, something enormous begins to roar. \"Huh,\" says Pinsworth, eyeing the fold. \"Never opened one of *those* before. Choose quick, Stripes.\"",
+  "choices": [
+   {
+    "label": "Climb the secret shaft",
+    "to": "u_climb"
+   },
+   {
+    "label": "Step into the pastel fold",
+    "to": "x_portal"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_vent_duct",
+  "title": "The Vent Duct",
+  "art": "vent_duct",
+  "text": "The Vent Duct is a great silver accordion of foil, snaking off into the wall. Up close it creaks and murmurs, and when it speaks, it speaks in echoes.\n\n\"*Small one... small one... one...*\" Its voice is a long cold breath. \"*I carry the heat out, out, out. I carry lint out. I could carry you out, out.*\"\n\nThrough its ribbed throat you can see a pinprick of daylight, and you feel the pull of the air toward it. Outside: the yard, the sky, things you have only heard about from socks who came back changed.\n\n\"*Or,*\" adds the Duct, \"*there is the climb. The climb back up. Up. Up.*\"",
+  "choices": [
+   {
+    "label": "Let the Duct carry you out",
+    "to": "o_vent"
+   },
+   {
+    "label": "Take the climb back up",
+    "to": "u_climb"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_climb",
+  "title": "The Long Climb",
+  "art": "behind",
+  "text": "The way home, it turns out, goes up. You inch upward along the back of the dryer, clinging with every scrap of static you have. The metal is still warm. Wires loop past like jungle vines. A forgotten penny watches from a ledge, judgmental.\n\nHalfway up, your stripes catch on a screw head and you hang there, swinging, while the whole laundry room tilts below you. The darn on your toe holds. Good darn. Best darn.\n\nAt the top, a sliver of light: the gap between the dryer and the wall, and beyond it, just below, the rim of a plastic laundry basket heaped with warm towels. It is a long jump. It is a very long jump for a sock.",
+  "choices": [
+   {
+    "label": "Leap for the basket",
+    "to": "h_basket"
+   },
+   {
+    "label": "Lose your nerve and slide to the Duct",
+    "to": "u_vent_duct"
+   },
+   {
+    "label": "Ask the judgmental penny",
+    "to": "u_penny"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_penny",
+  "title": "The Penny on the Ledge",
+  "art": "coin",
+  "text": "You haul yourself onto the ledge beside the penny. It is a 1974 Lincoln, brown as a cough drop, and it has clearly been up here a long time, judging.\n\n\"Another one,\" it says. \"Socks. Always climbing. Always leaping. Do you know how many socks I have watched miss that basket?\" It nods at a tally scratched into the dust on the ledge. It is a long tally. Some of the marks have little stripes drawn on them, out of respect.\n\n\"Free advice, since I am worth one cent and I know it. Don't jump. Socks that try to fly, miss. Go limp. Fall like a sock that has given up on everything, and the basket will catch you out of pity.\"\n\nIt sniffs. \"Or jump. Add to my tally. See if I care.\"",
+  "choices": [
+   {
+    "label": "Go limp and flop toward the basket",
+    "to": "h_basket"
+   },
+   {
+    "label": "Slide back down to the Duct",
+    "to": "u_vent_duct"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_cleaning",
+  "title": "The Annual Cleaning",
+  "art": "vacuum",
+  "text": "Nobody has time to explain. The light comes first. The whole dryer groans and scrapes forward as giant hands drag it from the wall, and daylight floods the Lint Kingdom for the first time in a year. Dust bunnies scatter, shrieking. The King is rolling in circles shouting \"ORDER! ORDER!\"\n\nThen the Long Hose descends. Its mouth is round and black and roaring, and it eats the far corner of the kingdom in one long slurp: pillars, bottle caps, three guards, a raisin.\n\nIt swings toward you. You can feel the pull in your cuff. Nearby, a bottle cap lies upturned like a little steel bunker. Behind you, the King has rolled into a corner and is trembling.",
+  "choices": [
+   {
+    "label": "Dive under the bottle cap",
+    "to": "u_hide"
+   },
+   {
+    "label": "Stand and shield the King",
+    "to": "u_vacuumed"
+   },
+   {
+    "label": "Run for the vent",
+    "to": "u_vent_duct"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_hide",
+  "title": "Under the Bottle Cap",
+  "art": "vacuum",
+  "text": "You dive under the bottle cap and pull your toe in tight. The roar passes overhead like a storm made of hunger. The cap rattles, lifts a terrible half inch, and drops back down. Then the roar moves on, and on, and stops.\n\nWhen you peek out, the Lint Kingdom is mostly gone. The floor is bare linoleum, shocking and cold. A giant hand reaches down and plucks up a stray sock nearby, then another, and tosses them into a basket.\n\nFrom the corner, King Fluffington wobbles out, much smaller than before. \"The kingdom,\" he whispers. \"We must rebuild.\" He looks at you. Over at the basket, the hand is reaching again.",
+  "choices": [
+   {
+    "label": "Stay and help the King rebuild",
+    "to": "u_heir"
+   },
+   {
+    "label": "Let the hand find you",
+    "to": "h_basket"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "u_vacuumed",
+  "title": "The Long Hose",
+  "art": "garbage",
+  "text": "You plant yourself in front of King Fluffington and spread your cuff wide. \"Not today!\" you cry, which is very brave and also not how vacuums work.\n\nThe Long Hose takes you with a single *thwup*. You tumble through a dark tube, past screaming dust bunnies and a terrified paperclip, and land in the bag: a warm grey world of hair and crumbs and one Lego.\n\nIt is not so bad, actually. The King is in here too, and most of the court. You hold a small ceremony and crown nobody. On Thursday, the bag goes out to the curb, and you hear the truck coming, and you think: well. At least I was brave about it.",
+  "choices": [],
+  "ending": {
+   "name": "Into the Bag",
+   "kind": "bad"
+  }
+ }
+]

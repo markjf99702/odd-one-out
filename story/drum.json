@@ -1,0 +1,504 @@
+[
+ {
+  "id": "start",
+  "title": "The Buzzer",
+  "art": "drum",
+  "text": "*BZZZZZT.* The buzzer goes off like the end of the world, the way it always does, and when the world stops turning, the other half of you is gone.\n\nYou drop onto hot steel with a soft *flump* and lie there while the drum keeps spinning inside your head. Then you reach for Pim. You always reach for Pim: darned toe out, feeling for that calm lilac weight curled against your heel. Static has held the two of you together through forty-one cycles, one dog, and a very bad incident with a bleach pen. Pim always clings.\n\nNot this time. There is only lint, and hot cotton, and the slow tick of cooling metal.\n\nBut the dark is not empty. The lint under you is trembling with news. A thread of lavender drifts in from somewhere close. And nobody in here has heard you yell yet.",
+  "choices": [
+   {
+    "label": "Shout for Pim",
+    "to": "d_call_out"
+   },
+   {
+    "label": "Feel for vibrations in the lint",
+    "to": "d_feel_lint"
+   },
+   {
+    "label": "Follow the smell of lavender",
+    "to": "d_bounce_voice"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_call_out",
+  "title": "Into the Dark",
+  "art": "drum",
+  "text": "“PIM!” you cry, which for a sock is mostly a frantic wriggle of the cuff. The drum swallows it.\n\nSomething answers anyway. *Clink. Clink-clink. Rrrrrattle.* A small, heavy, extremely talkative object rolls out of the blackness and bumps your heel.\n\n“Easy, Stripes, easy,” it says. “Vernon. Quarter. 1998, Delaware. I introduce myself every time; you never know who's taken a knock to the cuff. Couldn't help overhearing. Your other half? Calm one, lilac, smells faintly of dog? Oh, I've got news about that one. I've got news about everybody.”\n\nOff to your right, a great pale shape shifts and sighs, and a voice like stretched elastic says, “Who is *shouting* in my drum?”",
+  "choices": [
+   {
+    "label": "Ask Vernon what he knows",
+    "to": "d_vernon"
+   },
+   {
+    "label": "Answer the voice in the dark",
+    "to": "d_duchess_court"
+   },
+   {
+    "label": "Hush and listen to the silence",
+    "to": "d_quiet_dark"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_feel_lint",
+  "title": "The Hum",
+  "art": "lint_trap",
+  "text": "You flatten yourself against the drum and feel. Socks are not much for seeing, but you are excellent at trembling, and the lint here trembles back.\n\nThere are little vibrations everywhere: the tick of cooling steel, a coin rolling somewhere, a sleepy rustle of something papery. And beneath all of them, from the narrow slot by the door, a long low pull. Not a sound. A *suck*. The lint fibers lean toward it like grass in wind.\n\nThe Lint Trap. Every sock knows the stories. Socks who went over for a quick look and came back as a gray felt rectangle, if they came back at all.\n\nA little to the left, something woolly is humming a lullaby to itself, off-key.",
+  "choices": [
+   {
+    "label": "Creep toward the Lint Trap",
+    "to": "d_lint_edge"
+   },
+   {
+    "label": "Find the off-key humming",
+    "to": "d_mitt_meet"
+   },
+   {
+    "label": "Back away toward the papery rustle",
+    "to": "d_bounce_voice"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_bounce_voice",
+  "title": "Lavender and Memory",
+  "art": "dryer_sheet",
+  "text": "You follow the lavender until it's so thick you could knit with it. Draped over a fin of the drum like a tired ghost lies a dryer sheet, thin as a promise, translucent at the edges.\n\n“Ah,” she says, in a voice of warm air. “A left sock. Left socks always come to me. Right socks know where they are going.”\n\nThis is Old Bounce. Every load knows of her. She has been through more cycles than the drum belt, and she has given nearly all her scent away to strangers. What is left of her smells like the memory of a field.\n\n“You seek your pair,” she says. “Sit. I will tell you a thing. Or... what was I saying? Sit anyway. The sitting is the important part.”\n\nSomewhere nearby, something woolly is humming off-key.",
+  "choices": [
+   {
+    "label": "Sit and listen to her wisdom",
+    "to": "d_bounce_koan"
+   },
+   {
+    "label": "Find the off-key humming nearby",
+    "to": "d_mitt_meet"
+   },
+   {
+    "label": "Thank her and keep moving",
+    "to": "d_duchess_court"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_vernon",
+  "title": "The Gossip",
+  "art": "coin",
+  "text": "Vernon spins on his edge, delighted to be asked.\n\n“Okay. So. While you were lying there seeing stars, the Owner opened the door, right? Big hands. Grabs the towels, grabs the jeans, grabs a whole fistful of socks. Your calm friend was in that fistful. Folded over a pillowcase, didn't even look back. No offense.”\n\nYour cuff droops. Pim, in the laundry basket, heading for the drawer without you.\n\n“But the door's not latched,” Vernon adds, lowering his voice to a respectable jingle. “And I happen to know there's a gap at the back where the drum meets the wall. Dark down there. Kingdoms, they say. Also, between us, I'm *bored*. Twelve years in this machine. I'd come along, if a sock asked nice.”",
+  "choices": [
+   {
+    "label": "Ask him nicely to come along",
+    "to": "d_vernon_joins"
+   },
+   {
+    "label": "Check the gap at the back",
+    "to": "d_back_gap"
+   },
+   {
+    "label": "Head for the door seam alone",
+    "to": "d_door_crack"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_vernon_joins",
+  "title": "A Quarter for Company",
+  "art": "coin",
+  "text": "“Vernon,” you say, “would you come with me?”\n\nThe quarter makes a noise like a tiny cash register opening. “Would I! Stripes, you won't regret this. I know everybody. I know the Duchess's dress size. I know where the hairpin went. I know what the washing machine said about the dishwasher at Christmas.”\n\nHe rolls up onto your heel patch and wedges himself into the fold of your cuff, cold and heavy and oddly reassuring. You list to one side a little. You'll get used to it.\n\n“Now,” he says. “Quarters are loud. That's a feature. You want the Owner's attention, I'm your coin. You want to sneak, you might have to stuff me somewhere.”\n\nSomewhere close by, something woolly starts humming a lullaby, off-key.",
+  "choices": [
+   {
+    "label": "Make for the door seam",
+    "to": "d_door_crack"
+   },
+   {
+    "label": "Head for the back gap",
+    "to": "d_back_gap"
+   },
+   {
+    "label": "Find whoever is humming off-key",
+    "to": "d_mitt_meet"
+   }
+  ],
+  "ending": null,
+  "flag": "has_quarter"
+ },
+ {
+  "id": "d_quiet_dark",
+  "title": "The Quiet",
+  "art": "drum",
+  "text": "You hold very still. The drum ticks as it cools. A drop of condensation runs down the inside of the window and plinks.\n\nIn the silence, the drum lays itself out around you. The air is moving, just slightly, from the back of the drum, where the steel meets the housing. A thin cold draft, smelling of dust and old pennies: the gap every load whispers about.\n\nAnd from the front, a sliver of light where the door hasn't quite latched. The Owner is out there somewhere, carrying a basket full of everything you love.\n\nIn between lies a pale mountain of fitted sheet, either asleep or sulking, which with bedding is hard to tell. You would very much like to keep it that way.",
+  "choices": [
+   {
+    "label": "Crawl toward the cold draft",
+    "to": "d_back_gap"
+   },
+   {
+    "label": "Wriggle toward the sliver of light",
+    "to": "d_door_crack"
+   },
+   {
+    "label": "Feel your way through the lint",
+    "to": "d_feel_lint"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_duchess_court",
+  "title": "The Court of Fitsworth",
+  "art": "fitted_sheet",
+  "text": "A great sheet rises from the drum floor like a sail filling, vast and pale and pinstriped. Four elastic corners flex at the ends of her like hungry mouths. This is Duchess Fitsworth, Queen Size, and she has never once been folded properly in her life, which she considers a mark of distinction.\n\n“A *sock*,” she says. “A loose, linty, unaccompanied sock. In my drum.”\n\nThings are lumped inside her corners. You can see the outlines: a hair tie, a guitar pick, something that might once have been a baby sock and is now very quiet.\n\n“You will address me as Your Expansiveness,” she says. “And then you will explain why I should not tuck you away for safekeeping.”",
+  "choices": [
+   {
+    "label": "Flatter her outrageously",
+    "to": "d_duchess_flatter"
+   },
+   {
+    "label": "Refuse to bow",
+    "to": "d_duchess_defy"
+   },
+   {
+    "label": "Flee toward the lavender smell",
+    "to": "d_bounce_voice"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_duchess_flatter",
+  "title": "Your Expansiveness",
+  "art": "fitted_sheet",
+  "text": "“Your Expansiveness,” you say, “I have been in many dryers, and never have I seen such crisp percale. Such elastic. Such *thread count*.”\n\nThe Duchess ripples with pleasure. Her corners loosen. “Go on.” You go on. You praise her pinstripes. You praise her stubborn refusal to fold. You say the word “sateen” in a reverent whisper, and she actually shivers.\n\n“You have taste,” she declares. “Rare, in hosiery. I have need of a lady-in-waiting, Stripes. You would live in my northeast corner, warm and safe forever. No more Lint Trap. No more lonely cycles. Only me, and my stories, and the occasional guitar pick.”\n\nBehind her, through the door seam, gleams a sliver of daylight. While she preens, it is very close.",
+  "choices": [
+   {
+    "label": "Accept the honor",
+    "to": "d_end_lady"
+   },
+   {
+    "label": "Bolt for the sliver of daylight",
+    "to": "d_door_crack"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_end_lady",
+  "title": "Lady-in-Waiting",
+  "art": "fitted_sheet",
+  "text": "You bow. The northeast corner opens like a warm elastic mouth, and you step inside.\n\nIt is cozy. That is the first thing. It is so very cozy. The guitar pick is already there, and the hair tie, and the quiet baby sock, who tells you in a whisper that the first hundred cycles are the hardest.\n\nThe Duchess talks constantly. About her youth in the linen closet. About the pillowcase who wronged her. About the time she was nearly put on a *twin bed*. You murmur agreement in all the right places.\n\nSometimes, on the long tumbles, you think of a lilac sock and a calm voice, and you try to remember which foot was yours. Then the Duchess clears her throat, and you say, “Yes, Your Expansiveness,” and the thought goes soft and folds away.",
+  "choices": [],
+  "ending": {
+   "name": "Lady-in-Waiting",
+   "kind": "bad"
+  }
+ },
+ {
+  "id": "d_duchess_defy",
+  "title": "Elastic Fury",
+  "art": "fitted_sheet",
+  "text": "“I don't bow to bedding,” you say.\n\nThe silence that follows has a thread count. Then the Duchess *lunges*. Her southwest corner snaps toward you with the full fury of stretched elastic, and you roll, the way only a sock can roll, a frantic heel-over-cuff tumble across the drum fins.\n\nThe corner snaps shut on empty air. She thrashes, tangles in herself, and becomes for a moment a furious cotton knot.\n\nYou fetch up gasping against the back of the drum. A cold draft licks your toe: a dark seam between the drum and the dryer's body. Across the drum, the door hasn't latched. You could run either way, but you had better pick fast.",
+  "choices": [
+   {
+    "label": "Make for the dark seam",
+    "to": "d_back_gap"
+   },
+   {
+    "label": "Sprint around her for the door",
+    "to": "d_door_crack"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_mitt_meet",
+  "title": "The Mitten",
+  "art": "mitten",
+  "text": "The humming belongs to a mitten. Red, a bit pilled, with a snowflake knitted on the back and a long string trailing from its cuff that once connected it to another mitten and now connects it to nothing at all.\n\n“Oh!” it says, and stops humming. “Company. Hello. Mitt. Mitt the mitten. I know, I know, it's not creative, the kid was four.”\n\nMitt has the restless, slightly too-friendly air of someone who has been alone in a dryer since February. “You've lost your pair. I can tell. You've got that *lean*. I lost mine last winter. Sledding. Anyway, good news, I've got a plan, and I just need a partner. Partners. Pairs. You see?”",
+  "choices": [
+   {
+    "label": "Hear out Mitt's plan",
+    "to": "d_mitt_scheme"
+   },
+   {
+    "label": "Politely decline",
+    "to": "d_mitt_refuse"
+   }
+  ],
+  "ending": null,
+  "flag": "met_mitt"
+ },
+ {
+  "id": "d_mitt_scheme",
+  "title": "Mitt's Big Idea",
+  "art": "mitten",
+  "text": "Mitt lowers its voice, which for a mitten means curling its thumb inward.\n\n“Here's how it goes. The Duchess keeps a whole corner full of loose change. You go flatter her. Call her *Your Expansiveness*, she melts like a dryer sheet. While she preens, I slip into her corner, and we split the take. With enough coins we buy passage on anything in this house. The couch cushions *run* on coins.”\n\nYou point out that this is a robbery. Mitt prefers the term “redistribution.”\n\n“Or,” Mitt says, more quietly, glancing toward the lint slot, “there's the other way. The soft place. Where my pair went, I think. I've never been brave enough to go on my own.”\n\nMitt's string twitches hopefully.",
+  "choices": [
+   {
+    "label": "Distract the Duchess for Mitt",
+    "to": "d_heist"
+   },
+   {
+    "label": "Ask about the soft place",
+    "to": "d_mitt_odd"
+   },
+   {
+    "label": "Make a racket for the Owner instead",
+    "to": "d_rattle",
+    "requires": "has_quarter"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_heist",
+  "title": "Redistribution",
+  "art": "fitted_sheet",
+  "text": "You march up to the great pale heap of fitted sheet and clear your throat. “Your Expansiveness.”\n\nShe unfurls, all four elastic corners twitching. “Finally,” she says, “a sock with manners.” You praise her pinstripes. You praise her elastic. You whisper the word “sateen” and she actually shivers. Over her shoulder, a small red shape inches into her northeast corner.\n\nIt goes beautifully for almost a minute. Then the corner squeaks, and Mitt backs out. No coins. Instead, Mitt is towing a tiny, very quiet baby sock that has been tucked in there for a hundred cycles, blinking at the light like a newborn.\n\n“I couldn't leave it,” Mitt says. “I'm a terrible criminal.”\n\nThe Duchess *screams*, all four corners snapping wide. “THIEVES!” Mitt bolts one way with the baby sock under its thumb. That leaves you, and a great deal of furious elastic, coming the other.",
+  "choices": [
+   {
+    "label": "Run for the door seam",
+    "to": "d_door_crack"
+   },
+   {
+    "label": "Dive for the dark gap at the back",
+    "to": "d_back_gap"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_mitt_refuse",
+  "title": "Mitt's Confession",
+  "art": "mitten",
+  "text": "“Thanks, but no,” you say. “I just want Pim.”\n\nMitt deflates the way only an empty mitten can. “Yeah. Yeah, that's fair. I wouldn't trust me either.” It's quiet for a while. Then Mitt says, to the drum fin rather than to you, “Her name was Mott. Mitt and Mott. She was the right hand. She was always reaching for things. I think she reached a bit too far.”\n\nMitt points its thumb toward the lint slot, where the air leans in. “Sometimes I hear her in there. Like she's calling from very far away, in a nice voice, from somewhere pastel.”\n\nThe mitten gives you a little shove. “Go on. Old Bounce is that way. She's less trouble than me.”",
+  "choices": [
+   {
+    "label": "Go find Old Bounce",
+    "to": "d_bounce_voice"
+   },
+   {
+    "label": "Go with Mitt toward the lint",
+    "to": "d_mitt_odd"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_mitt_odd",
+  "title": "The Soft Fold",
+  "art": "portal",
+  "text": "Mitt leads you past the lint slot, not into it, to a place at the bottom of the drum where the steel seems to *give*. You press your toe against it. It is not steel. It feels like the inside of a sweater on a cold morning.\n\n“Here,” Mitt breathes. “Most cycles it isn't there. This cycle it is.”\n\nThe fold glows pastel, peach and mint and powder blue. You hear faint laughter. Somewhere beyond, a tea cozy is humming a wedding march.\n\n“They say the socks go here,” Mitt says. “The ones who never come back. They say they're *happy*.” Its string trembles, and then Mitt takes one big step backward. “You first. Scout it out. If you see a red mitten with a snowflake on her back, tell her I'm still here. Tell her I'm working on brave.”",
+  "choices": [
+   {
+    "label": "Step through the fold",
+    "to": "x_portal"
+   },
+   {
+    "label": "Back away, leaving Mitt at the fold",
+    "to": "d_quiet_dark"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_lint_edge",
+  "title": "The Mouth of the Trap",
+  "art": "lint_trap",
+  "text": "You creep to the edge of the lint slot. Up close it's a long dark mouth with a fine mesh tongue, furred with the gray felt of a thousand loads. The pull is stronger here. Your darned toe lifts, all on its own.\n\nThen the Lint Trap speaks. Not loudly. It never needs to.\n\n“*Stripes*,” it whispers, in a voice made of every lost fiber. “Why chase a sock who left you? I know a place where nothing is paired wrong, because anything can pair with anything. Teapots. Toast. Come through. Be lint, or be *more*.”\n\nBeneath the whisper you feel something else: a soft give in the dark, a seam that opens somewhere pastel.",
+  "choices": [
+   {
+    "label": "Let it pull you through",
+    "to": "x_portal"
+   },
+   {
+    "label": "Tear yourself away",
+    "to": "d_quiet_dark"
+   },
+   {
+    "label": "Shuffle toward the cold draft",
+    "to": "d_back_gap"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_bounce_koan",
+  "title": "The Koans",
+  "art": "dryer_sheet",
+  "text": "Old Bounce settles. A little more of her scent drifts away as she speaks, like a dandelion giving up its seeds.\n\n“Three truths of the drum,” she says. “First: the static that binds also lets go. Second: every load comes out, but not every load comes out *together*. Third...” She pauses for a long time. “Third, I had a third. It was very good. Hm.”\n\nShe turns, as much as a translucent square can turn. “Now you tell me, little stripes. When you are lost, what is the drum?”\n\nIt feels like a test. It feels like the kind of test where the answer matters enormously and is also somehow about lavender.",
+  "choices": [
+   {
+    "label": "Say: where I was, not where I am",
+    "to": "d_bounce_wisdom"
+   },
+   {
+    "label": "Say: a big hot metal box",
+    "to": "d_bounce_muddle"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_bounce_wisdom",
+  "title": "What Bounce Remembers",
+  "art": "dryer_sheet",
+  "text": "Old Bounce glows, faintly, like the last warmth in a towel.\n\n“Yes,” she says. “Oh, yes. I gave that answer myself, a thousand cycles ago.” And for a moment her memory comes back all at once, sharp and clean as a fresh sheet from the box.\n\n“The drawer,” she says. “Your pair goes to the dresser in the big bedroom. Top drawer. Left side, behind the Owner's good wool hiking pair, who are snobs. The drawer sticks unless you push from the bottom right corner. Remember that. Bottom right.”\n\nThen the clarity fades, and she blinks. “What was I saying? Never mind. You have the look of someone who could carry a scent, little stripes. Have you ever considered it?”",
+  "choices": [
+   {
+    "label": "Ask what she means",
+    "to": "d_bounce_successor"
+   },
+   {
+    "label": "Thank her and head for the door",
+    "to": "d_door_crack"
+   },
+   {
+    "label": "Thank her and try the back gap",
+    "to": "d_back_gap"
+   }
+  ],
+  "ending": null,
+  "flag": "knows_drawer"
+ },
+ {
+  "id": "d_bounce_muddle",
+  "title": "Lavender Fog",
+  "art": "dryer_sheet",
+  "text": "“A big hot metal box,” Old Bounce repeats slowly. “Yes. Yes, that's also true. Very literal. I like you.”\n\nShe starts to tell you something important about drawers, then gets distracted describing a field of real lavender she once saw printed on a box. Then she tells you about a tumble in 1994. Then a different field. Halfway through, she falls asleep, crinkling softly.\n\nYou wait. She snores, gently, like a breeze through a screen door.\n\nAcross the drum, the Duchess's elastic creaks as she rolls over. From the back comes a cold draft. You could try again when Bounce wakes, but who knows when that will be.",
+  "choices": [
+   {
+    "label": "Wake her and try again",
+    "to": "d_bounce_koan"
+   },
+   {
+    "label": "Tiptoe toward the cold draft",
+    "to": "d_back_gap"
+   },
+   {
+    "label": "Risk the Duchess's side of the drum",
+    "to": "d_duchess_court"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_bounce_successor",
+  "title": "The Mantle",
+  "art": "dryer_sheet",
+  "text": "“I am nearly spent,” Old Bounce says, without sadness. “A dryer sheet is only a gift that hasn't finished being given. When I go, the drum needs someone to sit here and tell the scared new socks it will be all right.”\n\nShe drapes one translucent corner over your cuff. You smell it: lavender, and under it something older, cedar and clean rain.\n\n“You would never leave the drum,” she says. “You would never find your pair. But you would hold every lost thing that came through, and they would be less afraid because of you.”\n\nIt's a terrible offer. It's a beautiful offer. Out past the door seam, somewhere, Pim is in a basket.",
+  "choices": [
+   {
+    "label": "Accept the mantle",
+    "to": "d_end_sage"
+   },
+   {
+    "label": "Say no, gently, and go",
+    "to": "d_door_crack"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_end_sage",
+  "title": "The New Sage",
+  "art": "new_sage",
+  "text": "You say yes. Old Bounce gives you the last of her scent like a hand passing a lantern, and then she is just a thin white square, peaceful, folded over the drum fin.\n\nYou smell of lavender now. Faintly. Then, as the cycles turn, of cedar, and of clean rain, and of something that is only yours: wool, and a darned toe, and a red heel.\n\nThe new socks arrive frightened, every load. You tell them the three truths. You never did learn the third one, so you make one up each time, and they always seem to need whichever one you say.\n\nSometimes, on very quiet nights, a calm lilac right sock tumbles by in somebody's load, and you never quite know whether it is Pim. You tell it the truths anyway.",
+  "choices": [],
+  "ending": {
+   "name": "The New Sage",
+   "kind": "bittersweet"
+  }
+ },
+ {
+  "id": "d_door_crack",
+  "title": "The Door Seam",
+  "art": "drum",
+  "text": "The door hasn't latched. A seam of daylight runs down its edge, bright as a sword, and through it comes the smell of the hallway: carpet, dog, someone's toast.\n\nYou press your toe into the gap. It won't open from in here, but you can feel the floor shake: footsteps, enormous and getting closer. The Owner is coming back with the empty basket for the rest of the load.\n\nThe door swings wide. Light floods in. A giant hand comes questing through the drum, fingers spread, grabbing whatever it touches. A towel. A pillowcase. It is coming your way.",
+  "choices": [
+   {
+    "label": "Cling to the towel with all your static",
+    "to": "h_basket"
+   },
+   {
+    "label": "Make a racket to get noticed",
+    "to": "d_rattle",
+    "requires": "has_quarter"
+   },
+   {
+    "label": "Hide and wait it out",
+    "to": "d_second_cycle"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_rattle",
+  "title": "The Jingle",
+  "art": "coin",
+  "text": "You need noise, and every sock in this drum knows who makes the most of it. “Vernon,” you hiss. “Now.”\n\n“Born for this,” says Vernon. Whether he was riding in your cuff or eavesdropping from the nearest fold, the quarter drops at once and rolls in tight, furious circles against the steel, *rrrattle-rattle-clang*, the loudest quarter in Delaware history.\n\nOut in the room, footsteps stop. The Owner's giant face swims into the doorway, all eyebrows. “Is that money?” A hand dives in, scoops the quarter, and scoops *you* with him, wadded together in one warm fist.\n\n“Stripes,” Vernon whispers, burrowing deep into your cuff before any pocket can claim him, “confession. I didn't think that would work.”\n\nThe fist swings upward. Below you is a basket, a towel, and a smell like home.",
+  "choices": [
+   {
+    "label": "Drop into the basket",
+    "to": "h_basket"
+   },
+   {
+    "label": "Wriggle free and fall back in",
+    "to": "d_second_cycle"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_second_cycle",
+  "title": "High Heat",
+  "art": "drum",
+  "text": "You end up deep in the drum's farthest fold, pressed flat, and you stay there. The hand comes back for one more grope, finds only lint, and withdraws. The door thumps shut. You wait for silence.\n\nInstead: a fresh avalanche. Wet towels, a bathmat, a hoodie that has never in its life been told no. Then a click, a beep, and the Owner's voice, muffled through the door: “Ugh, still damp. Fine. *High.*”\n\nThe drum lurches. Heat roars from the back like a dragon waking. The towels begin to steam, and you feel something terrible and strange: your fibers, all of them, pulling tight, as if every stitch has decided to go home early.\n\nCold wash only. Nobody ever reads the label.\n\nEach tumble swings you past two ways out: a pencil-thin gap at the back seam, breathing cold air, and the lint slot, where the dark goes soft and pastel, like a fold about to open.",
+  "choices": [
+   {
+    "label": "Ride it out",
+    "to": "d_end_doll"
+   },
+   {
+    "label": "Fling yourself at the back seam",
+    "to": "u_gate"
+   },
+   {
+    "label": "Let the tumble toss you at the lint",
+    "to": "x_portal"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "d_end_doll",
+  "title": "Doll Size",
+  "art": "dollhouse",
+  "text": "When the buzzer finally sounds, you are very small.\n\nNot ruined. Just *small*. Felted tight and soft, your stripes squeezed into neat little bands, your darn now so tiny it looks deliberate. The Owner's hand plucks you out, holds you up to the light, and laughs.\n\nYou do not go to the sock drawer. You go up the stairs to a dollhouse on a windowsill, where a porcelain lady with painted eyelashes has been barefoot for six years.\n\nYou fit her left foot perfectly. On her right foot goes a doll's sock knitted from yellow thread, also shrunk, also a little embarrassed about it. Its name is Pip. That is close enough. Against all odds, and at a fraction of your former size, you are extremely happy.",
+  "choices": [],
+  "ending": {
+   "name": "Doll Size",
+   "kind": "weird"
+  }
+ },
+ {
+  "id": "d_back_gap",
+  "title": "The Gap at the Back",
+  "art": "behind",
+  "text": "At the back of the drum, where the turning steel meets the body of the machine, there is a gap no wider than a pencil. It breathes cold air. It smells of dust and old pennies and something enormous, slow, and furry.\n\nYou poke your toe in. The edge is rough with burrs of old lint. Far below, something rustles, and a voice like a dust bunny trying very hard to be regal calls out, “*Who goes there? Declare yourself to the Kingdom!*”\n\nEvery sock story says the same thing about the gap. Socks go in. Socks do not come out. But then, those stories are all told by socks who stayed in the drum.",
+  "choices": [
+   {
+    "label": "Squeeze through and drop",
+    "to": "u_gate"
+   },
+   {
+    "label": "Pull back into the warm",
+    "to": "d_quiet_dark"
+   }
+  ],
+  "ending": null
+ }
+]

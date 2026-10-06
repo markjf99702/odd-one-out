@@ -1,0 +1,485 @@
+[
+ {
+  "id": "o_vent",
+  "title": "Blown Out",
+  "art": "vent_duct",
+  "text": "The duct coughs. There is no other word for it. One moment you are drifting through ribbed aluminum dark, the next you are fired out of a little hinged flap like a party popper and slapped against the side of the house.\n\nDaylight. Actual sky, enormous and blue and frankly showing off. You cling to the vinyl siding by a thread of static, flapping beside the vent cap, which wheezes warm air past you and smells faintly of fabric softener and regret.\n\nBelow you, a flowerbed. Beyond it, a yard, a clothesline, a whole outdoors that has never once been tumble dried. The breeze tugs at your cuff, curious.",
+  "choices": [
+   {
+    "label": "Let the wind take you",
+    "to": "o_wind"
+   },
+   {
+    "label": "Drop into the flowerbed",
+    "to": "o_flowerbed"
+   },
+   {
+    "label": "Wriggle back into the vent",
+    "to": "u_gate"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_yard",
+  "title": "The Back Yard",
+  "art": "yard",
+  "text": "You land in grass. Wet grass, which is a betrayal of everything a freshly dried sock stands for. Whatever got you out here, a dog with priorities or a breeze with no manners, has already wandered off to bother something more interesting. The house has let you go.\n\nYou take stock. Teal and mustard stripes: present. Red heel: damp. The darn on your toe: still embarrassing. Above you the sky goes on forever, which seems excessive.\n\nThe back of the house looms, its dog flap swinging gently. To one side, a clothesline sags with pinned laundry, murmuring. And under the hedge, something small and twitchy is watching you. It has clearly been watching for a while.",
+  "choices": [
+   {
+    "label": "Inchworm toward the dog flap",
+    "to": "h_door"
+   },
+   {
+    "label": "Approach the clothesline",
+    "to": "o_clothesline"
+   },
+   {
+    "label": "Investigate the twitchy thing",
+    "to": "o_squirrel"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_wind",
+  "title": "Airborne",
+  "art": "yard",
+  "text": "You let go. The wind takes you the way the dryer never could: no drum, no walls, just lift. You tumble over the flowerbed, over the fence, wool fibers singing. It is the single most frightening and wonderful thing that has ever happened to a sock, and you have been through a heavy-duty cycle.\n\nThe wind does not talk, exactly, but it has moods. Right now its mood is *wherever*. You spin past the clothesline, where a pair of boxer shorts gasps at you. Below, the street glitters with puddles. Above, a black shape with glossy wings tilts her head and follows.\n\nYou have a few seconds of steering, if wriggling counts as steering.",
+  "choices": [
+   {
+    "label": "Wriggle down to the clothesline",
+    "to": "o_clothesline"
+   },
+   {
+    "label": "Ride it out over the street",
+    "to": "o_street"
+   },
+   {
+    "label": "Snag on the big oak branch",
+    "to": "o_crow"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_flowerbed",
+  "title": "The Hydrangeas",
+  "art": "yard",
+  "text": "You drop into mulch, which turns out to be wood chips that have given up on being trees. A hydrangea towers over you, blue and judgmental. A beetle trundles past without so much as a hello.\n\nThe flowerbed runs along the foundation of the house like a moat, and moats, you reason, lead to doors. Somewhere ahead, around the corner, you can hear the dog flap creak as Biscuit comes and goes. Above you, the vent cap still breathes warm laundry air, close enough to reach if you climb the downspout bracket.\n\nThen a shadow crosses the mulch. Something with wings has noticed the bright stripes in the flowerbed.",
+  "choices": [
+   {
+    "label": "Follow the foundation to the door",
+    "to": "h_door"
+   },
+   {
+    "label": "Climb back up into the vent",
+    "to": "u_gate"
+   },
+   {
+    "label": "Freeze and hope the shadow passes",
+    "to": "o_crow"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_clothesline",
+  "title": "The Clothesline",
+  "art": "clothesline",
+  "text": "Up close, the clothesline is a society. A long row of laundry hangs from wooden pins, and every item is talking at once. A bedsheet complains about the humidity. Two dish towels argue about the proper fold. A pair of jeans, hanging upside down by the cuffs, insists this is how jeans are *meant* to dry and everyone else is doing it wrong.\n\n\"A loose sock!\" cries a pillowcase. \"On the *ground*! Have you no pin?\"\n\nThe line goes quiet. Forty garments regard you with the shared horror of the respectably clipped. Then a faded beach towel, clearly some kind of elder, clears her throat. \"Let the creature speak.\"",
+  "choices": [
+   {
+    "label": "Ask the line for help",
+    "to": "o_council"
+   },
+   {
+    "label": "Ask to be pinned up with them",
+    "to": "o_pinned"
+   },
+   {
+    "label": "Back away toward the hedge",
+    "to": "o_squirrel"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_council",
+  "title": "The Council of the Line",
+  "art": "clothesline",
+  "text": "The beach towel, whose name is Margarita Sunset, convenes a council. This takes a while. The jeans want a vote. The dish towels want two votes. A bra abstains on principle.\n\nAt last the verdict: the line knows two ways home. \"The Owner takes us in at sundown,\" says Margarita. \"Pin yourself among us and ride the basket through the back door. Or go across the street. The laundromat socks know every route there is. Rough lot, mind you. They have a gang.\"\n\nA scarf at the end of the line murmurs, \"A child's mitten blew through here last winter, off the sledding hill. Red, a right hand. Mott, she said her name was. Took the laundromat road. Never came back.\" The whole line shudders together, as if a breeze went through it, which it did.",
+  "choices": [
+   {
+    "label": "Get pinned and wait for sundown",
+    "to": "o_pinned"
+   },
+   {
+    "label": "Head for the street",
+    "to": "o_street"
+   },
+   {
+    "label": "Tell them about Mitt",
+    "to": "o_mott",
+    "requires": "met_mitt"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_mott",
+  "title": "A Message on the Line",
+  "art": "mitten",
+  "text": "\"Mitt?\" The scarf goes very still. \"A mitten with a string? Talks fast? Calls stealing *redistribution*?\" You nod. The whole line rustles at once.\n\n\"Mott asked after it,\" the scarf says softly. \"All the way down the line, peg by peg. She said if a mitten called Mitt ever came looking, it should know she went the soft way: across to the laundromat, behind the very last dryer, Number Nine, where the wall goes fuzzy and smells of warm cinnamon.\"\n\nMargarita Sunset sniffs. \"Cinnamon,\" she says darkly. \"Nobody comes back from cinnamon.\"\n\nYou think of Mitt alone in the drum since February, pretending not to care. A message is a warm thing too, and you happen to be built for carrying warm things.",
+  "choices": [
+   {
+    "label": "Find Number Nine and lean on the fuzzy wall",
+    "to": "x_portal"
+   },
+   {
+    "label": "Get pinned and carry the news home",
+    "to": "o_pinned"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_pinned",
+  "title": "Pinned",
+  "art": "clothesline",
+  "text": "A helpful clothespin, who has clearly been waiting all its life to be asked, scissors open and clamps your cuff to the line. You hang between a striped dish towel and a sock-shaped silence where the line's last sock used to be. Nobody mentions it.\n\nHanging is peaceful. The sun warms your stripes. The wind rocks you. The jeans tell a long story about a rodeo they insist they attended. You learn more about humidity than any sock should know.\n\nThen two things happen at once. The back door opens and the Owner comes out with the laundry basket. And a crow lands on the line post, eyeing your bright stripes with naked greed.",
+  "choices": [
+   {
+    "label": "Ride the basket in, tumble onto the doormat",
+    "to": "h_door"
+   },
+   {
+    "label": "Hiss at the crow",
+    "to": "o_crow"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_squirrel",
+  "title": "The Squirrel",
+  "art": "squirrel",
+  "text": "Something small and twitchy is waiting under the hedge. It is a squirrel. It approaches in a series of panicked lunges, as if every step is a fresh decision it regrets. Its tail is magnificent. Its eyes are two small black planets of pure anxiety.\n\n\"You're soft,\" it says. \"Are you a nest? You look like a nest. I need a nest. Winter's coming. Winter is always coming. Do you know how many acorns I've lost? I don't. That's the problem.\"\n\nIt introduces itself as Pocket. Pocket would like to stuff you full of acorns and bury you, which is unacceptable. But Pocket also climbs everything, sees everything, and knows every way into the house that a small creature could use.",
+  "choices": [
+   {
+    "label": "Offer Pocket a deal",
+    "to": "o_squirrel_deal"
+   },
+   {
+    "label": "Flee toward the street",
+    "to": "o_gutter"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_squirrel_deal",
+  "title": "A Deal with Pocket",
+  "art": "squirrel",
+  "text": "You negotiate like a sock who has watched the Owner haggle at a yard sale. Pocket may keep three acorns in your toe for the journey. In exchange, transport. Pocket agrees so fast you suspect you undersold yourself.\n\nRiding a squirrel is like riding a sneeze. Pocket hauls you up the oak in jerks and bursts, chattering a running monologue about hawks and the weather and a bird feeder that betrayed it in 2023. From the top you see everything: the roof, the street, the laundromat sign blinking across the way, the dog flap swinging below.\n\n\"Where to?\" Pocket asks, already forgetting the acorns.",
+  "choices": [
+   {
+    "label": "Down to the dog flap, please",
+    "to": "h_door"
+   },
+   {
+    "label": "The roof, please. I'll take it from there",
+    "to": "o_roof"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_crow",
+  "title": "Margo",
+  "art": "crow",
+  "text": "She lands beside you with the confidence of a bird who owns several spoons. Glossy black, one eye milky, the other bright as a new button. She tilts her head and looks at you the way a jeweler looks at a ring.\n\n\"Stripes,\" she says. \"Teal *and* mustard. And is that a darn? Hand-mended. Very rare.\" You did not know your darn was an asset. You are briefly flattered, then remember that crows have nests and nests need lining.\n\n\"I'm Margo,\" she says. \"I collect. You'd be the soft centerpiece of my whole east wing. But I'm a reasonable bird. Everything has a price, and everything can be carried.\"",
+  "choices": [
+   {
+    "label": "Negotiate with her",
+    "to": "o_bargain"
+   },
+   {
+    "label": "Let Vernon do the talking",
+    "to": "o_vernon",
+    "requires": "has_quarter"
+   },
+   {
+    "label": "Play dead",
+    "to": "o_nest"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_vernon",
+  "title": "Vernon's Pitch",
+  "art": "coin",
+  "text": "Vernon has been rattling in your cuff this whole time, and now he rolls out onto your stripes and catches the sun like a tiny silver stage light. Margo's good eye goes perfectly round.\n\n\"Lady,\" he says, \"put the beak away. You don't want me. I'm one quarter. Small potatoes. But I know where the *rest* of us live.\" And he tells her about the couch: the deep cushions, the economy of crumbs and coins, a lost treasury of dimes, a button shaped like a star, a key nobody has missed in years.\n\nMargo leans in so far she nearly tips over. \"Delaware,\" she murmurs, reading him. \"1998. Classy.\"\n\n\"Classy and *connected*,\" says Vernon. \"One ride for the kid, and the address is yours.\" Margo is already spreading her wings.",
+  "choices": [
+   {
+    "label": "Go before she changes her mind",
+    "to": "o_flight"
+   },
+   {
+    "label": "Ask for a quick drop at the back door",
+    "to": "h_door"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_bargain",
+  "title": "Terms",
+  "art": "crow",
+  "text": "\"A ride,\" you say. \"Anywhere I want. In exchange for...\" You think hard. You have nothing. You are a sock.\n\nMargo waits, patient as a gargoyle. \"Something shiny,\" she suggests. \"I'm not greedy. A bottle cap. A paperclip with character.\" You describe the gap behind the dryer in lavish detail: bottle caps, a hairpin, an earring glinting in the lint. Whatever you have not seen yourself, you embroider. You are, after all, made of thread. Margo's good eye widens until it is almost round.\n\n\"Behind the dryer,\" she breathes. \"Fine. I'll fly you where you like, and you tell me how to get in there.\" She pauses. \"If you're lying, you become insulation.\"",
+  "choices": [
+   {
+    "label": "Shake on it (with your cuff)",
+    "to": "o_flight"
+   },
+   {
+    "label": "Refuse. Socks have principles",
+    "to": "o_nest"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_nest",
+  "title": "The Nest",
+  "art": "crow",
+  "text": "Margo carries you up anyway, because crows take neither no nor silence for an answer. Her nest sits in the crook of the big oak, a vast woven bowl of twigs and stolen glory: a key, three spoons, a chess knight, a tangle of tinsel, half a pair of sunglasses, and a single baby shoe that refuses to discuss its past.\n\nShe tucks you along the bottom with real tenderness. \"There,\" she says. \"Now everything is soft.\" Then she flaps off to find something to go with your colors.\n\nThe baby shoe clears its throat. \"She's gone till dusk,\" it whispers. \"You could climb out. Down the trunk, onto the roof. Or you could stay. It's warm here. It's quiet. Nobody ever loses you twice.\"",
+  "choices": [
+   {
+    "label": "Climb out onto the roof",
+    "to": "o_roof"
+   },
+   {
+    "label": "Stay. It is very warm",
+    "to": "o_lining"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_lining",
+  "title": "Nest Egg",
+  "art": "nest",
+  "text": "You stay. You tell yourself it is just until the wind dies down, and then just until spring, and then you stop telling yourself anything at all.\n\nIn April, Margo lays three speckled eggs on top of you. You keep them warm. You were made to keep things warm; it is the one job a sock is truly built for, and you are good at it. The chicks hatch ugly and loud and perfect, and they sleep on your teal stripes and peck at your darn as though it is the most interesting thing in the world.\n\nSometimes, on windy nights, you think of Pim in the drawer, calm as always, waiting. You hope Pim found another left sock. You hope Pim is warm too.",
+  "choices": [],
+  "ending": {
+   "name": "Nest Egg",
+   "kind": "bittersweet"
+  }
+ },
+ {
+  "id": "o_flight",
+  "title": "Crow Air",
+  "art": "crow",
+  "text": "Margo grips you gently in her beak, and the yard drops away. This is nothing like drifting on a breeze. It is purposeful, steered, and slightly drooly. From up here, the house is a box of secrets. You can see the vent cap still puffing, the dog flap, the street, and the blinking laundromat sign.\n\n\"Mmmff?\" says Margo, which you interpret as *where to*.\n\nIf you know which window is the bedroom, you could point. If not, there are plenty of other places a crow can drop a sock.",
+  "choices": [
+   {
+    "label": "Drop me at the back door",
+    "to": "h_door"
+   },
+   {
+    "label": "The bedroom window, top floor",
+    "to": "h_drawer",
+    "requires": "knows_drawer"
+   },
+   {
+    "label": "Across the street, to the laundromat",
+    "to": "o_laundromat"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_roof",
+  "title": "The Roof",
+  "art": "rooftop",
+  "text": "The roof is a hot, gritty desert of shingles, and you are the only sock to have ever crossed it. Probably. You suspect a frisbee was here once; it has left a sad circle in the moss.\n\nFrom up here you can see the gutter running along the edge, choked with leaves and rainwater, and beyond it the downspout plunging toward the street. Clouds are piling up in the west with the grim purpose of a rinse cycle. Wind snaps at your cuff, eager for another go.\n\nYou could slide. You could jump. You could wait for the weather to decide for you, which is how most of your life has gone so far.",
+  "choices": [
+   {
+    "label": "Slide down the downspout",
+    "to": "o_gutter"
+   },
+   {
+    "label": "Jump and let the wind catch you",
+    "to": "o_wind"
+   },
+   {
+    "label": "Climb the old TV antenna",
+    "to": "o_windsock"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_windsock",
+  "title": "Windsock",
+  "art": "rooftop",
+  "text": "The antenna is a rusted metal tree that has not received a channel since before you were knitted. You inchworm up it anyway, and at the very top the wind finds your open cuff, rushes in, and fills you like a lung.\n\nYou stand straight out. Rigid. Magnificent. A sock at full attention, pointing due east.\n\nYou never come down. You don't want to. Every morning the neighborhood looks up to see which way you are blowing. The crow in the oak plans her flights by you. The squirrel under the hedge checks you before every acorn run. Clotheslines up and down the street pin their washing by your forecast, and even the bedsheets stop complaining about the humidity.\n\nOn still nights you droop, and remember being a pair. Then the breeze comes back, and you have work to do.",
+  "choices": [],
+  "ending": {
+   "name": "Windsock",
+   "kind": "weird"
+  }
+ },
+ {
+  "id": "o_gutter",
+  "title": "Rain",
+  "art": "drain",
+  "text": "The rain comes all at once, as if someone upstairs pressed *heavy duty*. Within seconds you are soaked through, heavier than you have ever been, cold wash and no one asked you first. Water gathers you up and carries you along the curb in a brown rushing stream full of leaves and a single determined popsicle stick.\n\n\"First time?\" the popsicle stick shouts over the roar. \"Just go with it! It all ends up somewhere!\"\n\nAhead, the stream pours toward an iron grate set in the road. The storm drain. It gurgles like a giant laughing in its sleep. Your heel catches briefly on the edge of the curb.",
+  "choices": [
+   {
+    "label": "Let the current carry you on",
+    "to": "o_drain"
+   },
+   {
+    "label": "Haul yourself up onto the curb",
+    "to": "o_street"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_drain",
+  "title": "The Storm Drain",
+  "art": "drain",
+  "text": "The current flings you at the iron grate, and you catch there, hanging by one damp thread. Below, the dark echoes with water and something else: voices. Hundreds of small, cheerful voices, echoing up from the tunnels.\n\n\"Come on down!\" they call. \"The water's fine! We're going to the sea!\" A hair tie. A sandwich bag. A glove that waves one finger at you. All of them lost, all of them strangely, unreasonably happy about it.\n\nThe thread holding you trembles. Up on the street, the rain is easing, and the laundromat sign is buzzing awake across the road. Down below, the whole wide world is flowing somewhere you have never been. You think of Pim. You think of the sea.",
+  "choices": [
+   {
+    "label": "Let go",
+    "to": "o_sea"
+   },
+   {
+    "label": "Climb back up to the street",
+    "to": "o_street"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_sea",
+  "title": "Adventure Sock",
+  "art": "sea",
+  "text": "You let go. The dark takes you, then the tunnels, then a culvert, a creek, a river that smells of rust and frogs. For weeks you travel with the glove and the hair tie, telling stories, losing count of the spin cycles.\n\nAnd then, one morning, the sea. It is the biggest drum you have ever seen, and it never buzzes, and it never stops. You ride swells the color of your own teal stripes. A gull mistakes you for a fish and apologizes. You wash up on a beach, then wash off again, then wash up somewhere else entirely.\n\nYou never go back to the drawer. You are something else now: a legend among lost things, the striped sock who saw the ocean. Somewhere far inland, you hope Pim feels a sudden, inexplicable taste of salt.",
+  "choices": [],
+  "ending": {
+   "name": "Adventure Sock",
+   "kind": "weird"
+  }
+ },
+ {
+  "id": "o_street",
+  "title": "The Street",
+  "art": "yard",
+  "text": "The street is wider than the whole laundry room, and it is not interested in you. Cars thunder past with a sound like a thousand dryers full of sneakers. A shopping bag cartwheels by and does not stop to chat. Road grit is already working its way into your stripes.\n\nOn one side, the front walk of your own house leads up to the porch, where the front door stands ajar. The Owner is carrying in groceries, giant feet going back and forth, a giant hand swinging low with every trip. On the other side, a laundromat hums behind fogged glass. Its sign reads SUDS CITY, with the second U flickering.\n\nYou can feel its dryers from here, a deep vibration in your fibers, like a choir of drums all humming your name.",
+  "choices": [
+   {
+    "label": "Scurry up the walk to the door",
+    "to": "h_door"
+   },
+   {
+    "label": "Cross to the laundromat",
+    "to": "o_laundromat"
+   },
+   {
+    "label": "Get scooped up, gritty, by the Owner",
+    "to": "w_rinse"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_laundromat",
+  "title": "Suds City",
+  "art": "laundromat",
+  "text": "You slip in under the door with a gust and a gum wrapper. Inside, the air is thick and warm and smells of forty brands of detergent at once. Rows of industrial dryers spin like planets, each one ten times the size of your home dryer. You feel very much from the suburbs.\n\nSocks are everywhere. Socks under the folding tables. Socks along the baseboards. Socks from a hundred different households, in every color and fiber, and none of them look lost. They look like they *live* here.\n\nIn one corner sits a cardboard box labelled LOST + FOUND in faded marker. In another, by the change machine, a cluster of hard-looking socks has gone quiet and turned to stare at you.",
+  "choices": [
+   {
+    "label": "Approach the staring socks",
+    "to": "o_gang"
+   },
+   {
+    "label": "Peek into the lost-and-found box",
+    "to": "o_lostfound"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_gang",
+  "title": "The Spin Cycle",
+  "art": "sock_crowd",
+  "text": "They call themselves the Spin Cycle. The leader is an enormous hockey sock named Big Tube, stretched and scarred, with a tag that reads *machine wash hot* like a dare. Flanking him: a pair of argyles who finish each other's sentences, a toe sock with five opinions, and a tiny no-show sock nobody ever notices until it is behind you.\n\n\"Suburban,\" Big Tube rumbles, sniffing your fabric softener. \"Wool blend. Cold wash only.\" The gang snickers. \"You want help getting home? Everybody wants help. Help costs. Either you ride Number Seven, the hottest dryer in the joint, full cycle, or you pay tribute.\"\n\nBehind you, the lost-and-found box rustles invitingly.",
+  "choices": [
+   {
+    "label": "Ride Number Seven",
+    "to": "o_challenge"
+   },
+   {
+    "label": "Pay tribute with Vernon",
+    "to": "h_door",
+    "requires": "has_quarter"
+   },
+   {
+    "label": "Retreat to the lost-and-found box",
+    "to": "o_lostfound"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_challenge",
+  "title": "Number Seven",
+  "art": "laundromat",
+  "text": "Number Seven is a beast. When the door swings shut behind you, the drum is so big you cannot see the far side. Then it starts. Heat like August. Tumbling like a mountain falling over and over. A stranger's towel slaps you. Someone's bathrobe tie wraps around your heel. You hold on to the one thing you have, which is the thought of Pim, calm and folded, waiting.\n\nForty-five minutes later, the door opens. You flop out, frizzled, smelling of someone else's lavender, and very slightly shrunk. The Spin Cycle is staring.\n\n\"Full cycle,\" whispers an argyle. \"Wool blend. On *high*.\" Big Tube lowers his cuff, which is the most respect a hockey sock can show.",
+  "choices": [
+   {
+    "label": "Ask them to get you home",
+    "to": "h_door"
+   },
+   {
+    "label": "Go see what's in the lost-and-found",
+    "to": "o_lostfound"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_lostfound",
+  "title": "Lost and Found",
+  "art": "laundromat",
+  "text": "The box is warm and smells of cardboard and patience. Inside, dozens of single socks lie together, waiting for owners who will never come back. Unlike the Hall of the Unpaired, nobody here has given up. They have simply decided to be content in the meantime.\n\nA sock rolls over to meet you. A right sock, charcoal gray with a pink toe and a heel worn thin from long walks. \"Hi,\" she says shyly. \"I'm a right. You're a left. I couldn't help noticing.\" She has a small darn on her toe too, the same shape as yours.\n\nAbove the box, the attendant taps a sign: UNCLAIMED ITEMS DONATED FRIDAY. Today is Thursday.",
+  "choices": [
+   {
+    "label": "Stay with the gray sock",
+    "to": "o_adopted"
+   },
+   {
+    "label": "Thank her, and head back out",
+    "to": "o_street"
+   }
+  ],
+  "ending": null
+ },
+ {
+  "id": "o_adopted",
+  "title": "Found in the Lost and Found",
+  "art": "mismatch",
+  "text": "On Friday, the attendant does not donate the box. Instead she tips it out on the folding table and starts matching socks the way some people do crosswords, humming. She picks you up, then the gray sock with the pink toe. She holds you side by side. She laughs and says, \"Close enough,\" and balls you together.\n\nYou go home with her that night, to a different drawer in a different house, cozy and cedar-scented. Your new pair tells you about the walks she wore her heel thin on. You tell her about the dryer, the long way here, and Pim.\n\nYou never match. Everyone who opens the drawer says so. Neither of you minds at all.",
+  "choices": [],
+  "ending": {
+   "name": "Found in the Lost and Found",
+   "kind": "good"
+  }
+ }
+]
