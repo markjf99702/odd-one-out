@@ -252,7 +252,8 @@
     "to": "x_fade"
    }
   ],
-  "ending": null
+  "ending": null,
+  "flag": "x_quizzed"
  },
  {
   "id": "x_quiz2",
@@ -313,7 +314,10 @@
    {
     "label": "Count the cycles, like the old sock said",
     "to": "x_count",
-    "requires": "x_warned",
+    "requires": [
+     "x_warned",
+     "x_quizzed"
+    ],
     "unless": "x_counted"
    }
   ],
