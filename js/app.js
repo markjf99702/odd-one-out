@@ -137,6 +137,7 @@ const STORY = window.STORY;
     render(true);
   }
   function back() {
+    if (!state.begun) return; // the cover shows where you left off, and Back (or Backspace) leaves it there
     const prev = state.hist.pop();
     if (!prev) return;
     state.at = prev.at; state.flags = prev.flags; state.cycles = Math.max(0, state.cycles - 1);

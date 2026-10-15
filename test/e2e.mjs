@@ -104,6 +104,32 @@ assert.deepEqual(installabilityErrors, [], 'Chromium would not install it');
 const manifest = await cdp.send('Page.getAppManifest');
 assert.deepEqual(manifest.errors, [], 'the manifest has errors');
 
+// The checks below each start a new reader with nothing saved, in a context of their own.
+const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+async function reader(options = {}) {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true, reducedMotion: 'reduce', serviceWorkers: 'block', ...options });
+  const p = await context.newPage();
+  p.on('pageerror', e => problems.push(e.message));
+  await p.goto(base);
+  return p;
+}
+const turn = async (p, ...picks) => { for (const i of picks) await p.locator('.choices .choice').nth(i).click(); };
+
+// On the cover Back is off, and Backspace leaves your place alone too.
+{
+  const p = await reader();
+  await p.click('[data-act=begin]');
+  await turn(p, 0, 0);
+  const there = await p.textContent('.ptitle');
+  await p.reload();
+  await p.keyboard.press('Backspace');
+  await p.keyboard.press('Backspace');
+  assert.match(await p.textContent('.cover .hint'), new RegExp(escape(there)), 'Backspace on the cover moved your place');
+  await p.click('[data-act=begin]');
+  assert.equal(await p.textContent('.ptitle'), there);
+  await p.context().close();
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();
