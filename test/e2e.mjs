@@ -185,6 +185,45 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.context().close();
 }
 
+// Two copies open at once (two tabs, or the installed app and a tab) share one save: a page turn in one keeps the
+// endings the other found, and Forget my endings in one sticks in the other.
+{
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true, reducedMotion: 'reduce', serviceWorkers: 'block' });
+  const a = await context.newPage(), b = await context.newPage();
+  for (const p of [a, b]) p.on('pageerror', e => problems.push(e.message));
+  // b can be made to miss the news from a, like a copy asleep in the background.
+  await b.addInitScript(() => {
+    const listen = window.addEventListener;
+    window.addEventListener = function (type, fn, options) {
+      return listen.call(this || window, type, type === 'storage' ? e => { if (!window.asleep) fn(e); } : fn, options);
+    };
+  });
+  await a.goto(base); await b.goto(base);
+  await a.click('[data-act=begin]'); await b.click('[data-act=begin]');
+  const shows = (p, n) => p.waitForFunction(n => document.getElementById('foot').textContent.startsWith(n + ' of'), n, { timeout: 5000 }).then(() => true, () => false);
+  const forget = async p => { await p.click('#lfBtn'); await p.click('#wipeBtn'); await p.click('#wipeBtn'); await p.click('#lfClose'); };
+
+  await turn(a, 0, 1, 0, 0); // Lady-in-Waiting
+  await turn(b, 0);
+  assert.deepEqual((await saved(b)).found, ['d_end_lady'], 'a page turn in one copy wiped the ending found in the other');
+  assert.ok(await shows(b, 1), 'the other copy does not count the ending');
+
+  await forget(a);
+  assert.ok(await shows(b, 0), 'the other copy still counts the forgotten ending');
+  await turn(b, 0);
+  assert.deepEqual((await saved(b)).found, [], 'a page turn in the other copy brought the forgotten ending back');
+
+  await b.evaluate(() => { window.asleep = true; });
+  await a.click('[data-act=restart]');
+  await turn(a, 0, 1, 0, 0);
+  await turn(b, 2);
+  assert.deepEqual((await saved(b)).found, ['d_end_lady'], 'a copy that was asleep wiped the ending found in the other');
+  await forget(a);
+  await turn(b, 0);
+  assert.deepEqual((await saved(b)).found, [], 'a copy that was asleep brought the forgotten ending back');
+  await context.close();
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();

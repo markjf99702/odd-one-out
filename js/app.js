@@ -25,6 +25,7 @@ const STORY = window.STORY;
     if (!(Number.isInteger(s.cycles) && s.cycles >= 0)) s.cycles = s.hist.length;
     s.found = unique(strings(s.found).filter(id => byId[id] && byId[id].ending));
     s.seen = unique(strings(s.seen).filter(id => byId[id]));
+    if (!(Number.isFinite(s.forgot) && s.forgot > 0)) delete s.forgot;
     return s;
   }
   const saved = tidy(store.get());
@@ -38,6 +39,14 @@ const STORY = window.STORY;
   }
   window.claude?.hot?.snapshot?.(() => state);
   function save() { store.set(state); }
+  // Every open copy of the book (another tab, the installed app) writes this one save. Endings found and pages seen
+  // only add up, so a copy takes in what the others saved before it writes; Forget my endings stamps the time, and a
+  // copy that sees a newer stamp than its own lets go of its lists first, so it can't bring the forgotten ones back.
+  function catchUp(disk) {
+    if ((disk.forgot || 0) > (state.forgot || 0)) { state.found = []; state.seen = []; state.forgot = disk.forgot; }
+    state.found = unique(state.found.concat(disk.found));
+    state.seen = unique(state.seen.concat(disk.seen));
+  }
 
   const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   const fmt = t => t.split(/\n\s*\n/).map(par => "<p>" + esc(par.trim()).replace(/\*([^*]+)\*/g, "<em>$1</em>") + "</p>").join("");
@@ -113,6 +122,7 @@ const STORY = window.STORY;
     if (!state.begun) return cover();
     const p = byId[state.at];
     if (!p) { state.at = "start"; return render(anim); }
+    catchUp(tidy(store.get()));
     if (p.flag && !state.flags.includes(p.flag)) state.flags.push(p.flag);
     if (!state.seen.includes(p.id)) state.seen.push(p.id);
     let h = '<div class="porthole">' + art(p.art) + "</div>";
@@ -165,7 +175,7 @@ const STORY = window.STORY;
     state.at = prev.at; state.flags = prev.flags; state.cycles = Math.max(0, state.cycles - 1);
     render(true);
   }
-  function restart() { state = { at: "start", flags: [], hist: [], cycles: 0, found: state.found, seen: state.seen, begun: true }; closeLF(); render(true); }
+  function restart() { state = { at: "start", flags: [], hist: [], cycles: 0, found: state.found, seen: state.seen, forgot: state.forgot, begun: true }; closeLF(); render(true); }
 
   page.addEventListener("click", e => {
     const b = e.target.closest("button"); if (!b) return;
@@ -220,8 +230,18 @@ const STORY = window.STORY;
   wipeBtn.onclick = function () {
     if (!wipeArmed) { wipeArmed = true; this.textContent = "Tap again to forget"; return; }
     disarm();
-    state.found = []; state.seen = [state.at]; save(); tally(); fillLF();
+    state.found = []; state.seen = [state.at]; state.forgot = Math.max(Date.now(), (state.forgot || 0) + 1);
+    save(); tally(); fillLF();
   };
+  // Another copy saved: take in what it found, or that it forgot, without waiting for a page turn here.
+  window.addEventListener("storage", e => {
+    if (e.key !== KEY || !e.newValue) return;
+    let disk;
+    try { disk = JSON.parse(e.newValue); } catch (err) { return; }
+    catchUp(tidy(disk));
+    tally();
+    if (!lf.hidden) fillLF();
+  });
 
   window.claude?.hot?.ready ? window.claude.hot.ready(boot) : boot(window.claude?.hot?.data ?? {});
   if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register("sw.js").catch(() => {});
