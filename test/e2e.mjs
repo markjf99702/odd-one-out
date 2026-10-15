@@ -277,6 +277,20 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.context().close();
 }
 
+// Scrolled to the end, the Found panel's last line clears a phone's home indicator.
+{
+  const p = await reader();
+  const cdp = await p.context().newCDPSession(p);
+  const inset = 34; // an iPhone's home indicator
+  if (await cdp.send('Emulation.setSafeAreaInsetsOverride', { insets: { top: 47, bottom: inset } }).then(() => true, () => false)) {
+    await p.click('[data-act=begin]');
+    await p.click('#lfBtn');
+    const gap = await p.evaluate(() => { const lf = document.getElementById('lf'); lf.scrollTop = lf.scrollHeight; return innerHeight - lf.querySelector('.jd-foot').getBoundingClientRect().bottom; });
+    assert.ok(gap > inset, `the Found panel's last line ends ${gap}px from the bottom, behind the home indicator`);
+  } else console.log('note: this Chromium cannot pretend to be a phone with a home indicator, so the Found panel went unchecked');
+  await p.context().close();
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();

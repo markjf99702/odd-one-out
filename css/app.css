@@ -96,7 +96,7 @@ h1.ptitle { font-family: var(--display); font-weight: 800; font-size: clamp(1.7r
 .endbtns .choice { flex: 1 1 12rem; justify-content: center; }
 
 /* lost and found */
-.lf { position: fixed; inset: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(4px); overflow-y: auto; padding-inline: 16px; padding-block: calc(env(safe-area-inset-top, 0px) + 1.2rem) 2rem; }
+.lf { position: fixed; inset: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(4px); overflow-y: auto; padding-inline: 16px; padding-block: calc(env(safe-area-inset-top, 0px) + 1.2rem) calc(2rem + env(safe-area-inset-bottom, 0px)); }
 .lf .inner { max-width: 34rem; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
 .lf h2 { font-family: var(--display); font-weight: 800; font-size: 1.7rem; margin: 0; }
 .lf .sub { font: 500 .78rem/1.5 var(--mono); letter-spacing: .06em; color: var(--muted); margin: 0; }
