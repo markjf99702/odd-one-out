@@ -55,6 +55,7 @@ async function arrive(page, to, found) {
   await page.reload();
   await page.evaluate(() => document.fonts.ready);
   await page.click('[data-act=begin]');
+  await page.mouse.move(0, 0); // or the pointer stays over whatever button lands under it, tinted and nudged by :hover
   await page.evaluate(() => scrollTo(0, 0));
 }
 
