@@ -224,6 +224,26 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await context.close();
 }
 
+// The Found panel keeps the keyboard inside it, and closing it puts focus back on Found.
+{
+  const p = await reader({ hasTouch: false });
+  await p.click('[data-act=begin]');
+  await p.focus('#lfBtn');
+  await p.keyboard.press('Enter');
+  const inside = () => p.evaluate(() => document.activeElement === document.body || document.getElementById('lf').contains(document.activeElement));
+  for (let i = 0; i < 8; i++) {
+    await p.keyboard.press('Tab');
+    assert.ok(await inside(), 'Tab left the Found panel for the page behind it');
+  }
+  await p.focus('#lfClose');
+  await p.keyboard.press('Enter');
+  assert.equal(await p.evaluate(() => document.activeElement.id), 'lfBtn', 'closing Found did not put focus back on Found');
+  await p.keyboard.press('Enter');
+  await p.keyboard.press('Escape');
+  assert.equal(await p.evaluate(() => document.activeElement.id), 'lfBtn', 'Escape did not put focus back on Found');
+  await p.context().close();
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();

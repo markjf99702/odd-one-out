@@ -218,8 +218,15 @@ const STORY = window.STORY;
       return '<div class="reg"><span class="rn">' + esc(REGION[r]) + " · " + v + "/" + ps.length + '</span><div class="dots">' + ps.map(p => '<span class="' + (p.ending ? "e " : "") + (state.seen.includes(p.id) ? "v" : "") + '" title="' + (state.seen.includes(p.id) ? esc(p.title) : "unvisited") + '"></span>').join("") + "</div></div>";
     }).join("");
   }
-  function openLF() { fillLF(); disarm(); lf.hidden = false; document.getElementById("lfClose").focus(); }
-  function closeLF() { lf.hidden = true; disarm(); }
+  // While the panel is open the page behind it (the bar, the page, the line under it) is inert, so the keyboard stays
+  // in the panel; closing it puts focus back on Found.
+  const behind = page.parentElement;
+  function openLF() { fillLF(); disarm(); lf.hidden = false; behind.inert = true; document.getElementById("lfClose").focus(); }
+  function closeLF() {
+    if (lf.hidden) return;
+    lf.hidden = true; behind.inert = false; disarm();
+    document.getElementById("lfBtn").focus();
+  }
   document.getElementById("lfBtn").onclick = openLF;
   document.getElementById("lfClose").onclick = closeLF;
   document.getElementById("restartBtn").onclick = restart;
