@@ -92,7 +92,7 @@ const STORY = window.STORY;
     if (seen) seen.textContent = state.seen.length;
   }
   function cover() {
-    const cont = state.at !== "start" && byId[state.at];
+    const cont = (state.at !== "start" || state.hist.length > 0) && byId[state.at]; // a tumble can loop back to the buzzer
     let h = '<div class="porthole">' + art("title") + "</div>";
     h += '<section class="cover"><h1>Odd<br><span>One</span> Out</h1>';
     h += '<p class="tagline">The dryer buzzes. You wake alone in the warm dark, a striped left sock with a darned toe, and Pim is gone. Find your pair before you become a rag.</p>';

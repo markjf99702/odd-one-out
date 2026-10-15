@@ -134,6 +134,27 @@ const turn = async (p, ...picks) => { for (const i of picks) await p.locator('.c
   await p.context().close();
 }
 
+// A tumble that loops back to The Buzzer is still a tumble: after a reload the cover offers to keep tumbling or start
+// over, and only starting over gives a fresh cover.
+{
+  const p = await reader();
+  await p.click('[data-act=begin]');
+  await turn(p, 1, 0, 0, 2); // the lint, the Lint Trap, through it, and back through the soft fold to The Buzzer
+  assert.equal(await p.textContent('.ptitle'), 'The Buzzer');
+  await p.reload();
+  assert.equal(await p.textContent('[data-act=begin]'), 'Keep tumbling', 'a reader who looped back to The Buzzer was offered Begin');
+  assert.match(await p.textContent('.cover .hint'), /The Buzzer/);
+  await p.click('[data-act=begin]');
+  assert.match(await p.textContent('.where'), /Cycle 5(?!\d)/, 'Keep tumbling lost the tumble');
+  await p.reload();
+  await p.click('[data-act=fresh]');
+  assert.match(await p.textContent('.where'), /Cycle 1(?!\d)/, 'Start over did not start over');
+  assert.equal(await p.isDisabled('#backBtn'), true, 'Start over left Back on');
+  await p.reload();
+  assert.equal(await p.textContent('[data-act=begin]'), 'Begin', 'a reader who started over was offered their old tumble');
+  await p.context().close();
+}
+
 // A save whose fields have the wrong types (a damaged or hand-edited copy) still opens, and keeps what makes sense:
 // each field falls back on its own, and only endings in the book count.
 {
