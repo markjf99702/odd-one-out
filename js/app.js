@@ -13,13 +13,27 @@ const STORY = window.STORY;
     get() { try { return JSON.parse(localStorage.getItem(KEY) || localStorage.getItem(OLD_KEY)) || null; } catch (e) { return null; } },
     set(v) { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {} }
   };
-  const saved = store.get() || {};
+  // A save comes back as whatever was stored, so each field is checked on its own: a damaged one falls back to the
+  // default without taking the good ones with it, and only pages and endings that are in the book count.
+  const strings = v => (Array.isArray(v) ? v.filter(x => typeof x === "string") : []);
+  const unique = a => Array.from(new Set(a));
+  function tidy(v) {
+    const s = Object.assign({}, v && typeof v === "object" && !Array.isArray(v) ? v : null);
+    if (typeof s.at !== "string" || !byId[s.at]) delete s.at;
+    s.flags = strings(s.flags);
+    s.hist = Array.isArray(s.hist) ? s.hist.filter(h => h && typeof h.at === "string" && byId[h.at]).map(h => ({ at: h.at, flags: strings(h.flags) })) : [];
+    if (!(Number.isInteger(s.cycles) && s.cycles >= 0)) s.cycles = s.hist.length;
+    s.found = unique(strings(s.found).filter(id => byId[id] && byId[id].ending));
+    s.seen = unique(strings(s.seen).filter(id => byId[id]));
+    return s;
+  }
+  const saved = tidy(store.get());
   let state = { at: "start", flags: [], hist: [], cycles: 0, found: [], seen: [], begun: false };
   function boot(data) {
-    const src = (data && data.at) ? data : saved;
-    if (src && src.at && byId[src.at]) state = Object.assign(state, src);
+    const src = (data && data.at) ? tidy(data) : saved;
+    if (src.at) state = Object.assign(state, src);
     if (!(data && data.at)) state.begun = false;
-    state.found = Array.from(new Set((state.found || []).concat(saved.found || [])));
+    state.found = unique(state.found.concat(saved.found));
     render(false);
   }
   window.claude?.hot?.snapshot?.(() => state);

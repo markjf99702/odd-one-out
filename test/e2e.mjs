@@ -130,6 +130,37 @@ const turn = async (p, ...picks) => { for (const i of picks) await p.locator('.c
   await p.context().close();
 }
 
+// A save whose fields have the wrong types (a damaged or hand-edited copy) still opens, and keeps what makes sense:
+// each field falls back on its own, and only endings in the book count.
+{
+  const good = { at: 'd_vernon', flags: [], hist: [{ at: 'start', flags: [] }, { at: 'd_call_out', flags: [] }], cycles: 2, found: ['h_end_rag'], seen: ['start', 'd_call_out', 'd_vernon'] };
+  const damaged = [
+    { seen: null }, { seen: {} }, { hist: null }, { flags: null }, { hist: [null, 7, { at: 'start' }, { at: 'no_such_page', flags: [] }] },
+    { found: 'h_end_rag' }, { found: ['h_end_rag', 'no_such_page', 'd_vernon', 'h_end_rag'] }, { cycles: 'two' },
+  ];
+  for (const bad of damaged) {
+    const p = await reader();
+    const errors = [];
+    p.on('pageerror', e => errors.push(e.message));
+    await p.evaluate(v => localStorage.setItem('odd-one-out.v1', JSON.stringify(v)), { ...good, ...bad });
+    await p.reload();
+    const what = JSON.stringify(bad);
+    const found = Array.isArray(bad.found) || !('found' in bad) ? 1 : 0;
+    assert.match(await p.textContent('#foot'), new RegExp(`^${found} of ${story.endings} endings found`), `${what}: wrong count`);
+    await p.click('[data-act=begin]');
+    assert.equal(await p.textContent('.ptitle', { timeout: 5000 }).catch(() => null), 'The Gossip', `${what}: Keep tumbling did not open the page`);
+    if (!('hist' in bad)) assert.match(await p.textContent('.where'), /Cycle 3(?!\d)/, `${what}: wrong cycle`);
+    await turn(p, 0);
+    assert.notEqual(await p.textContent('.ptitle'), 'The Gossip', `${what}: a choice did nothing`);
+    await p.click('#backBtn');
+    assert.equal(await p.textContent('.ptitle'), 'The Gossip', `${what}: Back did nothing`);
+    await p.click('#lfBtn');
+    assert.equal(await p.locator('.tag:not(.missing)').count(), found, `${what}: the Found panel did not open or miscounted`);
+    assert.deepEqual(errors, [], `${what}: errors`);
+    await p.context().close();
+  }
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();
