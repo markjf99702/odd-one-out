@@ -252,6 +252,7 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.reload();
   const [main, bar] = await p.evaluate(() => [document.getElementById('page'), document.querySelector('.bar')].map(e => e.getBoundingClientRect().width));
   assert.equal(main, bar, 'the returning cover is narrower than the bar');
+  assert.equal(await p.innerText('[data-act=size]'), 'Aa', 'the text size button does not read Aa');
   await p.context().close();
 }
 

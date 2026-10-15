@@ -62,6 +62,7 @@ button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .pill { font: 500 .68rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: transparent; border: 1.5px solid var(--line); border-radius: 999px; padding: .4rem .6rem; cursor: pointer; }
 .pill:hover { border-color: var(--fg); color: var(--fg); }
 .pill[aria-pressed="true"] { color: var(--bg); background: var(--teal); border-color: var(--teal); }
+.pill[data-act="size"] { text-transform: none; } /* reads Aa, not AA */
 .pill:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 .story { font-size: var(--story-size, 1.075rem); }
 h1.ptitle:focus { outline: none; }
