@@ -117,7 +117,8 @@ h1.ptitle { font-family: var(--display); font-weight: 800; font-size: clamp(1.7r
 .cover h1 span { color: var(--teal); }
 .cover .tagline { font-size: 1.15rem; margin: 0; max-width: 30rem; }
 .cover .specs { font: 500 .74rem/1.6 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); border-block: 2px dashed var(--line); padding-block: .6rem; display: flex; gap: .4rem 1.2rem; flex-wrap: wrap; }
-.cover .choice.primary { background: var(--fg); color: var(--bg); justify-content: center; font-family: var(--display); font-weight: 800; font-size: 1.2rem; }
+.cover .choice { justify-content: center; }
+.cover .choice.primary { background: var(--fg); color: var(--bg); font-family: var(--display); font-weight: 800; font-size: 1.2rem; }
 .cover .choice.primary:hover { background: var(--teal); color: var(--bg); }
 .cover .hint { font: 400 .74rem/1.5 var(--mono); color: var(--muted); margin: 0; }
 /* celebration */

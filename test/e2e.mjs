@@ -253,6 +253,13 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   const [main, bar] = await p.evaluate(() => [document.getElementById('page'), document.querySelector('.bar')].map(e => e.getBoundingClientRect().width));
   assert.equal(main, bar, 'the returning cover is narrower than the bar');
   assert.equal(await p.innerText('[data-act=size]'), 'Aa', 'the text size button does not read Aa');
+  const offCentre = await p.evaluate(() => {
+    const b = document.querySelector('[data-act=fresh]'), r = document.createRange();
+    r.selectNodeContents(b);
+    const text = r.getBoundingClientRect(), box = b.getBoundingClientRect();
+    return Math.abs((text.left - box.left) - (box.right - text.right));
+  });
+  assert.ok(offCentre < 2, 'Start over from the buzzer is not centred under Keep tumbling');
   await p.context().close();
 }
 
