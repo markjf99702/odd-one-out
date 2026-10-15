@@ -103,6 +103,10 @@ const { installabilityErrors } = await cdp.send('Page.getInstallabilityErrors');
 assert.deepEqual(installabilityErrors, [], 'Chromium would not install it');
 const manifest = await cdp.send('Page.getAppManifest');
 assert.deepEqual(manifest.errors, [], 'the manifest has errors');
+// The installed app opens in the page's own light colour, so its bars don't flash from navy to light as it loads.
+const light = (await readFile(join(root, 'index.html'), 'utf8')).match(/name="theme-color" content="([^"]+)" media="\(prefers-color-scheme: light\)"/)[1];
+const webmanifest = JSON.parse(await readFile(join(root, 'manifest.webmanifest'), 'utf8'));
+assert.deepEqual([webmanifest.theme_color, webmanifest.background_color], [light, light], 'the manifest colours differ from the page');
 
 // The checks below each start a new reader with nothing saved, in a context of their own.
 const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
