@@ -244,6 +244,17 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.context().close();
 }
 
+// On a wide screen the cover for a returning reader is as wide as the bar, like the first one.
+{
+  const p = await reader({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1, hasTouch: false });
+  await p.click('[data-act=begin]');
+  await turn(p, 0);
+  await p.reload();
+  const [main, bar] = await p.evaluate(() => [document.getElementById('page'), document.querySelector('.bar')].map(e => e.getBoundingClientRect().width));
+  assert.equal(main, bar, 'the returning cover is narrower than the bar');
+  await p.context().close();
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();

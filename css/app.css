@@ -39,7 +39,7 @@
 * { box-sizing: border-box; }
 html, body { background: var(--bg); color: var(--fg); }
 body { font-family: var(--body); font-size: 1.075rem; line-height: 1.62; padding-inline: 16px; padding-block: 0 3rem; }
-.wrap { max-width: 34rem; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; }
+.wrap { width: 100%; max-width: 34rem; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; }
 
 /* top bar */
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); display: flex; align-items: center; gap: .5rem; padding-block: .7rem; border-bottom: 2px dashed var(--line); }
