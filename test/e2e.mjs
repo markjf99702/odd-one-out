@@ -161,6 +161,30 @@ const turn = async (p, ...picks) => { for (const i of picks) await p.locator('.c
   }
 }
 
+// "Forget my endings" asks twice, and closing the panel takes the question back. After a wipe the counts under the
+// page and on the care label say so straight away.
+const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out.v1')));
+{
+  const p = await reader();
+  await p.click('[data-act=begin]');
+  await turn(p, 0, 1, 0, 0); // Lady-in-Waiting, an ending
+  assert.match(await p.textContent('#foot'), new RegExp(`^1 of ${story.endings} endings found`));
+  await p.click('#lfBtn');
+  await p.click('#wipeBtn');
+  await p.click('#lfClose');
+  await p.click('#lfBtn');
+  assert.equal(await p.textContent('#wipeBtn'), 'Forget my endings', 'Forget my endings was still armed after the panel closed');
+  await p.click('#wipeBtn');
+  assert.deepEqual((await saved(p)).found, ['d_end_lady'], 'one tap forgot the endings');
+  await p.click('#wipeBtn');
+  assert.deepEqual((await saved(p)).found, [], 'two taps did not forget the endings');
+  await p.click('#lfClose');
+  assert.match(await p.textContent('#foot'), new RegExp(`^0 of ${story.endings} endings found`), 'the line under the page still counts the forgotten endings');
+  assert.equal(await p.textContent('.label .kicker span:last-child'), '0 found', 'the care label still counts the forgotten endings');
+  assert.match(await p.textContent('.label .fine'), new RegExp(`Visited 1 of ${story.pages} `), 'the care label still counts the forgotten pages');
+  await p.context().close();
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();

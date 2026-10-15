@@ -74,6 +74,14 @@ const STORY = window.STORY;
     SockVoice.read(chunks);
   }
   const FOOT = '<footer class="jd-foot"><a href="https://junkdrawer.works/">Part of junkdrawer.works</a><span aria-hidden="true">·</span><a href="https://junkdrawer.works/privacy.html">Privacy</a></footer>';
+  // The counts on screen: the line under the page and, on an ending, the care label's. Forgetting the endings
+  // changes them without turning the page, so it calls this too.
+  function tally() {
+    document.getElementById("foot").textContent = state.found.length + " of " + ENDINGS.length + " endings found" + (state.begun ? " · " + STORY.length + " passages in the drum" : "");
+    const found = document.getElementById("nFound"), seen = document.getElementById("nSeen");
+    if (found) found.textContent = state.found.length + " found";
+    if (seen) seen.textContent = state.seen.length;
+  }
   function cover() {
     const cont = state.at !== "start" && byId[state.at];
     let h = '<div class="porthole">' + art("title") + "</div>";
@@ -87,7 +95,7 @@ const STORY = window.STORY;
     h += FOOT + "</section>";
     page.innerHTML = h;
     document.getElementById("backBtn").disabled = true;
-    document.getElementById("foot").textContent = state.found.length + " of " + ENDINGS.length + " endings found";
+    tally();
     if (window.SockSound) SockSound.region("d");
   }
   function celebrate() {
@@ -118,11 +126,11 @@ const STORY = window.STORY;
       if (anim && window.SockSound) SockSound.motif(p.ending.kind);
       const n = ENDINGS.findIndex(e => e.id === p.id) + 1;
       h += '<section class="label" aria-label="Ending">';
-      h += '<div class="kicker"><span>Ending ' + n + " of " + ENDINGS.length + "</span><span>" + state.found.length + " found</span></div>";
+      h += '<div class="kicker"><span>Ending ' + n + " of " + ENDINGS.length + '</span><span id="nFound">' + state.found.length + " found</span></div>";
       h += '<div class="ename">' + esc(p.ending.name) + "</div>";
       h += '<div class="care">' + ["good", "bittersweet", "bad", "weird"].map(x => x === k ? careSvg(x) : careSvg(x).replace("<svg", '<svg style="opacity:.22"')).join("") + "</div>";
       h += '<div><span class="kind kind-' + k + '">' + k + "</span></div>";
-      h += '<div class="fine">' + CARE[k][1] + " " + "Visited " + state.seen.length + " of " + STORY.length + " places. 80% wool, 20% nylon, 100% you.</div>";
+      h += '<div class="fine">' + CARE[k][1] + ' Visited <span id="nSeen">' + state.seen.length + "</span> of " + STORY.length + " places. 80% wool, 20% nylon, 100% you.</div>";
       const trail = state.hist.map(x => x.at).concat(p.id).filter((id, i, a) => byId[id] && a[i - 1] !== id).map(id => byId[id].title);
       h += '<div class="route"><b>Your tumble</b>' + trail.map(esc).join(" &rarr; ") + "</div>";
       h += '<div class="copyline"><button class="tbtn" type="button" data-act="copy">Copy my ending</button><span class="copied" id="copied" aria-live="polite"></span></div>';
@@ -137,7 +145,7 @@ const STORY = window.STORY;
     page.innerHTML = h;
     if (anim) { page.classList.remove("fade"); void page.offsetWidth; page.classList.add("fade"); window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" }); page.querySelector(".ptitle").focus({ preventScroll: true }); }
     document.getElementById("backBtn").disabled = state.hist.length === 0;
-    document.getElementById("foot").textContent = state.found.length + " of " + ENDINGS.length + " endings found · " + STORY.length + " passages in the drum";
+    tally();
     if (window.SockSound) SockSound.region(regionKey(p.id));
     if (anim) narrate();
     save();
@@ -185,7 +193,7 @@ const STORY = window.STORY;
   document.getElementById("backBtn").onclick = back;
 
   const lf = document.getElementById("lf");
-  function openLF() {
+  function fillLF() {
     const f = state.found;
     document.getElementById("lfSub").textContent = f.length + " of " + ENDINGS.length + " endings found. " + state.seen.length + " of " + STORY.length + " places visited.";
     document.getElementById("lfMeter").style.width = (100 * f.length / ENDINGS.length) + "%";
@@ -199,17 +207,20 @@ const STORY = window.STORY;
       const v = ps.filter(p => state.seen.includes(p.id)).length;
       return '<div class="reg"><span class="rn">' + esc(REGION[r]) + " · " + v + "/" + ps.length + '</span><div class="dots">' + ps.map(p => '<span class="' + (p.ending ? "e " : "") + (state.seen.includes(p.id) ? "v" : "") + '" title="' + (state.seen.includes(p.id) ? esc(p.title) : "unvisited") + '"></span>').join("") + "</div></div>";
     }).join("");
-    lf.hidden = false; document.getElementById("lfClose").focus();
   }
-  function closeLF() { lf.hidden = true; }
+  function openLF() { fillLF(); disarm(); lf.hidden = false; document.getElementById("lfClose").focus(); }
+  function closeLF() { lf.hidden = true; disarm(); }
   document.getElementById("lfBtn").onclick = openLF;
   document.getElementById("lfClose").onclick = closeLF;
   document.getElementById("restartBtn").onclick = restart;
+  // Forgetting asks for a second tap, and closing or opening the panel takes the question back.
+  const wipeBtn = document.getElementById("wipeBtn");
   let wipeArmed = false;
-  document.getElementById("wipeBtn").onclick = function () {
+  function disarm() { wipeArmed = false; wipeBtn.textContent = "Forget my endings"; }
+  wipeBtn.onclick = function () {
     if (!wipeArmed) { wipeArmed = true; this.textContent = "Tap again to forget"; return; }
-    wipeArmed = false; this.textContent = "Forget my endings";
-    state.found = []; state.seen = [state.at]; save(); openLF();
+    disarm();
+    state.found = []; state.seen = [state.at]; save(); tally(); fillLF();
   };
 
   window.claude?.hot?.ready ? window.claude.hot.ready(boot) : boot(window.claude?.hot?.data ?? {});
