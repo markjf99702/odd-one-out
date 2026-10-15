@@ -2,7 +2,7 @@
 
 **Play it: [odd-one-out.junkdrawer.works](https://odd-one-out.junkdrawer.works/)**
 
-**A choose-your-own-adventure where you are a sock lost in the dryer.** You wake alone in the warm drum, a striped left sock with a darned toe, and Pim, your pair, is gone. Every page ends in two or three choices. Find Pim before you end up a rag, or wander off and find something else: there are 170 pages, 23 endings and seven places to get lost in, from under the dryer to the junk drawer.
+**A choose-your-own-adventure where you are a sock lost in the dryer.** You wake alone in the warm drum, a striped left sock with a darned toe, and Pim, your pair, is gone. Almost every page ends in two or three choices. Find Pim before you end up a rag, or wander off and find something else: there are 170 pages, 23 endings and seven places to get lost in, from under the dryer to the junk drawer.
 
 <p align="center">
   <img src="docs/phone-cover.png" alt="The cover on a phone: a dryer drawing with two socks in its round window, a teal striped sock and a purple sock, under a heart. Below it the title Odd One Out, one line of setup, and a Begin button" width="250">
@@ -18,7 +18,7 @@
 - **Back** undoes a choice. Keep pressing it to retrace your steps.
 - **Every ending is a care label:** its name, whether it's good, bittersweet, bad or just weird, and the way you came. Copy my ending puts it on the clipboard to send to someone.
 - **Found** lists the endings you've reached and the places you've been, with a dot for every page.
-- **Sound** plays a different made-up ambience in each place, **Narrate** reads each page aloud in the browser's own voice, and **Aa** makes the text bigger.
+- **Sound** plays a different made-up ambience in each place, **Narrate** reads each page aloud in the browser's own voice, and **Aa** steps through four text sizes.
 - No account and no server. Your place and the endings you've found stay in your browser, so it picks up where you left off. It works offline and installs to a phone's home screen.
 
 ## Running it
