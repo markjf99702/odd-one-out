@@ -57,6 +57,12 @@ window.SockSound = (function () {
       const a = bed("brown", "lowpass", 600, 2, 0.8, out), m = tone(48, "triangle", 0.02, out);
       const loop = () => { blip(180 + Math.random() * 220, 0.12, 0.05, "sine", out, 90); later(loop, 400 + Math.random() * 1600); }; later(loop, 700);
       return [a.n, lfo(0.35, 450, a.fl.frequency), m];
+    },
+    j(out, later) { // the junk drawer: shut-in dark, a watch that lost count long ago, small things settling
+      const a = bed("brown", "lowpass", 200, 0, 0.5, out);
+      const watch = () => { tick(out, 0.05, 3400); later(watch, Math.random() < 0.15 ? 1700 : 500); }; later(watch, 400);
+      const settle = () => { const k = 2 + Math.floor(Math.random() * 3); for (let i = 0; i < k; i++) later(() => tick(out, 0.1, 700 + Math.random() * 900), i * (50 + Math.random() * 80)); later(settle, 3500 + Math.random() * 6500); }; later(settle, 2000);
+      return [a.n];
     }
   };
   function stopCur(fade) {

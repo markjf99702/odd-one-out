@@ -294,6 +294,32 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.context().close();
 }
 
+// Sound plays a different ambience in each place, as the cover says: turned on in each of the seven, it sets up
+// seven different sets of sounds (the filters and tones it makes at once, by their frequencies).
+{
+  const p = await reader();
+  const places = await p.evaluate(() => [...new Set(window.STORY.map(s => s.id[0]))].filter(k => k !== 's').map(k => window.STORY.find(s => s.id[0] === k).id));
+  assert.equal(places.length, 7, 'the book no longer has seven places');
+  const heard = {};
+  for (const at of places) {
+    await p.evaluate(at => localStorage.setItem('odd-one-out.v1', JSON.stringify({ at, hist: [{ at: 'start', flags: [] }] })), at);
+    await p.reload();
+    await p.click('[data-act=begin]');
+    heard[at] = await p.evaluate(() => {
+      const made = [];
+      for (const name of ['createBiquadFilter', 'createOscillator']) {
+        const make = AudioContext.prototype[name];
+        AudioContext.prototype[name] = function () { const n = make.apply(this, arguments); made.push(n); return n; };
+      }
+      document.querySelector('[data-act=sound]').click();
+      return made.map(n => n.type + ' ' + Math.round(n.frequency.value * 100) / 100).join(', ');
+    });
+    assert.ok(heard[at], `Sound set up nothing on ${at}`);
+  }
+  assert.equal(new Set(Object.values(heard)).size, places.length, 'two places share an ambience: ' + JSON.stringify(heard));
+  await p.context().close();
+}
+
 // Scrolled to the end, the Found panel's last line clears a phone's home indicator.
 {
   const p = await reader();
