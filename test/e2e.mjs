@@ -255,6 +255,16 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.context().close();
 }
 
+// Holding a number key down turns one page, not one for every repeat.
+{
+  const p = await reader({ hasTouch: false });
+  await p.click('[data-act=begin]');
+  for (let i = 0; i < 6; i++) await p.keyboard.down('1');
+  await p.keyboard.up('1');
+  assert.match(await p.textContent('.where'), /Cycle 2(?!\d)/, 'a held number key turned more than one page');
+  await p.context().close();
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();

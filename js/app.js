@@ -196,6 +196,7 @@ const STORY = window.STORY;
   });
   document.addEventListener("keydown", e => {
     if (!document.getElementById("lf").hidden) { if (e.key === "Escape") closeLF(); return; }
+    if (e.repeat) return; // a key held down turns one page, not one per repeat
     const n = parseInt(e.key, 10);
     if (n >= 1 && n <= 9) { const bs = page.querySelectorAll(".choices .choice"); if (bs[n - 1]) bs[n - 1].click(); }
     if (e.key === "Backspace") back();
