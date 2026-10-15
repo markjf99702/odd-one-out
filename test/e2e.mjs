@@ -267,6 +267,23 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.context().close();
 }
 
+// On the narrowest phones (280 wide, a Galaxy Fold's cover screen) Start over from the buzzer wraps, and each line
+// stays centred.
+{
+  const p = await reader({ viewport: { width: 280, height: 653 } });
+  await p.click('[data-act=begin]');
+  await turn(p, 0);
+  await p.reload();
+  const lines = await p.evaluate(() => {
+    const b = document.querySelector('[data-act=fresh]'), r = document.createRange();
+    r.selectNodeContents(b);
+    const box = b.getBoundingClientRect();
+    return [...r.getClientRects()].map(t => Math.abs((t.left - box.left) - (box.right - t.right)));
+  });
+  assert.ok(lines.every(d => d < 2), `Start over from the buzzer is off centre by ${lines.map(Math.round).join(' and ')}px when it wraps`);
+  await p.context().close();
+}
+
 // Holding a number key down turns one page, not one for every repeat.
 {
   const p = await reader({ hasTouch: false });
