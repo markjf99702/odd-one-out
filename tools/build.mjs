@@ -1,7 +1,7 @@
 // Checks the story and writes js/story.js and the single-file Artifact copy:  node tools/build.mjs
 // The story lives in story/*.json, one file per place. This merges them, then refuses to write anything if a
-// choice points nowhere, a picture is missing, some page or ending can't be reached with the flags as played, or a
-// page that talks about an earlier meeting can be reached without it.
+// choice points nowhere, a picture is missing, some page or ending can't be reached with the flags as played, some way
+// through can never reach an ending, or a page that talks about an earlier meeting can be reached without it.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -43,10 +43,10 @@ for (const p of story) {
   for (const c of p.choices || []) if (c.label.length > 45) notes.push(`${p.id}: long label "${c.label}"`);
 }
 
-// Play every way through at once: a state is a page plus the flags picked up on the way there. Pages in `avoid` are
-// never turned to, which shows what can be reached without passing them.
+// Play every way through at once: a state is a page plus the flags picked up on the way there, and `ways` lists the
+// states each one leads to. Pages in `avoid` are never turned to, which shows what can be reached without passing them.
 function play(avoid = new Set()) {
-  const seen = new Set(), reached = new Set();
+  const reached = new Set(), ways = new Map([['start|', []]]);
   const queue = [['start', []]];
   while (queue.length) {
     const [at, had] = queue.shift();
@@ -54,23 +54,36 @@ function play(avoid = new Set()) {
     if (!p) continue;
     reached.add(at);
     const flags = p.flag && !had.includes(p.flag) ? [...had, p.flag].sort() : had;
+    const out = ways.get(at + '|' + had.join(','));
     for (const c of p.choices || []) {
       if (avoid.has(c.to) || !list(c.requires).every(f => flags.includes(f)) || list(c.unless).some(f => flags.includes(f))) continue;
       const key = c.to + '|' + flags.join(',');
-      if (!seen.has(key)) { seen.add(key); queue.push([c.to, flags]); }
+      out.push(key);
+      if (!ways.has(key)) { ways.set(key, []); queue.push([c.to, flags]); }
     }
   }
-  return reached;
+  return { reached, ways };
 }
-const reached = play();
+const { reached, ways } = play();
 for (const p of story) if (!reached.has(p.id)) problems.push(`${p.id} can't be reached from the start`);
+
+// Nobody gets stuck: from every state the book can be in, with whatever has been picked up, some ending can still be
+// reached. (A loop whose only ways out need something you can't be holding there would be a trap.)
+const page = k => k.slice(0, k.indexOf('|'));
+const canEnd = new Set([...ways.keys()].filter(k => byId.get(page(k))?.ending));
+for (let grew = true; grew;) {
+  grew = false;
+  for (const [k, out] of ways) if (!canEnd.has(k) && out.some(o => canEnd.has(o))) { canEnd.add(k); grew = true; }
+}
+const stuck = [...ways.keys()].filter(k => byId.has(page(k)) && !canEnd.has(k));
+if (stuck.length) problems.push(`${stuck.length} ways through can never reach an ending, on ${[...new Set(stuck.map(page))].slice(0, 6).join(', ')}`);
 
 // Pages that talk as if you have already been somewhere: no way through may reach them without passing there first.
 const AFTER = {
   x_count: ['x_quiz'], // Counting: Madame Purl offers "once more, from the top", and the choice is "Face her questions again"
 };
 for (const [id, before] of Object.entries(AFTER)) {
-  if (play(new Set(before)).has(id)) problems.push(`${id} can be reached without passing ${before.join(' or ')} first`);
+  if (play(new Set(before)).reached.has(id)) problems.push(`${id} can be reached without passing ${before.join(' or ')} first`);
 }
 
 const endings = story.filter(p => p.ending);

@@ -38,7 +38,7 @@ To put it online with GitHub Pages: **Settings → Pages → Build and deploymen
 ### Files
 
 - `story/*.json`: the book, one file per place. A page has an id, a title, a picture, its text and its choices; a choice can need a flag or be hidden by one, and a page can set one.
-- `tools/build.mjs`: merges the story and refuses to build if a choice points nowhere, a picture is missing, any page or ending can't be reached with the flags as you'd play them, or a page that talks about an earlier meeting (Counting, after Madame Purl's questions) can be reached without it. It writes `js/story.js` and `dist/artifact.html`, a single-file copy for the Claude Artifact viewer (`dist/` isn't committed).
+- `tools/build.mjs`: merges the story and refuses to build if a choice points nowhere, a picture is missing, any page or ending can't be reached with the flags as you'd play them, some way through can never reach an ending, or a page that talks about an earlier meeting (Counting, after Madame Purl's questions) can be reached without it. It writes `js/story.js` and `dist/artifact.html`, a single-file copy for the Claude Artifact viewer (`dist/` isn't committed).
 - `js/app.js`: the reader: pages, choices, flags, saves, the care labels and the Found panel.
 - `js/art.js`: the 68 drawings, as SVG coloured by CSS variables, so the dark palette repaints them.
 - `js/sound.js`: the ambience for each place, generated with WebAudio (no sound files), and the narration.
