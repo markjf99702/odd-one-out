@@ -75,7 +75,7 @@
     P('M126,108 q-8,10 -4,22 M210,84 q8,8 4,20', 'none', 1) +
     P('M270,40 q14,10 0,20 M283,34 q22,16 0,32 M50,120 q-14,-10 0,-20 M37,126 q-22,-16 0,-32', 'none', 1));
 
-  A.lint_trap = svg('The lint trap, a swirling grey slot, with a nervous sock leaning away from its edge',
+  A.lint_trap = svg('The lint trap, a swirling gray slot, with a nervous sock leaning away from its edge',
     R(70, 30, 180, 120, 'shade', 14) + R(92, 50, 136, 80, 'cool', 8, 1) +
     P('M160,90 m-34,0 a34,22 0 1,1 68,0 a26,16 0 1,1 -52,0 a18,11 0 1,1 36,0 a10,6 0 1,1 -20,0', 'none', 1) +
     fluff(116, 62, 7, 7, 'paper') + fluff(208, 118, 8, 7, 'paper') + fluff(200, 60, 5, 6, 'paper') +
@@ -183,7 +183,7 @@
     sock(210, 124, 0.9, -70, 'sad') +
     heart(64, 40, 0.8) + P('M40,150 q10,-10 20,0 q10,10 20,0', 'none', 1) + floor(166));
 
-  A.cat = svg('Professor, a grey cat with spectacles, peers down with disdain at a small sock',
+  A.cat = svg('Professor, a gray cat with spectacles, peers down with disdain at a small sock',
     P('M120,160 Q104,110 128,82 L122,46 L144,64 Q160,58 176,64 L198,46 L192,82 Q216,110 200,160Z', 'shade') +
     P('M200,150 q40,6 34,-30 q-4,-16 10,-20', 'none') +
     C(146, 86, 9, 'paper', 1) + C(174, 86, 9, 'paper', 1) + P('M155,86 h10', 'none', 1) +
@@ -344,7 +344,7 @@
       P('M-20,-30 l10,10 10,-10 10,10 10,-10 M-26,-12 l10,10 M-6,-12 l10,10', 'none', 1) +
       (face ? D(-9, -22, 2.4) + D(9, -22, 2.4) + smile(0, -15, 10) : ''));
   }
-  /* a mismatched partner sock: grey with a pink toe and argyle lines */
+  /* a mismatched partner sock: gray with a pink toe and argyle lines */
   function oddSock(x, y, s, r) {
     s = s || 1; r = r || 0;
     return G('translate(' + x + ' ' + y + ') rotate(' + r + ') scale(' + (-s) + ' ' + s + ')',
@@ -599,7 +599,7 @@
     sock(210, 162, 0.55, 0) + G('translate(234 162) scale(0.55)', P(SOCK, 'mustard') + P('M-5,-6 h3 M2,-6 h3', 'none', 1)) +
     heart(270, 116, 0.7) + spark(170, 110, 5));
 
-  A.mismatch = svg('Close Enough: a striped sock and a grey sock with a pink toe lean together in a cozy drawer, clearly not a match and clearly happy',
+  A.mismatch = svg('Close Enough: a striped sock and a gray sock with a pink toe lean together in a cozy drawer, clearly not a match and clearly happy',
     R(20, 40, 280, 130, 'mustard', 8) + R(34, 54, 252, 116, 'warm', 4, 1) +
     E(64, 150, 20, 12, 'cool', 1) + P('M50,148 q14,-8 28,0', 'none', 1) + E(256, 150, 20, 12, 'shade', 1) + P('M242,148 q14,-8 28,0', 'none', 1) +
     sock(132, 120, 1.25, 8) + oddSock(190, 120, 1.25, -8) +
@@ -697,7 +697,7 @@
     G('translate(92 96) scale(1.25 0.9)', sock(0, 0, 1, -30)) +
     P('M60,132 l-6,10 M88,140 l-2,12 M120,134 l4,10', 'teal', 1) + P('M40,64 q-10,10 -6,24 M150,40 q12,-6 22,2', 'none', 1));
 
-  A.drain_hose = svg('Down the Drain Hose: a ribbed grey hose bends down the wall, a striped sock lodged at the bend catching sequins and threads',
+  A.drain_hose = svg('Down the Drain Hose: a ribbed gray hose bends down the wall, a striped sock lodged at the bend catching sequins and threads',
     R(240, -4, 84, 188, 'shade') + P('M240,-4 V184', 'none') +
     line('M-10,60 Q120,50 170,90 Q210,124 244,170', 'ink', 52) + line('M-10,60 Q120,50 170,90 Q210,124 244,170', 'shade', 45) +
     P('M20,36 v46 M50,34 v46 M80,36 v46 M108,40 l-4,46 M136,50 l-10,42 M182,68 l-28,38 M206,92 l-30,32 M224,118 l-34,22', 'none', 1) +

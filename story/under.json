@@ -66,7 +66,7 @@
   "id": "u_court",
   "title": "The Court of Lint",
   "art": "throne",
-  "text": "The throne room is a cathedral of fluff. Pillars of compressed lint rise to the dryer's underside, decorated with bottle caps, a staple, and one gleaming paperclip held up as a sacred relic.\n\nCourtiers bob everywhere: dust bunnies in every shade of grey, plus a lady's hair tie acting as chancellor and a crumpled receipt who reads out royal decrees. Everyone is whispering. You catch the words *annual cleaning* and *this very day* and *the Long Hose*.\n\nOn the throne sits a dust bunny the size of a cabbage, crowned with a bent ring-pull. He is snoring. Behind the throne, half hidden, is a small locked door made of felted lint.",
+  "text": "The throne room is a cathedral of fluff. Pillars of compressed lint rise to the dryer's underside, decorated with bottle caps, a staple, and one gleaming paperclip held up as a sacred relic.\n\nCourtiers bob everywhere: dust bunnies in every shade of gray, plus a lady's hair tie acting as chancellor and a crumpled receipt who reads out royal decrees. Everyone is whispering. You catch the words *annual cleaning* and *this very day* and *the Long Hose*.\n\nOn the throne sits a dust bunny the size of a cabbage, crowned with a bent ring-pull. He is snoring. Behind the throne, half hidden, is a small locked door made of felted lint.",
   "choices": [
    {
     "label": "Kneel and request an audience",
@@ -361,7 +361,7 @@
   "id": "u_vault",
   "title": "The Felted Door",
   "art": "vault",
-  "text": "Behind the throne is a little door of felted lint, studded with thumbtacks and locked with a padlock from a child's diary. Painted on it, in what might be ketchup: *ROYAL TREASURY. KEEP OUT. THIS MEANS SOCKS.*\n\nYou press your ear to it. Inside, something chimes softly, the sound of many small precious things settling.\n\nThen the floor shudders. Far above, a door opens, and footsteps the size of continents cross the laundry room. A cupboard clanks. Something long and plastic is dragged out of it, bumping along the floor. All over the court, dust bunnies go pale, which is hard for something already grey. \"The Long Hose,\" somebody whimpers. \"It's *today*.\"\n\nThat lock had better open fast.",
+  "text": "Behind the throne is a little door of felted lint, studded with thumbtacks and locked with a padlock from a child's diary. Painted on it, in what might be ketchup: *ROYAL TREASURY. KEEP OUT. THIS MEANS SOCKS.*\n\nYou press your ear to it. Inside, something chimes softly, the sound of many small precious things settling.\n\nThen the floor shudders. Far above, a door opens, and footsteps the size of continents cross the laundry room. A cupboard clanks. Something long and plastic is dragged out of it, bumping along the floor. All over the court, dust bunnies go pale, which is hard for something already gray. \"The Long Hose,\" somebody whimpers. \"It's *today*.\"\n\nThat lock had better open fast.",
   "choices": [
    {
     "label": "Have Pinsworth pick the lock",
@@ -493,7 +493,7 @@
   "id": "u_vacuumed",
   "title": "The Long Hose",
   "art": "garbage",
-  "text": "You plant yourself in front of King Fluffington and spread your cuff wide. \"Not today!\" you cry, which is very brave and also not how vacuums work.\n\nThe Long Hose takes you with a single *thwup*. You tumble through a dark tube, past screaming dust bunnies and a terrified paperclip, and land in the bag: a warm grey world of hair and crumbs and one Lego.\n\nIt is not so bad, actually. The King is in here too, and most of the court. You hold a small ceremony and crown nobody. On Thursday, the bag goes out to the curb, and you hear the truck coming, and you think: well. At least I was brave about it.",
+  "text": "You plant yourself in front of King Fluffington and spread your cuff wide. \"Not today!\" you cry, which is very brave and also not how vacuums work.\n\nThe Long Hose takes you with a single *thwup*. You tumble through a dark tube, past screaming dust bunnies and a terrified paperclip, and land in the bag: a warm gray world of hair and crumbs and one Lego.\n\nIt is not so bad, actually. The King is in here too, and most of the court. You hold a small ceremony and crown nobody. On Thursday, the bag goes out to the curb, and you hear the truck coming, and you think: well. At least I was brave about it.",
   "choices": [],
   "ending": {
    "name": "Into the Bag",
