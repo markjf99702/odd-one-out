@@ -379,6 +379,47 @@ for (const colorScheme of ['light', 'dark']) {
   await p.context().close();
 }
 
+// The pills (Sound, Narrate, Aa) and the small buttons (Back, Found, Close, Copy my ending, and Found's two at the
+// bottom, which wrap onto two lines once Forget my endings asks again) take a tap at least 44px tall, though they look
+// as they did, and no two of those taps overlap.
+{
+  const taps = p => p.evaluate(() => {
+    const area = b => { // the box a tap lands in: the button's own, or the invisible margin round it
+      const r = b.getBoundingClientRect(), s = getComputedStyle(b), m = getComputedStyle(b, '::after'), n = parseFloat;
+      return m.position !== 'absolute' ? r : { top: r.top + n(s.borderTopWidth) + n(m.top), bottom: r.bottom - n(s.borderBottomWidth) - n(m.bottom), left: r.left + n(s.borderLeftWidth) + n(m.left), right: r.right - n(s.borderRightWidth) - n(m.right) };
+    };
+    scrollTo(0, 0); document.getElementById('lf').scrollTop = 0; // so nothing on the page sits under the bar
+    const shown = [...document.querySelectorAll('.pill, .tbtn')].filter(b => b.getClientRects().length && !b.closest('[inert]'));
+    const areas = shown.map(area), overlaps = [];
+    areas.forEach((a, i) => areas.slice(i + 1).forEach((o, j) => { if (a.left < o.right && o.left < a.right && a.top < o.bottom && o.top < a.bottom) overlaps.push(shown[i].textContent + ' and ' + shown[i + 1 + j].textContent); }));
+    return { overlaps, taps: shown.map(b => { // and the page agrees: a tap just inside the top or the bottom of that box finds the button
+      b.scrollIntoView({ block: 'center' });
+      const a = area(b);
+      return { name: b.textContent, height: Math.round((a.bottom - a.top) * 10) / 10, lands: [a.top + 0.5, a.bottom - 0.5].every(y => document.elementFromPoint((a.left + a.right) / 2, y)?.closest('button') === b) };
+    }) };
+  });
+  const check = async (p, where, expect) => {
+    const { overlaps, taps: found } = await taps(p);
+    assert.deepEqual(found.map(t => t.name).sort(), expect.sort(), `${where}: not the buttons expected`);
+    for (const t of found) {
+      assert.ok(t.height >= 44, `${where}: ${t.name} takes a tap only ${t.height}px tall`);
+      assert.ok(t.lands, `${where}: a tap at the edge of ${t.name}'s area misses it`);
+    }
+    assert.deepEqual(overlaps, [], `${where}: taps overlap`);
+  };
+  const p = await reader();
+  await p.click('[data-act=begin]');
+  await turn(p, 0);
+  await check(p, 'a page', ['Back', 'Found', 'Sound', 'Narrate', 'Aa']);
+  await turn(p, 1, 0, 0); // Lady-in-Waiting, an ending
+  await check(p, 'an ending', ['Back', 'Found', 'Sound', 'Narrate', 'Aa', 'Copy my ending']);
+  await p.click('#lfBtn');
+  await p.click('#wipeBtn');
+  assert.ok(await p.evaluate(() => document.getElementById('wipeBtn').offsetTop > document.getElementById('restartBtn').offsetTop), "Found's buttons no longer wrap, so this checks less than it says");
+  await check(p, 'Found', ['Close', 'Start a new tumble', 'Tap again to forget']);
+  await p.context().close();
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();

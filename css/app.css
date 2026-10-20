@@ -52,6 +52,12 @@ body { font-family: var(--body); font-size: 1.075rem; line-height: 1.62; padding
 .tbtn { font: 500 .78rem/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--fg); background: transparent; border: 2px solid var(--fg); border-radius: 999px; padding: .5rem .7rem; cursor: pointer; white-space: nowrap; }
 .tbtn:hover { background: var(--fg); color: var(--bg); }
 .tbtn:disabled { opacity: .35; cursor: default; background: transparent; color: var(--fg); }
+/* The pills and these buttons look small but take a tap about 44px tall: an invisible margin round each reaches 6px
+   above and below a button and 9px for a pill, but only about 3px to the sides, as the pills sit 6px apart. (The insets
+   count from inside the border.) */
+.tbtn, .pill { position: relative; }
+.tbtn::after, .pill::after { content: ""; position: absolute; inset: -8px -5px; }
+.pill::after { inset: -10.5px -4px; }
 button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 
 /* porthole picture */
@@ -112,7 +118,7 @@ h1.ptitle { font-family: var(--display); font-weight: 800; font-size: clamp(1.7r
 .tag .k { font: 500 .66rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
 .tag.missing { border-style: dashed; background: transparent; color: var(--muted); }
 .tag.missing .t { font-family: var(--mono); font-weight: 500; letter-spacing: .2em; }
-.lf .row { display: flex; gap: .6rem; flex-wrap: wrap; }
+.lf .row { display: flex; gap: .8rem .6rem; flex-wrap: wrap; } /* rows over 12px apart, so wrapped buttons' taps (6px each way) don't overlap */
 
 
 /* cover */
