@@ -140,7 +140,7 @@ const STORY = window.STORY;
       h += '<div class="ename">' + esc(p.ending.name) + "</div>";
       h += '<div class="care">' + ["good", "bittersweet", "bad", "weird"].map(x => x === k ? careSvg(x) : careSvg(x).replace("<svg", '<svg style="opacity:.22"')).join("") + "</div>";
       h += '<div><span class="kind kind-' + k + '">' + k + "</span></div>";
-      h += '<div class="fine">' + CARE[k][1] + ' Visited <span id="nSeen">' + state.seen.length + "</span> of " + STORY.length + " places. 80% wool, 20% nylon, 100% you.</div>";
+      h += '<div class="fine">' + CARE[k][1] + ' Visited <span id="nSeen">' + state.seen.length + "</span> of " + STORY.length + " passages. 80% wool, 20% nylon, 100% you.</div>";
       const trail = state.hist.map(x => x.at).concat(p.id).filter((id, i, a) => byId[id] && a[i - 1] !== id).map(id => byId[id].title);
       h += '<div class="route"><b>Your tumble</b>' + trail.map(esc).join(" &rarr; ") + "</div>";
       h += '<div class="copyline"><button class="tbtn" type="button" data-act="copy">Copy my ending</button><span class="copied" id="copied" aria-live="polite"></span></div>';
@@ -206,7 +206,7 @@ const STORY = window.STORY;
   const lf = document.getElementById("lf");
   function fillLF() {
     const f = state.found;
-    document.getElementById("lfSub").textContent = f.length + " of " + ENDINGS.length + " endings found. " + state.seen.length + " of " + STORY.length + " places visited.";
+    document.getElementById("lfSub").textContent = f.length + " of " + ENDINGS.length + " endings found. " + state.seen.length + " of " + STORY.length + " passages visited.";
     document.getElementById("lfMeter").style.width = (100 * f.length / ENDINGS.length) + "%";
     document.getElementById("lfTags").innerHTML = ENDINGS.map((e, i) => f.includes(e.id)
       ? '<li class="tag"><span class="k kind-' + esc(e.ending.kind) + '">' + (i + 1) + " · " + esc(e.ending.kind) + '</span><span class="t">' + esc(e.ending.name) + '</span><span class="k" style="color:var(--muted)">' + esc(regionOf(e.id)) + "</span></li>"

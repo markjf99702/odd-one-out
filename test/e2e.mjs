@@ -206,7 +206,7 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.click('#lfClose');
   assert.match(await p.textContent('#foot'), new RegExp(`^0 of ${story.endings} endings found`), 'the line under the page still counts the forgotten endings');
   assert.equal(await p.textContent('.label .kicker span:last-child'), '0 found', 'the care label still counts the forgotten endings');
-  assert.match(await p.textContent('.label .fine'), new RegExp(`Visited 1 of ${story.pages} `), 'the care label still counts the forgotten pages');
+  assert.match(await p.textContent('.label .fine'), new RegExp(`Visited 1 of ${story.pages} passages\\.`), 'the care label still counts the forgotten pages');
   await p.context().close();
 }
 
