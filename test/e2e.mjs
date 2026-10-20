@@ -355,6 +355,30 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.context().close();
 }
 
+// The small coloured words, an ending's kind (on its care label and in Found) and the place's name above a page, read
+// at 4.5:1 against what's behind them, in both palettes.
+for (const colorScheme of ['light', 'dark']) {
+  const p = await reader({ colorScheme });
+  await p.evaluate(() => {
+    const first = {}; // the first ending of each kind
+    for (const s of window.STORY) if (s.ending && !first[s.ending.kind]) first[s.ending.kind] = s.id;
+    localStorage.setItem('odd-one-out.v1', JSON.stringify({ at: first.weird, hist: [{ at: 'start', flags: [] }], found: Object.values(first) }));
+  });
+  await p.reload();
+  await p.click('[data-act=begin]');
+  await p.click('#lfBtn');
+  const words = await p.evaluate(() => {
+    const rgb = s => s.match(/[\d.]+/g).map(Number);
+    const lum = c => c.slice(0, 3).map(v => ((v /= 255) <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4)).reduce((n, v, i) => n + v * [0.2126, 0.7152, 0.0722][i], 0);
+    const behind = el => { for (; el; el = el.parentElement) { const c = rgb(getComputedStyle(el).backgroundColor); if (c.length === 3 || c[3] === 1) return c; } return [255, 255, 255]; };
+    const ratio = el => { const [a, b] = [lum(rgb(getComputedStyle(el).color)), lum(behind(el))].sort((x, y) => y - x); return (a + 0.05) / (b + 0.05); };
+    return [...document.querySelectorAll('.where b, .label .kind, .tag .k[class*="kind-"]')].map(el => [el.textContent, Math.round(ratio(el) * 100) / 100]);
+  });
+  assert.equal(words.length, 6, `${colorScheme}: expected the place, the care label's kind and four kinds in Found, got ${JSON.stringify(words)}`);
+  for (const [text, ratio] of words) assert.ok(ratio >= 4.5, `${colorScheme}: "${text}" reads at only ${ratio}:1`);
+  await p.context().close();
+}
+
 assert.deepEqual(problems.filter(p => !p.startsWith('failed:')), [], 'problems while reading it');
 await browser.close();
 server.close();

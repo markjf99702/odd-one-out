@@ -16,6 +16,8 @@
   --red: #CF4535;
   --pim: #9C8BD3;
   --focus: #177E80;
+  /* the same colours as small type (an ending's kind, the place above a page): darker, so they read at 4.5:1 */
+  --ink-weird: #936812; --ink-bittersweet: #7860C3; --ink-bad: #CA4030; --ink-place: #157577;
   --a-ink: #232637; --a-paper: #F4F1EA; --a-shade: #D6DCE2; --a-teal: #1F8E90; --a-mustard: #E6A92A;
   --a-red: #D4473A; --a-pim: #A797DA; --a-warm: #F6D58A; --a-cool: #8FB3CF;
   --display: "Grandstander", "Trebuchet MS", system-ui, sans-serif;
@@ -25,6 +27,7 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #161925; --card: #1F2333; --fg: #ECE8DF; --muted: #A3A7B8; --line: #343A4F;
   --teal: #4FC2BF; --mustard: #F0B940; --red: #F06F5E; --pim: #B9AAEE; --focus: #4FC2BF;
+  --ink-weird: var(--mustard); --ink-bittersweet: var(--pim); --ink-bad: var(--red); --ink-place: var(--teal);
   --a-ink: #ECE8DF; --a-paper: #252A3C; --a-shade: #353C53; --a-teal: #3AAFAD; --a-mustard: #E9B23A;
   --a-red: #E8604F; --a-pim: #A898E0; --a-warm: #8C6B2E; --a-cool: #3E5878;
   color-scheme: dark;
@@ -32,6 +35,7 @@
 :root[data-theme="dark"] {
   --bg: #161925; --card: #1F2333; --fg: #ECE8DF; --muted: #A3A7B8; --line: #343A4F;
   --teal: #4FC2BF; --mustard: #F0B940; --red: #F06F5E; --pim: #B9AAEE; --focus: #4FC2BF;
+  --ink-weird: var(--mustard); --ink-bittersweet: var(--pim); --ink-bad: var(--red); --ink-place: var(--teal);
   --a-ink: #ECE8DF; --a-paper: #252A3C; --a-shade: #353C53; --a-teal: #3AAFAD; --a-mustard: #E9B23A;
   --a-red: #E8604F; --a-pim: #A898E0; --a-warm: #8C6B2E; --a-cool: #3E5878;
   color-scheme: dark;
@@ -56,7 +60,7 @@ button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .porthole::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(140deg, rgba(255,255,255,.22), rgba(255,255,255,0) 38%); }
 
 .where { font: 500 .74rem/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); display: flex; gap: .75rem; flex-wrap: wrap; }
-.where b { color: var(--teal); font-weight: 500; }
+.where b { color: var(--ink-place); font-weight: 500; }
 .where { align-items: center; }
 .deck { margin-left: auto; display: flex; gap: .4rem; }
 .pill { font: 500 .68rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: transparent; border: 1.5px solid var(--line); border-radius: 999px; padding: .4rem .6rem; cursor: pointer; }
@@ -84,7 +88,7 @@ h1.ptitle { font-family: var(--display); font-weight: 800; font-size: clamp(1.7r
 .label .kicker { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap; }
 .label .ename { font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: 1.1; text-wrap: balance; }
 .label .kind { display: inline-block; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; padding: .25rem .55rem; border-radius: 999px; border: 2px solid currentColor; }
-.kind-good { color: var(--teal); } .kind-bittersweet { color: var(--pim); } .kind-bad { color: var(--red); } .kind-weird { color: var(--mustard); }
+.kind-good { color: var(--teal); } .kind-bittersweet { color: var(--ink-bittersweet); } .kind-bad { color: var(--ink-bad); } .kind-weird { color: var(--ink-weird); }
 .care { display: flex; gap: .6rem; align-items: center; color: var(--fg); }
 .care svg { width: 1.9rem; height: 1.9rem; }
 .label .fine { font-size: .74rem; color: var(--muted); line-height: 1.5; }
