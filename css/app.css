@@ -47,8 +47,9 @@ body { font-family: var(--body); font-size: 1.075rem; line-height: 1.62; padding
 
 /* top bar */
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); display: flex; align-items: center; gap: .5rem; padding-block: .7rem; border-bottom: 2px dashed var(--line); }
-.brand { font-family: var(--display); font-weight: 800; font-size: 1.15rem; letter-spacing: .01em; margin-right: auto; display: flex; align-items: center; gap: .45rem; white-space: nowrap; }
-.brand .stripes { width: 1.6rem; height: .9rem; border-radius: .45rem; background: repeating-linear-gradient(90deg, var(--teal) 0 .3rem, var(--mustard) .3rem .6rem); border: 2px solid var(--fg); }
+.brand { font-family: var(--display); font-weight: 800; font-size: 1.15rem; letter-spacing: .01em; margin-right: auto; display: flex; align-items: center; gap: .45rem; white-space: nowrap; min-width: 0; }
+.brand .stripes { flex: none; width: 1.6rem; height: .9rem; border-radius: .45rem; background: repeating-linear-gradient(90deg, var(--teal) 0 .3rem, var(--mustard) .3rem .6rem); border: 2px solid var(--fg); }
+.brand .name { min-width: 0; overflow: hidden; text-overflow: ellipsis; } /* on the narrowest phones the name gives way, not Back and Found */
 .tbtn { font: 500 .78rem/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--fg); background: transparent; border: 2px solid var(--fg); border-radius: 999px; padding: .5rem .7rem; cursor: pointer; white-space: nowrap; }
 .tbtn:hover { background: var(--fg); color: var(--bg); }
 .tbtn:disabled { opacity: .35; cursor: default; background: transparent; color: var(--fg); }

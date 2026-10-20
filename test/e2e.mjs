@@ -305,6 +305,22 @@ const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('odd-one-out
   await p.context().close();
 }
 
+// The top bar fits there too: the name gives way ("Odd O…") and Back and Found stay whole, inside the page's margin,
+// so the phone doesn't widen the page to fit them. On an ordinary phone the name is whole.
+for (const width of [280, 390]) {
+  const p = await reader({ viewport: { width, height: 653 }, isMobile: true });
+  await p.click('[data-act=begin]');
+  const bar = await p.evaluate(() => {
+    const name = document.querySelector('.brand .name') || document.querySelector('.brand'), whole = b => { const r = document.createRange(); r.selectNodeContents(b); const t = r.getBoundingClientRect(), box = b.getBoundingClientRect(); return t.left >= box.left && t.right <= box.right; };
+    return { page: innerWidth, right: document.getElementById('lfBtn').getBoundingClientRect().right, whole: ['backBtn', 'lfBtn'].every(id => whole(document.getElementById(id))), cut: name.scrollWidth > name.clientWidth };
+  });
+  assert.equal(bar.page, width, `at ${width} wide the phone widened the page to ${bar.page} to fit the top bar`);
+  assert.ok(bar.right <= width - 16, `at ${width} wide Found ends at ${bar.right}, past the page's margin`);
+  assert.ok(bar.whole, `at ${width} wide Back or Found is cut short`);
+  assert.equal(bar.cut, width < 300, width < 300 ? 'at 280 wide the name did not give way' : `at ${width} wide the name is cut short`);
+  await p.context().close();
+}
+
 // Holding a number key down turns one page, not one for every repeat.
 {
   const p = await reader({ hasTouch: false });
