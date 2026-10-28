@@ -43,4 +43,4 @@ To put it online with GitHub Pages: **Settings → Pages → Build and deploymen
 - `js/art.js`: the 68 drawings, as SVG coloured by CSS variables, so the dark palette repaints them.
 - `js/sound.js`: the ambience for each place, generated with WebAudio (no sound files), and the narration.
 - `fonts/`: Grandstander, Literata and DM Mono (SIL Open Font License), served from here so nothing loads from elsewhere.
-- `sw.js`: keeps a copy of the book for reading offline.
+- `sw.js`: keeps a copy of the book for reading offline. On a connection that isn't answering, a page opens from that copy after four seconds. `FILES` in it is a fingerprint of the files it keeps: change one and `npm test` says what to set it to, so a release never leaves the copy half old.
